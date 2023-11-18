@@ -14,7 +14,7 @@
 						<div class="footer-item">
 							<img src="../../images/logo_w.png" alt="logo bottom" class="logo-bottom">
 							<div class="spacer-20"></div>
-							<p>We are pets center at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+							<p>Chúng tôi là trung tâm thú cưng tại P.Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</p>
 							<div class="spacer-20"></div>
 							<img src="../../images/payment.png" alt="">
 						</div>
@@ -23,19 +23,17 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
 							<div class="footer-title">
-								Opening Hours
+							Giờ mở cửa
 							</div>
-							<p>Our support available to help you 24 hours a day. We provide our best.</p>
+							<p>Bộ phận hỗ trợ của chúng tôi luôn sẵn sàng trợ giúp bạn 24 giờ một ngày. Chúng tôi cung cấp những gì tốt nhất của mình.</p>
 							<ul class="list">
 								<li>
-									Mon - Fri : 08.00 am - 20.00 pm
+									T2-T6 : 08.00  - 20.00 
 								</li>
 								<li>
-									Saturday : 09.00 am - 20.00 pm
+									T7-Chủ nhật : 09.00 - 20.00 
 								</li>
-								<li>
-									Sunday :  We Are Closed
-								</li>
+								
 							</ul>
 
 						</div>
@@ -44,7 +42,7 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
 							<div class="footer-title">
-								Contact Info
+							Thông tin liên lạc
 							</div>
 							<p>Lit sed The Best in dolor sit amet consectetur</p>
 							<ul class="list-info">
@@ -52,19 +50,19 @@
 									<div class="info-icon text-primary">
 										<span class="fa fa-map-marker"></span>
 									</div>
-									<div class="info-text">99 S.t Jomblo Park Pekanbaru 28292. Indonesia</div> 
+									<div class="info-text">P.Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</div> 
 								</li>
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-phone"></span>
 									</div>
-									<div class="info-text">(0761) 654-123987</div>
+									<div class="info-text">0986537495</div>
 								</li>
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-envelope"></span>
 									</div>
-									<div class="info-text">mail@hellopets.com</div>
+									<div class="info-text">petshop@gmail.com</div>
 								</li>
 							</ul>
 						</div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pets - Pet Care, Shop, and Veterinary Html Template</title>
+    <title>Dịch vụ chăm sóc thú cưng tốt nhất</title>
     <meta name="description" content="Pets is responsive multi-purpose HTML5 template compatible with Bootstrap 4. Take your Startup business website to the next level. it is designed for pet care, clinic, veterinary, shop, store, adopt, food, pets, businesses or any type of person or business who wants to showcase their work, services and professional way">
     <meta name="keywords" content="animals, business, cats, dogs, ecommerce, modern, pet care, pet services, pet shop, pet sitting, pets, shelter animals, store, veterinary">
     <meta name="author" content="rometheme.net"> 
@@ -88,7 +88,8 @@
 						</div>
 						<div class="body-content">
 							<div class="heading">Giờ mở cửa :</div>
-							Mon - Fri : 08:00 - 20:00
+							Thứ 2-thứ 6 : 08:00 - 20:00
+							Thứ 7-chủ nhật : 09:00 - 20:00
 						</div>
 					</div>
 					<!-- INFO 2 -->
@@ -97,8 +98,8 @@
 							<div class="fa fa-phone"></div>
 						</div>
 						<div class="body-content">
-							<div class="heading">Call Today :</div>
-							+62 7100 1234
+							<div class="heading">Gọi ngay :</div>
+							0986537495
 						</div>
 					</div>
 					
@@ -120,66 +121,66 @@
 			            <ul class="navbar-nav">
 			            	<li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          HOME
+						          TRANG CHỦ
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="index.html">Pets Care</a>
-	          						<a class="dropdown-item" href="pets-shop.html">Pets Shop</a>
+			                    	<a class="dropdown-item" href="index.html">Chăm sóc thú cưng</a>
+	          						<a class="dropdown-item" href="pets-shop.html">Cửa hàng thú cưng</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="about-us.html">ABOUT US</a>
+			                    <a class="nav-link" href="about-us.html">VỀ CHÚNG TÔI</a>
 			                </li>
 			                <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          SERVICES
+						          DỊCH VỤ
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="services.html">Services</a>
-	          						<a class="dropdown-item" href="services-single.html">Single Services</a>
+			                    	<a class="dropdown-item" href="services.html">Dịch vụ</a>
+	          						<a class="dropdown-item" href="services-single.html">Dịch vụ cá nhân</a>
 							    </div>
 			                </li>
 			                <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          PAGES
+						          TRANG
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="page-faq.html">Faqs</a>
-	          						<a class="dropdown-item" href="page-our-staff.html">Our Staff</a>
-	          						<a class="dropdown-item" href="page-single-staff.html">Single Staff</a>
-	          						<a class="dropdown-item" href="page-appointment-form.html">Appointment Form</a>
-	          						<a class="dropdown-item" href="page-pricing-tables.html">Pricing Tables</a>
+			                    	<a class="dropdown-item" href="page-faq.html">Câu hỏi thường gặp</a>
+	          						<a class="dropdown-item" href="page-our-staff.html">Nhân viên</a>
+	          						<a class="dropdown-item" href="page-single-staff.html">Nhân viên độc thân</a>
+	          						<a class="dropdown-item" href="page-appointment-form.html">Phiếu hẹn</a>
+	          						<a class="dropdown-item" href="page-pricing-tables.html">Bảng giá</a>
 	          						<a class="dropdown-item" href="page-404.html">404 Page</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="gallery.html">GALLERY</a>
+			                    <a class="nav-link" href="gallery.html">PHÒNG TRƯNG BÀY</a>
 			                </li>
 			                <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          BLOG
+						          BÀI VIẾT
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="blog.html">Blog List</a>
-	          						<a class="dropdown-item" href="blog-single.html">Single Blog</a>
+			                    	<a class="dropdown-item" href="blog.html">Danh sách bài viết</a>
+	          						<a class="dropdown-item" href="blog-single.html">Bài viết cá nhân</a>
 							    </div>
 			                </li>
 			                <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          SHOP
+						          CỬA HÀNG
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="shop.html">Shop</a>
-			                    	<a class="dropdown-item" href="shop-list.html">Product List</a>
-	          						<a class="dropdown-item" href="shop-single.html">Single Product</a>
+			                    	<a class="dropdown-item" href="shop.html">Cửa hàng</a>
+			                    	<a class="dropdown-item" href="shop-list.html">Danh sách sản phẩm</a>
+	          						<a class="dropdown-item" href="shop-single.html">Sản phẩm</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="contact.html">CONTACT</a>
+			                    <a class="nav-link" href="contact.html">LIÊN HỆ</a>
 			                </li>
 
 			            </ul>
-			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">GET AN APPOINTMENT</a>
+			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">NHẬN LỊCH</a>
 			        </div>
 			    </nav> <!-- -->
 

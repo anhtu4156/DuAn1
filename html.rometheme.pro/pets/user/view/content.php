@@ -1,27 +1,27 @@
 <!-- FEATURE -->
-<div class="section services">
+<!-- <div class="section services">
 		<div class="content-wrap">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<div class="row no-gutters overlap">
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-6"> -->
 								<!-- BOX 1 -->
-								<div class="rs-feature-box-1" data-background="../../images/promo_tab1.jpg">
+								<!-- <div class="rs-feature-box-1" data-background="../../images/promo_tab1.jpg">
 									<div class="body">
-										<h3> GIẢM GIÁ 30% KHI MUA TRỰC TUYẾN <br> ĐỘC QUYỀN</h3> 
-										<p>Mua sắm và tiết kiệm các sản phẩm thú cưng yêu thích của bạn chỉ có sẵn trực tuyến!</p>
+										<h3 style="color: #F7941D;"> GIẢM GIÁ 30% KHI MUA TRỰC TUYẾN <br> ĐỘC QUYỀN</h3> 
+										<p style="color: black;">Mua sắm và tiết kiệm các sản phẩm thú cưng yêu thích của bạn chỉ có sẵn trực tuyến!</p>
 										<a href="#" class="btn btn-secondary">Vào cửa hàng ngay</a>
 									</div>
 					            </div>
 							</div>
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-6"> -->
 								<!-- BOX 2 -->
-								<div class="rs-feature-box-1 bgdark" data-background="../../images/promo_tab2.jpg">
+								<!-- <div class="rs-feature-box-1 bgdark" data-background="../../images/promo_tab2.jpg">
 									<div class="body">
-										<h3>TIẾT KIỆM TỚI 30% TẤT CẢ PHỤ KIỆN</h3> 
-										<p>Mua sắm và tiết kiệm các sản phẩm thú cưng yêu thích của bạn chỉ có sẵn trực tuyến!</p>
-										<a href="#" class="btn btn-secondary">vào cửa hàng ngay</a>
+										<h3 style="color: #F7941D;">TIẾT KIỆM TỚI 30% TẤT CẢ PHỤ KIỆN</h3> 
+										<p style="color: black;">Mua sắm và tiết kiệm các sản phẩm thú cưng yêu thích của bạn chỉ có sẵn trực tuyến!</p>
+										<a href="#" class="btn btn-secondary">Vào cửa hàng ngay</a>
 									</div>
 					            </div>
 							</div>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- NEW ARRIVAL -->
 	<div class="section">
