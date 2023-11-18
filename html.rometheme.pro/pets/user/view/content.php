@@ -1,369 +1,78 @@
-<!-- FEATURE -->
-<!-- <div class="section services">
+<!-- ABOUT -->
+<div class="section bgi-left bgi-hide-xs" data-background="../../images/about.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12 col-md-12">
-						<div class="row no-gutters overlap">
-							<div class="col-sm-12 col-md-6"> -->
-								<!-- BOX 1 -->
-								<!-- <div class="rs-feature-box-1" data-background="../../images/promo_tab1.jpg">
-									<div class="body">
-										<h3 style="color: #F7941D;"> GIẢM GIÁ 30% KHI MUA TRỰC TUYẾN <br> ĐỘC QUYỀN</h3> 
-										<p style="color: black;">Mua sắm và tiết kiệm các sản phẩm thú cưng yêu thích của bạn chỉ có sẵn trực tuyến!</p>
-										<a href="#" class="btn btn-secondary">Vào cửa hàng ngay</a>
-									</div>
-					            </div>
-							</div>
-							<div class="col-sm-12 col-md-6"> -->
-								<!-- BOX 2 -->
-								<!-- <div class="rs-feature-box-1 bgdark" data-background="../../images/promo_tab2.jpg">
-									<div class="body">
-										<h3 style="color: #F7941D;">TIẾT KIỆM TỚI 30% TẤT CẢ PHỤ KIỆN</h3> 
-										<p style="color: black;">Mua sắm và tiết kiệm các sản phẩm thú cưng yêu thích của bạn chỉ có sẵn trực tuyến!</p>
-										<a href="#" class="btn btn-secondary">Vào cửa hàng ngay</a>
-									</div>
-					            </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
+					<div class="col-sm-12 col-md-8 offset-md-4">
 
-	<!-- NEW ARRIVAL -->
-	<div class="section">
-		<div class="content-wrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-
-						<h2 class="section-heading text-center text-primary no-after mb-4">
-							Hàng mới về
+						<h2 class="section-heading text-primary no-after mb-4">
+							Chào Mừng Quý Khách Đến Với Dịch Vụ Chăm Sóc Thú Cưng 
 						</h2>
-						<p class="subheading text-center mb-4">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+						<p class="subheading mb-4">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+
+						<p>Quisque ut dolor gravida, placerat libero vel, euismod. Ut enim ad minim veniam, quis nostrud exercitation. Quam temere in vitiis, legem sancimus haerentia. Pellentesque habitant morbi tristique senectus et netus.</p> 
 
 						
-					</div>
-				</div>
-				<div class="row mt-4">
-					<!-- Item 1 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-1.jpg" alt="" class="img-fluid"></a>
+						<div class="row mt-5">
+							<!-- Item 1 -->
+							<div class="col-sm-6 col-md-6">
+								<div class="rs-icon-info-3 mb-5">
+									<div class="info-icon">
+										<i class="fa fa-scissors"></i>
+									</div>
+									<div class="info-text">
+										<h3 class="text-secondary">Cắt Tỉa</h3>
+										Dịch vụ cắt tỉa của chúng tôi giúp thú cưng của bạn luôn trông sạch sẽ, xinh đẹp và thoải mái.
+									</div>
+								</div>
 							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Cat & Small Dog Carrier</a></h4>
-								<div class="meta">
-									<div class="price">$29</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
+							<!-- Item 2 -->
+							<div class="col-sm-6 col-md-6">
+								<div class="rs-icon-info-3 mb-5">
+									<div class="info-icon">
+										<i class="fa fa-home"></i>
+									</div>
+									<div class="info-text">
+										<h3 class="text-secondary">Khách Sạn Thú Cưng</h3>
+										Đội ngũ chăm sóc thú cưng chuyên nghiệp của chúng tôi sẽ đảm bảo rằng thú cưng của bạn được quan tâm và yêu thương như là một phần của gia đình.
+									</div>
+								</div>
+							</div>
+							<!-- Item 3 -->
+							<div class="col-sm-6 col-md-6">
+								<div class="rs-icon-info-3 mb-5">
+									<div class="info-icon">
+										<i class="fa fa-shield"></i>
+									</div>
+									<div class="info-text">
+										<h3 class="text-secondary">Tiêm Phòng</h3>
+										Dịch vụ tiêm phòng của chúng tôi mang lại bảo vệ toàn diện, giúp thú cưng của bạn chống lại các bệnh truyền nhiễm nguy hiểm.
+									</div>
+								</div>
+							</div>
+							<!-- Item 4 -->
+							<div class="col-sm-6 col-md-6">
+								<div class="rs-icon-info-3 mb-5">
+									<div class="info-icon">
+										<i class="fa fa-medkit"></i>
+									</div>
+									<div class="info-text">
+										<h3 class="text-secondary">Chăm Sóc Thú Cưng</h3>
+										Dịch vụ chăm sóc toàn diện từ dinh dưỡng đến y tế, chúng tôi đảm bảo thú cưng của bạn có một cuộc sống khỏe mạnh và hạnh phúc.
 									</div>
 								</div>
 							</div>
 						</div>
+						
 					</div>
-					<!-- Item 2 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-2.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Traveller Pet Carrier</a></h4>
-								<div class="meta">
-									<div class="price">$29</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 3 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-3.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Leather Belt Pink</a></h4>
-								<div class="meta">
-									<div class="price">$29</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 4 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-4.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Healthy Food</a></h4>
-								<div class="meta">
-									<div class="price">$29</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>	
 
-	<!-- CTA -->
-	<div class="section bgi-cover-center" data-background="../../images/pattern_bg.jpg">
-		<div class="content-wrap py-0">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-sm-6 col-md-6">
-						<div class="img-cta">
-							<img src="../../images/product_promo.png" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-6">
-						<div class="text-white">
-							<h1 class="section-heading no-after text-white">
-								ƯU ĐÃI ĐẶC BIỆT TRONG TUẦN NÀY!
-							</h1>
-							<p class="uk21 text-white mb-4">Được giảm giá 10% thức ăn cho thú cưng.</p>
-							<p class="mb-5">Chương trình ưu đãi được diễn ra hàng tuần, quý khách có thể ghé thăm shop bất kỳ ngày nào cũng đều có chương trình khuyến mãi.</p>
-
-						</div>
-						<a href="#" class="btn btn-light">Vào cửa hàng ngay</a>
-						<div class="spacer-50"></div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="spacer-90"></div>
-
-	<!-- POPULAR PRODUCTS -->
-	<div class="section">
-		<div class="content-wrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-
-						<h2 class="section-heading text-center text-primary no-after mb-4">
-							Sản phẩm phổ biến
-						</h2>
-						<p class="subheading text-center mb-4">Sức khoẻ và hạnh phúc của thú cưng luôn là ưu tiên hàng đầu của chúng tôi.</p>
-
-						
-					</div>
-				</div>
-				<div class="row mt-4">
-					<!-- Item 1 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-5.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Big Carrier</a></h4>
-								<div class="meta">
-									<div class="price">$59</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 2 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-6.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Blank Leather Belt</a></h4>
-								<div class="meta">
-									<div class="price">$12</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 3 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-7.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Rubber Pink Toy</a></h4>
-								<div class="meta">
-									<div class="price">$9</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 4 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-8.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Rubber Bone</a></h4>
-								<div class="meta">
-									<div class="price">$7</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 5 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-9.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Safety Mask</a></h4>
-								<div class="meta">
-									<div class="price">$19</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 6 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-10.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Bedrest</a></h4>
-								<div class="meta">
-									<div class="price">$41</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 7 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-11.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Plastic Bowl</a></h4>
-								<div class="meta">
-									<div class="price">$5</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Item 8 -->
-					<div class="col-sm-3 col-md-3">
-						<div class="rs-shop-box mb-5">
-							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-12.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h4 class="title"><a href="shop-single.html">Cat Playground</a></h4>
-								<div class="meta">
-									<div class="price">$179</div>
-									<div class="rating">
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-										<span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12 col-md-12 text-center">
-						<a href="#" class="btn btn-secondary mt-5">Xem thêm</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- FUN FACT -->
-	<div class="bgi-cover-center" data-background="../../images/testimonials_bg.jpg">
+	<div class="bgi-cover-center" data-background="../../images/statistic_bg.jpg">
 		<div class="content-wrap">
 			<div class="container">
 
@@ -376,8 +85,8 @@
 								<i class="fa fa-smile-o"></i>
 							</div>
 							<div class="body-content">
-								<h2 class="text-secondary">2700</h2>
-								<p class="uk16 text-primary">Happy Customers</p>
+								<h2>2700</h2>
+								<p class="uk16 text-primary">Số Người Hài Lòng</p>
 							</div>
 						</div>
 					</div>
@@ -389,8 +98,8 @@
 								<i class="fa fa-github"></i>
 							</div>
 							<div class="body-content">
-								<h2 class="text-secondary">4520</h2>
-								<p class="uk16 text-primary">Pets Cure</p>
+								<h2>4520</h2>
+								<p class="uk16 text-primary">Lượng Thú Cưng Sử Dụng Dịch Vụ</p>
 							</div>
 						</div>
 					</div>
@@ -402,8 +111,8 @@
 								<i class="fa fa-stethoscope"></i>
 							</div>
 							<div class="body-content">
-								<h2 class="text-secondary">15</h2>
-								<p class="uk16 text-primary">Team Doctor</p>
+								<h2>15</h2>
+								<p class="uk16 text-primary">Đội Ngũ Bác Sỹ</p>
 							</div>
 						</div>
 					</div>
@@ -415,12 +124,441 @@
 								<i class="fa fa-trophy"></i>
 							</div>
 							<div class="body-content">
-								<h2 class="text-secondary">21</h2>
-								<p class="uk16 text-primary">Awards Winner</p>
+								<h2>21</h2>
+								<p class="uk16 text-primary">Khách Hàng Thân Thiết</p>
 							</div>
 						</div>
 					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR SERVICES -->
+	<div class="">
+		<div class="content-wrap">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading text-center text-primary no-after mb-5">
+							Dịch Vụ Của Chúng Tôi
+						</h2>
+						<p class="subheading text-center">Chúng tôi không chỉ chữa bệnh, mà còn chăm sóc tình thương. Dịch vụ thú y với sự quan tâm đặc biệt cho thú cưng của bạn.</p>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					
+					<!-- Item 1 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-image-box">
+							<div class="media">
+								<a href="services-single.html"><img src="../../images/services01.jpg" alt="" class="img-fluid"></a>
+							</div>
+							<div class="body-text">
+								<h3 class="title"><a href="services-single.html">Pet Barber Services</a></h3>
+								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-image-box">
+							<div class="media">
+								<a href="services-single.html"><img src="../../images/services02.jpg" alt="" class="img-fluid"></a>
+							</div>
+							<div class="body-text">
+								<h3 class="title"><a href="services-single.html">Vaccination Supply</a></h3>
+								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 3 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-image-box">
+							<div class="media">
+								<a href="services-single.html"><img src="../../images/services03.jpg" alt="" class="img-fluid"></a>
+							</div>
+							<div class="body-text">
+								<h3 class="title"><a href="services-single.html">Pet Analysist</a></h3>
+								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12 text-center">
+						<a href="#" class="btn btn-secondary mt-5">Xem Thêm</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- DO PETS -->
+	<div class="section bgi-cover-center" data-background="../../images/home02.jpg">
+		<div class="content-wrap">
+			<div class="container">
+				
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="wrap-form">
+							<h2 class="text-primary mb-2">
+								Thú Cưng Của Bạn Có Bị Dị Ứng Không ?
+							</h2>
+							<p class="uk21 text-white">Chúng tôi là phòng khám thú cưng, nỗi đau là điều quan trọng, sau đó là dịch vụ khách hàng, nhưng đồng thời cũng có rất nhiều công việc và nỗi đau</p>
+							
+							<p class="text-white">Bất cứ ai đang mang thai với nỗi đau, hãy đầu tư miễn phí hoặc Euismod. Để đi đến chi tiết nhỏ nhất, bài tập của chúng ta là gì? Làm sao bừa bãi trong tệ nạn, chúng ta xử phạt tuân thủ luật pháp. Con cái sống trong tuổi già và cháu.</p>
+							<div class="spacer-30"></div>
+							<a href="#" class="btn btn-primary">Xem Thêm</a>
+							<div class="spacer-30"></div>
+							<div class="row">
+								<div class="col-sm-8 col-md-8">
+									<div class="img-video">
+										<a href="https://www.youtube.com/watch?v=vNDrLjOmUY4" class="popup-youtube play-video"><i class="fa fa-play fa-2x"></i></a>
+										<img src="../../images/home01.jpg" alt="" class="shadow img-fluid">
+										<div class="ripple"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MEET VETERINARY -->
+	<div class="">
+		<div class="content-wrap">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading text-center text-primary no-after mb-5">
+							Gặp Gỡ Thú Y
+						</h2>
+						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					
+					<!-- Item 1 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-team-1">
+							<div class="media">
+								<img src="../../images/vet05.jpg" alt="" class="img-fluid">
+								<div class="sosmed-icon">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+							<div class="body">
+								<div class="title">Dr. John Doel</div>
+								<div class="text-primary">Veterinary</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-team-1">
+							<div class="media">
+								<img src="../../images/vet06.jpg" alt="" class="img-fluid">
+								<div class="sosmed-icon">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+							<div class="body">
+								<div class="title">Dr. Mellisa Doel</div>
+								<div class="text-primary">Veterinary</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 3 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-team-1">
+							<div class="media">
+								<img src="../../images/vet07.jpg" alt="" class="img-fluid">
+								<div class="sosmed-icon">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+							<div class="body">
+								<div class="title">Dr. Aldizza Doel</div>
+								<div class="text-primary">Veterinary</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12 text-center">
+						<a href="#" class="btn btn-secondary mt-5">Xem Thêm</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- HAPPY CLIENTS -->
+	<div class="section bgi-cover-center" data-background="../../images/testimonials_bg.jpg">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading text-center text-primary mb-4">
+							Đánh Giá Của Khách Hàng
+						</h2>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-10 offset-md-1">
+						<div id="testimonial">
+							<!-- Item 1 -->
+							<div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="../../images/team-1.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>Businessman</span>
+										</p>                        
+									</div>
+								</div>
+							</div>
+							<!-- Item 2 -->
+							<div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="../../images/team-2.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>CEO Buka Kreasi</span>
+										</p>                        
+									</div>
+								</div>
+							</div>
+							<!-- Item 3 -->
+							<div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="../../images/team-3.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>Businessman</span>
+										</p>                        
+									</div>
+								</div>
+							</div>
+							<!-- Item 4 -->
+							<div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="../../images/team-4.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>CEO Buka Kreasi</span>
+										</p>                        
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR ARTICLES -->
+	<div class="">
+		<div class="content-wrap">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading text-center text-primary no-after mb-5">
+							From Our Articles
+						</h2>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					
+					<!-- Item 1 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-news-1 mb-5">
+							<div class="media">
+								<a href="blog-single.html">
+									<img src="../../images/blog-img-1.jpg" alt="" class="img-fluid">
+								</a>
+							</div>
+							<div class="body">
+								<div class="title"><a href="blog-single.html">Dog sitting on the floor</a></div>
+								<div class="meta-date">May 12, 2017</div>
+								<p>Dignissimos ccusamus et iusto odio ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores....</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-news-1 mb-5">
+							<div class="media">
+								<a href="blog-single.html">
+									<img src="../../images/blog-img-2.jpg" alt="" class="img-fluid">
+								</a>
+							</div>
+							<div class="body">
+								<div class="title"><a href="blog-single.html">Persian Cat with new</a></div>
+								<div class="meta-date">May 12, 2017</div>
+								<p>Dignissimos ccusamus et iusto odio ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores....</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 3 -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="rs-news-1 mb-5">
+							<div class="media">
+								<a href="blog-single.html">
+									<img src="../../images/blog-img-3.jpg" alt="" class="img-fluid">
+								</a>
+							</div>
+							<div class="body">
+								<div class="title"><a href="blog-single.html">Make pet comportable</a></div>
+								<div class="meta-date">May 12, 2017</div>
+								<p>Dignissimos ccusamus et iusto odio ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores....</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="spacer-50"></div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- CTA -->
+	<div class="section bgi-cover-center" data-background="../../images/pattern_bg.jpg">
+		<div class="content-wrap py-0">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-sm-6 col-md-6">
+						<div class="img-cta">
+							<img src="../../images/product_promo.png" alt="" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<div class="text-white mt-5">
+							<h1 class="section-heading no-after text-white">
+								Ưu Đãi Đặc Biệt Trong Tuần Này
+							</h1>
+							<p class="uk21 text-white mb-4">Get Discount 10% Off Pet Food.</p>
+							<p class="mb-5">Sed orci dolor, pulvinar nec luctus a, malesuada ac nisl. Aliquam eleifend et dui et suscipit. Nam semper accumsan ante, ac dapibus urna dapibus et.</p>
+
+						</div>
+						<a href="#" class="btn btn-light">Shop Now</a>	
+						<div class="spacer-50"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="spacer-90"></div>
+
+	<!-- AWARDS -->
+	<div class="section">
+		<div class="content-wrap content-wrap-40">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading text-center text-primary no-after mb-5">
+							Thành Tựu Của Chúng Tôi
+						</h2>
+						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6 col-sm-4 col-md-2">
+						<div class="client-img">
+							<a href="#">
+								<img src="../../images/client1.png" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<div class="client-img">
+							<a href="#"><img src="../../images/client2.png" alt="" class="img-fluid"></a>
+						</div>
+					</div>
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<div class="client-img">
+							<a href="#"><img src="../../images/client3.png" alt="" class="img-fluid"></a>
+						</div>
+					</div>
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<div class="client-img">
+							<a href="#"><img src="../../images/client4.png" alt="" class="img-fluid"></a>
+						</div>
+					</div>
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<div class="client-img">
+							<a href="#"><img src="../../images/client5.png" alt="" class="img-fluid"></a>
+						</div>
+					</div>
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<div class="client-img">
+							<a href="#"><img src="../../images/client6.png" alt="" class="img-fluid"></a>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -438,7 +576,7 @@
 			                	<p class="uk18 mb-0">Hãy liên hệ với chúng tôi ngay bây giờ và đặt lịch ngay hôm nay</p>
 			              	</div>
 			              	<div class="body-action">
-			                	<a href="#" class="btn btn-secondary">Hẹn ngay bây giờ!</a>
+			                	<a href="#" class="btn btn-secondary">Đặt Lịch Ngay</a>
 			              	</div>
 			            </div>
 					</div>

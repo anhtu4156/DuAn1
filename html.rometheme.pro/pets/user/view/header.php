@@ -124,8 +124,8 @@
 						          TRANG CHỦ
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="index.html">Chăm sóc thú cưng</a>
-	          						<a class="dropdown-item" href="pets-shop.html">Cửa hàng thú cưng</a>
+			                    	<a class="dropdown-item" href="index.php">Chăm sóc thú cưng</a>
+	          						<a class="dropdown-item" href="index.php?act=petshop">Cửa hàng thú cưng</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
@@ -136,8 +136,8 @@
 						          DỊCH VỤ
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="services.html">Dịch vụ</a>
-	          						<a class="dropdown-item" href="services-single.html">Dịch vụ cá nhân</a>
+			                    	<a class="dropdown-item" href="index.php?act=dv">Dịch vụ</a>
+	          						<a class="dropdown-item" href="index.php?act=dv_cn">Dịch vụ cá nhân</a>
 							    </div>
 			                </li>
 			                <li class="nav-item dropdown dmenu">
@@ -170,9 +170,9 @@
 						          CỬA HÀNG
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="shop.html">Cửa hàng</a>
-			                    	<a class="dropdown-item" href="shop-list.html">Danh sách sản phẩm</a>
-	          						<a class="dropdown-item" href="shop-single.html">Sản phẩm</a>
+			                    	<a class="dropdown-item" href="index.php?act=shop">Cửa hàng</a>
+			                    	<a class="dropdown-item" href="index.php?act=shop_list">Danh sách sản phẩm</a>
+	          						<a class="dropdown-item" href="index.php?act=ctsp">Sản phẩm</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
