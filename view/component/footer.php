@@ -1,5 +1,5 @@
-<!-- FOOTER SECTION -->
-<div class="footer bg-overlay-secondary" data-background="assets/images/statistic_bg.jpg">
+	<!-- FOOTER SECTION -->
+	<div class="footer bg-overlay-secondary" data-background="assets/images/statistic_bg.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				
@@ -8,7 +8,7 @@
 						<div class="footer-item">
 							<img src="assets/images/logo_w.png" alt="logo bottom" class="logo-bottom">
 							<div class="spacer-20"></div>
-							<p>We are pets center at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+							<p>Dịch vụ chăm sóc thú cưng cao cấp, vì thú cưng của bạn xứng đáng nhất.</p>
 							<div class="spacer-20"></div>
 							<img src="assets/images/payment.png" alt="">
 						</div>
@@ -17,19 +17,17 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
 							<div class="footer-title">
-								Opening Hours
+								Giờ Mở Cửa
 							</div>
-							<p>Our support available to help you 24 hours a day. We provide our best.</p>
+							<p>Chúng tôi luôn mở cửa và phục vụ khách hàng vào tất cả các ngày trong tuần. </p>
 							<ul class="list">
 								<li>
-									Mon - Fri : 08.00 am - 20.00 pm
+									T2- T7 : 08.00 am - 22.00 pm
 								</li>
 								<li>
-									Saturday : 09.00 am - 20.00 pm
+									Chủ Nhật : 09.00 am - 22.00 pm
 								</li>
-								<li>
-									Sunday :  We Are Closed
-								</li>
+								
 							</ul>
 
 						</div>
@@ -38,27 +36,27 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
 							<div class="footer-title">
-								Contact Info
+								Thông Tin Liên Hệ
 							</div>
-							<p>Lit sed The Best in dolor sit amet consectetur</p>
+							<p>Bạn Có Thể Liên Hệ Với Tôi Qua</p>
 							<ul class="list-info">
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-map-marker"></span>
 									</div>
-									<div class="info-text">99 S.t Jomblo Park Pekanbaru 28292. Indonesia</div> 
+									<div class="info-text">Số 132 Trịnh Văn Bô,Nam Từ Liêm, Hà Nội</div> 
 								</li>
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-phone"></span>
 									</div>
-									<div class="info-text">(0761) 654-123987</div>
+									<div class="info-text">1900 1558</div>
 								</li>
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-envelope"></span>
 									</div>
-									<div class="info-text">mail@hellopets.com</div>
+									<div class="info-text">Pestshop@gmail.com</div>
 								</li>
 							</ul>
 						</div>
@@ -71,7 +69,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-md-6">
-						<p class="ftex">&copy; 2019 Your Company. All Rights Reserved. Designed By <span class="text-primary">Rometheme</span></p> 
+						<p class="ftex">&copy; 2023 Coppy Right By  <span class="text-primary">Team 12</span></p> 
 					</div>
 					<div class="col-sm-6 col-md-6">
 						<div class="sosmed-icon d-inline-flex float-right">
@@ -101,5 +99,5 @@
 
 </body>
 
-<!-- Mirrored from html.rometheme.pro/pets/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Nov 2023 14:35:22 GMT -->
+<!-- Mirrored from html.rometheme.pro/pets/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Nov 2023 14:35:03 GMT -->
 </html>

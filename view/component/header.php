@@ -87,8 +87,8 @@
 							<div class="fa fa-clock-o"></div>
 						</div>
 						<div class="body-content">
-							<div class="heading">Open Hours :</div>
-							Mon - Fri : 09:00 - 20:00
+							<div class="heading">Giờ Mở Cửa :</div>
+							T2 - CN : 08:00 - 20:00
 						</div>
 					</div>
 					<!-- INFO 2 -->
@@ -97,7 +97,7 @@
 							<div class="fa fa-phone"></div>
 						</div>
 						<div class="body-content">
-							<div class="heading">Call Today :</div>
+							<div class="heading">Gọi Ngay :</div>
 							+62 7100 1234
 						</div>
 					</div>
@@ -120,26 +120,29 @@
 			            <ul class="navbar-nav">
 			            	<li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          HOME
+						          TRANG CHỦ
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="index.html">Pets Care</a>
-	          						<a class="dropdown-item" href="pets-shop.html">Pets Shop</a>
+			                    	<a class="dropdown-item" href="index.html">DỊCH VỤ THÚ CƯNG</a>
+	          						<a class="dropdown-item" href="pets-shop.html">CỬA HÀNG THÚ CƯNG</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="about-us.html">ABOUT US</a>
+			                    <a class="nav-link" href="about-us.html">GIỚI THIỆU</a>
 			                </li>
-			                <li class="nav-item dropdown dmenu">
+			                <li class="nav-item">
+			                    <a class="nav-link" href="services.html">DỊCH VỤ</a>
+			                </li>
+			                <!-- <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          SERVICES
+						          DỊCH VỤ
 						        </a>
 			                    <div class="dropdown-menu">
 			                    	<a class="dropdown-item" href="services.html">Services</a>
 	          						<a class="dropdown-item" href="services-single.html">Single Services</a>
 							    </div>
-			                </li>
-			                <li class="nav-item dropdown dmenu">
+			                </li> -->
+			                <!-- <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          PAGES
 						        </a>
@@ -151,11 +154,17 @@
 	          						<a class="dropdown-item" href="page-pricing-tables.html">Pricing Tables</a>
 	          						<a class="dropdown-item" href="page-404.html">404 Page</a>
 							    </div>
-			                </li>
+			                </li> -->
 			                <li class="nav-item">
 			                    <a class="nav-link" href="gallery.html">GALLERY</a>
 			                </li>
-			                <li class="nav-item dropdown dmenu">
+			                <li class="nav-item">
+			                    <a class="nav-link" href="blog.html">BLOG</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link" href="shop.html">SHOP</a>
+			                </li>
+			                <!-- <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          BLOG
 						        </a>
@@ -163,8 +172,8 @@
 			                    	<a class="dropdown-item" href="blog.html">Blog List</a>
 	          						<a class="dropdown-item" href="blog-single.html">Single Blog</a>
 							    </div>
-			                </li>
-			                <li class="nav-item dropdown dmenu">
+			                </li> -->
+			                <!-- <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          SHOP
 						        </a>
@@ -173,7 +182,7 @@
 			                    	<a class="dropdown-item" href="shop-list.html">Product List</a>
 	          						<a class="dropdown-item" href="shop-single.html">Single Product</a>
 							    </div>
-			                </li>
+			                </li> -->
 			                <li class="nav-item">
 			                    <a class="nav-link" href="contact.html">CONTACT</a>
 			                </li>
@@ -182,7 +191,7 @@
 			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">GET AN APPOINTMENT</a>
 			        </div>
 			    </nav> <!-- -->
-
+			
 			</div>
 		</div>
 

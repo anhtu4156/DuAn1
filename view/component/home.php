@@ -1,45 +1,6 @@
-<!-- BANNER -->
-<div id="oc-fullslider" class="banner owl-carousel">
-        <div class="owl-slide">
-        	<div class="item">
-	            <img src="assets/images/home01.jpg" alt="Slider">
-	            <div class="container d-flex align-items-center">
-	            	<div class="wrap-caption">
-		                <h1 class="caption-heading">We Provide The Best<br>Care For Your Pets</h1>
-		                <p class="">The best pets clinic at melbourne, more than 20.000+ customers happy.</p>
-		                <a href="#" class="btn btn-primary">More About Us</a>
-		            </div>  
-	            </div>
-        	</div>
-        </div>
-        <div class="owl-slide">
-        	<div class="item">
-	            <img src="assets/images/home02.jpg" alt="Slider">
-	            <div class="container d-flex align-items-center">
-	            	<div class="wrap-caption">
-		                <h1 class="caption-heading">We Provide The Best<br>Care For Your Pets</h1>
-		                <p class="">The best pets clinic at melbourne, more than 20.000+ customers happy.</p>
-		                <a href="#" class="btn btn-primary">More About Us</a>
-		            </div>  
-	            </div>
-        	</div>  
-        </div>
-        <div class="owl-slide">
-        	<div class="item">
-	            <img src="assets/images/home03.jpg" alt="Slider">
-	            <div class="container d-flex align-items-center">
-	            	<div class="wrap-caption">
-		                <h1 class="caption-heading text-primary">We Provide The Best<br>Care For Your Pets</h1>
-		                <p class="text-black">The best pets clinic at melbourne, more than 20.000+ customers happy.</p>
-		                <a href="#" class="btn btn-primary">More About Us</a>
-		            </div>  
-	            </div>
-        	</div>  
-        </div>
-    </div>
-
-	<div class="clearfix"></div>
-
+<?php
+include 'banner.php';
+?>
 	<!-- ABOUT -->
 	<div class="section bgi-left bgi-hide-xs" data-background="assets/images/about.jpg">
 		<div class="content-wrap">
@@ -48,11 +9,11 @@
 					<div class="col-sm-12 col-md-8 offset-md-4">
 
 						<h2 class="section-heading text-primary no-after mb-4">
-							Welcome to Pets Care
+							Chào Mừng Quý Khách Đến Với Dịch Vụ Chăm Sóc Thú Cưng 
 						</h2>
-						<p class="subheading mb-4">Your pet's health and well-being are our top priority.</p>
+						<p class="subheading mb-4">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
 
-						<p>Quisque ut dolor gravida, placerat libero vel, euismod. Ut enim ad minim veniam, quis nostrud exercitation. Quam temere in vitiis, legem sancimus haerentia. Pellentesque habitant morbi tristique senectus et netus.</p> 
+						<p>Chào mừng bạn đến với Pest shop không chỉ là một cửa hàng, mà là mái nhà của những chú cún, mèo và thú cưng yêu quý! Tại đây, chúng tôi không chỉ cung cấp các dịch vụ chăm sóc chất lượng mà còn mang đến không khí ấm áp và yêu thương cho thú cưng của bạn.</p> 
 
 						
 						<div class="row mt-5">
@@ -63,8 +24,8 @@
 										<i class="fa fa-scissors"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Pet Grooming</h3>
-										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
+										<h3 class="text-secondary">Cắt Tỉa</h3>
+										Dịch vụ cắt tỉa của chúng tôi giúp thú cưng của bạn luôn trông sạch sẽ, xinh đẹp và thoải mái.
 									</div>
 								</div>
 							</div>
@@ -75,8 +36,8 @@
 										<i class="fa fa-home"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Pet Hotel</h3>
-										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
+										<h3 class="text-secondary">Khách Sạn Thú Cưng</h3>
+										Đội ngũ chăm sóc thú cưng chuyên nghiệp của chúng tôi sẽ đảm bảo rằng thú cưng của bạn được quan tâm và yêu thương như là một phần của gia đình.
 									</div>
 								</div>
 							</div>
@@ -87,8 +48,8 @@
 										<i class="fa fa-shield"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Vaccination</h3>
-										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
+										<h3 class="text-secondary">Tiêm Phòng</h3>
+										Dịch vụ tiêm phòng của chúng tôi mang lại bảo vệ toàn diện, giúp thú cưng của bạn chống lại các bệnh truyền nhiễm nguy hiểm.
 									</div>
 								</div>
 							</div>
@@ -99,8 +60,8 @@
 										<i class="fa fa-medkit"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Pet Care</h3>
-										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
+										<h3 class="text-secondary">Chăm Sóc Thú Cưng</h3>
+										Dịch vụ chăm sóc toàn diện từ dinh dưỡng đến y tế, chúng tôi đảm bảo thú cưng của bạn có một cuộc sống khỏe mạnh và hạnh phúc.
 									</div>
 								</div>
 							</div>
@@ -128,7 +89,7 @@
 							</div>
 							<div class="body-content">
 								<h2>2700</h2>
-								<p class="uk16 text-primary">Happy Customers</p>
+								<p class="uk16 text-primary">Số Người Hài Lòng</p>
 							</div>
 						</div>
 					</div>
@@ -141,7 +102,7 @@
 							</div>
 							<div class="body-content">
 								<h2>4520</h2>
-								<p class="uk16 text-primary">Pets Cure</p>
+								<p class="uk16 text-primary">Lượng Thú Cưng Sử Dụng Dịch Vụ</p>
 							</div>
 						</div>
 					</div>
@@ -154,7 +115,7 @@
 							</div>
 							<div class="body-content">
 								<h2>15</h2>
-								<p class="uk16 text-primary">Team Doctor</p>
+								<p class="uk16 text-primary">Đội Ngũ Bác Sỹ</p>
 							</div>
 						</div>
 					</div>
@@ -167,7 +128,7 @@
 							</div>
 							<div class="body-content">
 								<h2>21</h2>
-								<p class="uk16 text-primary">Awards Winner</p>
+								<p class="uk16 text-primary">Khách Hàng Thân Thiết</p>
 							</div>
 						</div>
 					</div>
@@ -185,9 +146,9 @@
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Our Services
+							Dịch Vụ Của Chúng Tôi
 						</h2>
-						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
+						<p class="subheading text-center">Chúng tôi không chỉ chữa bệnh, mà còn chăm sóc tình thương. Dịch vụ thú y với sự quan tâm đặc biệt cho thú cưng của bạn.</p>
 					</div>
 				</div>
 
@@ -236,7 +197,7 @@
 
 				<div class="row">
 					<div class="col-sm-12 col-md-12 text-center">
-						<a href="#" class="btn btn-secondary mt-5">Check More</a>
+						<a href="#" class="btn btn-secondary mt-5">Xem Thêm</a>
 					</div>
 				</div>
 
@@ -253,13 +214,13 @@
 					<div class="col-sm-6 col-md-6">
 						<div class="wrap-form">
 							<h2 class="text-primary mb-2">
-								Do Pets Have Allergies?
+								Thú Cưng Của Bạn Có Bị Dị Ứng Không ?
 							</h2>
-							<p class="uk21 text-white">We are pets clinic dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p class="uk21 text-white">Chúng tôi là phòng khám thú cưng, nỗi đau là điều quan trọng, sau đó là dịch vụ khách hàng, nhưng đồng thời cũng có rất nhiều công việc và nỗi đau</p>
 							
-							<p class="text-white">Quisque ut dolor gravida, placerat libero vel, euismod. Ut enim ad minim veniam, quis nostrud exercitation. Quam temere in vitiis, legem sancimus haerentia. Pellentesque habitant morbi tristique senectus et netus.</p>
+							<p class="text-white">Bất cứ ai đang mang thai với nỗi đau, hãy đầu tư miễn phí hoặc Euismod. Để đi đến chi tiết nhỏ nhất, bài tập của chúng ta là gì? Làm sao bừa bãi trong tệ nạn, chúng ta xử phạt tuân thủ luật pháp. Con cái sống trong tuổi già và cháu.</p>
 							<div class="spacer-30"></div>
-							<a href="#" class="btn btn-primary">Learn More</a>
+							<a href="#" class="btn btn-primary">Xem Thêm</a>
 							<div class="spacer-30"></div>
 							<div class="row">
 								<div class="col-sm-8 col-md-8">
@@ -285,9 +246,9 @@
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Meet Veterinary
+							Gặp Gỡ Thú Y
 						</h2>
-						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
+						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
 					</div>
 				</div>
 
@@ -351,7 +312,7 @@
 
 				<div class="row">
 					<div class="col-sm-12 col-md-12 text-center">
-						<a href="#" class="btn btn-secondary mt-5">Check More</a>
+						<a href="#" class="btn btn-secondary mt-5">Xem Thêm</a>
 					</div>
 				</div>
 
@@ -367,7 +328,7 @@
 
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary mb-4">
-							What Customer's Say
+							Đánh Giá Của Khách Hàng
 						</h2>
 						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
@@ -533,7 +494,7 @@
 					<div class="col-sm-6 col-md-6">
 						<div class="text-white mt-5">
 							<h1 class="section-heading no-after text-white">
-								SPECIAL OFFER THIS WEEK!
+								Ưu Đãi Đặc Biệt Trong Tuần Này
 							</h1>
 							<p class="uk21 text-white mb-4">Get Discount 10% Off Pet Food.</p>
 							<p class="mb-5">Sed orci dolor, pulvinar nec luctus a, malesuada ac nisl. Aliquam eleifend et dui et suscipit. Nam semper accumsan ante, ac dapibus urna dapibus et.</p>
@@ -557,9 +518,9 @@
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Our Awards
+							Thành Tựu Của Chúng Tôi
 						</h2>
-						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
+						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -614,11 +575,11 @@
 					<div class="col-sm-12 col-md-12">
 						<div class="cta-1">
 			              	<div class="body-text text-white mb-3">
-			                	<h3 class="my-1">Get 30% off for the First Time Appointment!</h3>
-			                	<p class="uk18 mb-0">Contact us now and make an appointment today</p>
+			                	<h3 class="my-1">Giảm ngay 30% cho lần hẹn đầu tiên!</h3>
+			                	<p class="uk18 mb-0">Hãy liên hệ với chúng tôi ngay bây giờ và đặt lịch ngay hôm nay</p>
 			              	</div>
 			              	<div class="body-action">
-			                	<a href="#" class="btn btn-secondary">Appointment Now!</a>
+			                	<a href="#" class="btn btn-secondary">Đặt Lịch Ngay</a>
 			              	</div>
 			            </div>
 					</div>
