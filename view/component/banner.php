@@ -2,7 +2,7 @@
 <div id="oc-fullslider" class="banner owl-carousel">
         <div class="owl-slide">
         	<div class="item">
-	            <img src="images/home01.jpg" alt="Slider">
+	            <img src="../../../DuAn1/assets/images/home01.jpg" alt="Slider">
 	            <div class="container d-flex align-items-center">
 	            	<div class="wrap-caption">
 		                <h1 class="caption-heading">Chúng tôi cung cấp những dịch vụ tốt nhất<br>cho thú cưng của bạn.</h1>
@@ -14,7 +14,7 @@
         </div>
         <div class="owl-slide">
         	<div class="item">
-	            <img src="images/home02.jpg" alt="Slider">
+	            <img src="../../../DuAn1/assets/images/home02.jpg" alt="Slider">
 	            <div class="container d-flex align-items-center">
 	            	<div class="wrap-caption">
 		                <h1 class="caption-heading">Chúng tôi cung cấp những dịch vụ tốt nhất<br>cho thú cưng của bạn.</h1>
@@ -26,7 +26,7 @@
         </div>
         <div class="owl-slide">
         	<div class="item">
-	            <img src="images/home03.jpg" alt="Slider">
+	            <img src="../../../DuAn1/assets/images/home03.jpg" alt="Slider">
 	            <div class="container d-flex align-items-center">
 	            	<div class="wrap-caption">
 		                <h1 class="caption-heading text-primary">Chúng tôi cung cấp những dịch vụ tốt nhất<br>cho thu cưng của bạn.</h1>

@@ -1,16 +1,16 @@
 <!-- FOOTER SECTION -->
-<div class="footer bg-overlay-secondary" data-background="images/statistic_bg.jpg">
+<div class="footer bg-overlay-secondary" data-background="../../../DuAn1/assets/images/statistic_bg.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				
 				<div class="row">
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
-							<img src="images/logo_w.png" alt="logo bottom" class="logo-bottom">
+							<img src="../../../DuAn1/assets/images/logo_w.png" alt="logo bottom" class="logo-bottom">
 							<div class="spacer-20"></div>
 							<p>Dịch vụ chăm sóc thú cưng cao cấp, vì thú cưng của bạn xứng đáng nhất.</p>
 							<div class="spacer-20"></div>
-							<img src="images/payment.png" alt="">
+							<img src="../../../DuAn1/assets/images/payment.png" alt="">
 						</div>
 					</div>
 
@@ -86,16 +86,16 @@
 	</div>
 	
 	<!-- JS VENDOR -->
-	<script src="js/vendor/jquery.min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="js/vendor/owl.carousel.js"></script>
-	<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+	<script src="../../../DuAn1/assets/js/vendor/jquery.min.js"></script>
+	<script src="../../../DuAn1/assets/js/vendor/bootstrap.min.js"></script>
+	<script src="../../../DuAn1/assets/js/vendor/owl.carousel.js"></script>
+	<script src="../../../DuAn1/assets/js/vendor/jquery.magnific-popup.min.js"></script>
 
 	<!-- SENDMAIL -->
-	<script src="js/vendor/validator.min.js"></script>
-	<script src="js/vendor/form-scripts.js"></script>
+	<script src="../../../DuAn1/assets/js/vendor/validator.min.js"></script>
+	<script src="../../../DuAn1/assets/js/vendor/form-scripts.js"></script>
 
-	<script src="js/script.js"></script>
+	<script src="../../../DuAn1/assets/js/script.js"></script>
 
 </body>
 
