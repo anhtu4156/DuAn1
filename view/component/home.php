@@ -1,19 +1,58 @@
-<?php
-include 'view/component/banner.php';
-?>
-<!-- ABOUT -->
-<div class="section bgi-left bgi-hide-xs" data-background="../../../DuAn1/assets/images/about.jpg">
+<!-- BANNER -->
+<div id="oc-fullslider" class="banner owl-carousel">
+        <div class="owl-slide">
+        	<div class="item">
+	            <img src="assets/images/home01.jpg" alt="Slider">
+	            <div class="container d-flex align-items-center">
+	            	<div class="wrap-caption">
+		                <h1 class="caption-heading">We Provide The Best<br>Care For Your Pets</h1>
+		                <p class="">The best pets clinic at melbourne, more than 20.000+ customers happy.</p>
+		                <a href="#" class="btn btn-primary">More About Us</a>
+		            </div>  
+	            </div>
+        	</div>
+        </div>
+        <div class="owl-slide">
+        	<div class="item">
+	            <img src="assets/images/home02.jpg" alt="Slider">
+	            <div class="container d-flex align-items-center">
+	            	<div class="wrap-caption">
+		                <h1 class="caption-heading">We Provide The Best<br>Care For Your Pets</h1>
+		                <p class="">The best pets clinic at melbourne, more than 20.000+ customers happy.</p>
+		                <a href="#" class="btn btn-primary">More About Us</a>
+		            </div>  
+	            </div>
+        	</div>  
+        </div>
+        <div class="owl-slide">
+        	<div class="item">
+	            <img src="assets/images/home03.jpg" alt="Slider">
+	            <div class="container d-flex align-items-center">
+	            	<div class="wrap-caption">
+		                <h1 class="caption-heading text-primary">We Provide The Best<br>Care For Your Pets</h1>
+		                <p class="text-black">The best pets clinic at melbourne, more than 20.000+ customers happy.</p>
+		                <a href="#" class="btn btn-primary">More About Us</a>
+		            </div>  
+	            </div>
+        	</div>  
+        </div>
+    </div>
+
+	<div class="clearfix"></div>
+
+	<!-- ABOUT -->
+	<div class="section bgi-left bgi-hide-xs" data-background="assets/images/about.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-md-8 offset-md-4">
 
 						<h2 class="section-heading text-primary no-after mb-4">
-							Chào Mừng Quý Khách Đến Với Dịch Vụ Chăm Sóc Thú Cưng 
+							Welcome to Pets Care
 						</h2>
-						<p class="subheading mb-4">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+						<p class="subheading mb-4">Your pet's health and well-being are our top priority.</p>
 
-						<p>Chào mừng bạn đến với Pest shop không chỉ là một cửa hàng, mà là mái nhà của những chú cún, mèo và thú cưng yêu quý! Tại đây, chúng tôi không chỉ cung cấp các dịch vụ chăm sóc chất lượng mà còn mang đến không khí ấm áp và yêu thương cho thú cưng của bạn.</p> 
+						<p>Quisque ut dolor gravida, placerat libero vel, euismod. Ut enim ad minim veniam, quis nostrud exercitation. Quam temere in vitiis, legem sancimus haerentia. Pellentesque habitant morbi tristique senectus et netus.</p> 
 
 						
 						<div class="row mt-5">
@@ -24,8 +63,8 @@ include 'view/component/banner.php';
 										<i class="fa fa-scissors"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Cắt Tỉa</h3>
-										Dịch vụ cắt tỉa của chúng tôi giúp thú cưng của bạn luôn trông sạch sẽ, xinh đẹp và thoải mái.
+										<h3 class="text-secondary">Pet Grooming</h3>
+										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
 									</div>
 								</div>
 							</div>
@@ -36,8 +75,8 @@ include 'view/component/banner.php';
 										<i class="fa fa-home"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Khách Sạn Thú Cưng</h3>
-										Đội ngũ chăm sóc thú cưng chuyên nghiệp của chúng tôi sẽ đảm bảo rằng thú cưng của bạn được quan tâm và yêu thương như là một phần của gia đình.
+										<h3 class="text-secondary">Pet Hotel</h3>
+										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
 									</div>
 								</div>
 							</div>
@@ -48,8 +87,8 @@ include 'view/component/banner.php';
 										<i class="fa fa-shield"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Tiêm Phòng</h3>
-										Dịch vụ tiêm phòng của chúng tôi mang lại bảo vệ toàn diện, giúp thú cưng của bạn chống lại các bệnh truyền nhiễm nguy hiểm.
+										<h3 class="text-secondary">Vaccination</h3>
+										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
 									</div>
 								</div>
 							</div>
@@ -60,8 +99,8 @@ include 'view/component/banner.php';
 										<i class="fa fa-medkit"></i>
 									</div>
 									<div class="info-text">
-										<h3 class="text-secondary">Chăm Sóc Thú Cưng</h3>
-										Dịch vụ chăm sóc toàn diện từ dinh dưỡng đến y tế, chúng tôi đảm bảo thú cưng của bạn có một cuộc sống khỏe mạnh và hạnh phúc.
+										<h3 class="text-secondary">Pet Care</h3>
+										Dolor sit amet, dolor gravida, placerat liberolorem ipsum dolor consectetur adipiscing elit, sed do eiusmod.
 									</div>
 								</div>
 							</div>
@@ -75,7 +114,7 @@ include 'view/component/banner.php';
 	</div>	
 
 	<!-- FUN FACT -->
-	<div class="bgi-cover-center" data-background="../../../DuAn1/assets/images/statistic_bg.jpg">
+	<div class="bgi-cover-center" data-background="assets/images/statistic_bg.jpg">
 		<div class="content-wrap">
 			<div class="container">
 
@@ -89,7 +128,7 @@ include 'view/component/banner.php';
 							</div>
 							<div class="body-content">
 								<h2>2700</h2>
-								<p class="uk16 text-primary">Số Người Hài Lòng</p>
+								<p class="uk16 text-primary">Happy Customers</p>
 							</div>
 						</div>
 					</div>
@@ -102,7 +141,7 @@ include 'view/component/banner.php';
 							</div>
 							<div class="body-content">
 								<h2>4520</h2>
-								<p class="uk16 text-primary">Lượng Thú Cưng Sử Dụng Dịch Vụ</p>
+								<p class="uk16 text-primary">Pets Cure</p>
 							</div>
 						</div>
 					</div>
@@ -115,7 +154,7 @@ include 'view/component/banner.php';
 							</div>
 							<div class="body-content">
 								<h2>15</h2>
-								<p class="uk16 text-primary">Đội Ngũ Bác Sỹ</p>
+								<p class="uk16 text-primary">Team Doctor</p>
 							</div>
 						</div>
 					</div>
@@ -128,7 +167,7 @@ include 'view/component/banner.php';
 							</div>
 							<div class="body-content">
 								<h2>21</h2>
-								<p class="uk16 text-primary">Khách Hàng Thân Thiết</p>
+								<p class="uk16 text-primary">Awards Winner</p>
 							</div>
 						</div>
 					</div>
@@ -146,9 +185,9 @@ include 'view/component/banner.php';
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Dịch Vụ Của Chúng Tôi
+							Our Services
 						</h2>
-						<p class="subheading text-center">Chúng tôi không chỉ chữa bệnh, mà còn chăm sóc tình thương. Dịch vụ thú y với sự quan tâm đặc biệt cho thú cưng của bạn.</p>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
 				</div>
 
@@ -158,7 +197,7 @@ include 'view/component/banner.php';
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="../../../DuAn1/assets/images/services01.jpg" alt="" class="img-fluid"></a>
+								<a href="services-single.html"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
 								<h3 class="title"><a href="services-single.html">Pet Barber Services</a></h3>
@@ -171,7 +210,7 @@ include 'view/component/banner.php';
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="../../../DuAn1/assets/images/services02.jpg" alt="" class="img-fluid"></a>
+								<a href="services-single.html"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
 								<h3 class="title"><a href="services-single.html">Vaccination Supply</a></h3>
@@ -184,7 +223,7 @@ include 'view/component/banner.php';
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="../../../DuAn1/assets/images/services03.jpg" alt="" class="img-fluid"></a>
+								<a href="services-single.html"><img src="assets/images/services03.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
 								<h3 class="title"><a href="services-single.html">Pet Analysist</a></h3>
@@ -197,7 +236,7 @@ include 'view/component/banner.php';
 
 				<div class="row">
 					<div class="col-sm-12 col-md-12 text-center">
-						<a href="#" class="btn btn-secondary mt-5">Xem Thêm</a>
+						<a href="#" class="btn btn-secondary mt-5">Check More</a>
 					</div>
 				</div>
 
@@ -206,7 +245,7 @@ include 'view/component/banner.php';
 	</div>
 
 	<!-- DO PETS -->
-	<div class="section bgi-cover-center" data-background="../../../DuAn1/assets/images/home02.jpg">
+	<div class="section bgi-cover-center" data-background="assets/images/home02.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				
@@ -214,19 +253,19 @@ include 'view/component/banner.php';
 					<div class="col-sm-6 col-md-6">
 						<div class="wrap-form">
 							<h2 class="text-primary mb-2">
-								Thú Cưng Của Bạn Có Bị Dị Ứng Không ?
+								Do Pets Have Allergies?
 							</h2>
-							<p class="uk21 text-white">Chúng tôi là phòng khám thú cưng, nỗi đau là điều quan trọng, sau đó là dịch vụ khách hàng, nhưng đồng thời cũng có rất nhiều công việc và nỗi đau</p>
+							<p class="uk21 text-white">We are pets clinic dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 							
-							<p class="text-white">Bất cứ ai đang mang thai với nỗi đau, hãy đầu tư miễn phí hoặc Euismod. Để đi đến chi tiết nhỏ nhất, bài tập của chúng ta là gì? Làm sao bừa bãi trong tệ nạn, chúng ta xử phạt tuân thủ luật pháp. Con cái sống trong tuổi già và cháu.</p>
+							<p class="text-white">Quisque ut dolor gravida, placerat libero vel, euismod. Ut enim ad minim veniam, quis nostrud exercitation. Quam temere in vitiis, legem sancimus haerentia. Pellentesque habitant morbi tristique senectus et netus.</p>
 							<div class="spacer-30"></div>
-							<a href="#" class="btn btn-primary">Xem Thêm</a>
+							<a href="#" class="btn btn-primary">Learn More</a>
 							<div class="spacer-30"></div>
 							<div class="row">
 								<div class="col-sm-8 col-md-8">
 									<div class="img-video">
 										<a href="https://www.youtube.com/watch?v=vNDrLjOmUY4" class="popup-youtube play-video"><i class="fa fa-play fa-2x"></i></a>
-										<img src="../../../DuAn1/assets/images/home01.jpg" alt="" class="shadow img-fluid">
+										<img src="assets/images/home01.jpg" alt="" class="shadow img-fluid">
 										<div class="ripple"></div>
 									</div>
 								</div>
@@ -246,9 +285,9 @@ include 'view/component/banner.php';
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Gặp Gỡ Thú Y
+							Meet Veterinary
 						</h2>
-						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
 				</div>
 
@@ -258,7 +297,7 @@ include 'view/component/banner.php';
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-team-1">
 							<div class="media">
-								<img src="../../../DuAn1/assets/images/vet05.jpg" alt="" class="img-fluid">
+								<img src="assets/images/vet05.jpg" alt="" class="img-fluid">
 								<div class="sosmed-icon">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -276,7 +315,7 @@ include 'view/component/banner.php';
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-team-1">
 							<div class="media">
-								<img src="../../../DuAn1/assets/images/vet06.jpg" alt="" class="img-fluid">
+								<img src="assets/images/vet06.jpg" alt="" class="img-fluid">
 								<div class="sosmed-icon">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -294,7 +333,7 @@ include 'view/component/banner.php';
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-team-1">
 							<div class="media">
-								<img src="../../../DuAn1/assets/images/vet07.jpg" alt="" class="img-fluid">
+								<img src="assets/images/vet07.jpg" alt="" class="img-fluid">
 								<div class="sosmed-icon">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -312,7 +351,7 @@ include 'view/component/banner.php';
 
 				<div class="row">
 					<div class="col-sm-12 col-md-12 text-center">
-						<a href="#" class="btn btn-secondary mt-5">Xem Thêm</a>
+						<a href="#" class="btn btn-secondary mt-5">Check More</a>
 					</div>
 				</div>
 
@@ -321,14 +360,14 @@ include 'view/component/banner.php';
 	</div>
 
 	<!-- HAPPY CLIENTS -->
-	<div class="section bgi-cover-center" data-background="../../../DuAn1/assets/images/testimonials_bg.jpg">
+	<div class="section bgi-cover-center" data-background="assets/images/testimonials_bg.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				<div class="row">
 
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary mb-4">
-							Đánh Giá Của Khách Hàng
+							What Customer's Say
 						</h2>
 						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
@@ -342,7 +381,7 @@ include 'view/component/banner.php';
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
-											<img src="../../../DuAn1/assets/images/team-1.jpg" alt="" class="rounded-circle">
+											<img src="assets/images/team-1.jpg" alt="" class="rounded-circle">
 										</div>
 										<blockquote class="text-black">
 										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
@@ -358,7 +397,7 @@ include 'view/component/banner.php';
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
-											<img src="../../../DuAn1/assets/images/team-2.jpg" alt="" class="rounded-circle">
+											<img src="assets/images/team-2.jpg" alt="" class="rounded-circle">
 										</div>
 										<blockquote class="text-black">
 										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
@@ -374,7 +413,7 @@ include 'view/component/banner.php';
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
-											<img src="../../../DuAn1/assets/images/team-3.jpg" alt="" class="rounded-circle">
+											<img src="assets/images/team-3.jpg" alt="" class="rounded-circle">
 										</div>
 										<blockquote class="text-black">
 										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
@@ -390,7 +429,7 @@ include 'view/component/banner.php';
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
-											<img src="../../../DuAn1/assets/images/team-4.jpg" alt="" class="rounded-circle">
+											<img src="assets/images/team-4.jpg" alt="" class="rounded-circle">
 										</div>
 										<blockquote class="text-black">
 										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
@@ -430,7 +469,7 @@ include 'view/component/banner.php';
 						<div class="rs-news-1 mb-5">
 							<div class="media">
 								<a href="blog-single.html">
-									<img src="../../../DuAn1/assets/images/blog-img-1.jpg" alt="" class="img-fluid">
+									<img src="assets/images/blog-img-1.jpg" alt="" class="img-fluid">
 								</a>
 							</div>
 							<div class="body">
@@ -446,7 +485,7 @@ include 'view/component/banner.php';
 						<div class="rs-news-1 mb-5">
 							<div class="media">
 								<a href="blog-single.html">
-									<img src="../../../DuAn1/assets/images/blog-img-2.jpg" alt="" class="img-fluid">
+									<img src="assets/images/blog-img-2.jpg" alt="" class="img-fluid">
 								</a>
 							</div>
 							<div class="body">
@@ -462,7 +501,7 @@ include 'view/component/banner.php';
 						<div class="rs-news-1 mb-5">
 							<div class="media">
 								<a href="blog-single.html">
-									<img src="../../../DuAn1/assets/images/blog-img-3.jpg" alt="" class="img-fluid">
+									<img src="assets/images/blog-img-3.jpg" alt="" class="img-fluid">
 								</a>
 							</div>
 							<div class="body">
@@ -482,19 +521,19 @@ include 'view/component/banner.php';
 	</div>
 
 	<!-- CTA -->
-	<div class="section bgi-cover-center" data-background="../../../DuAn1/assets/images/pattern_bg.jpg">
+	<div class="section bgi-cover-center" data-background="assets/images/pattern_bg.jpg">
 		<div class="content-wrap py-0">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-sm-6 col-md-6">
 						<div class="img-cta">
-							<img src="../../../DuAn1/assets/images/product_promo.png" alt="" class="img-fluid">
+							<img src="assets/images/product_promo.png" alt="" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-sm-6 col-md-6">
 						<div class="text-white mt-5">
 							<h1 class="section-heading no-after text-white">
-								Ưu Đãi Đặc Biệt Trong Tuần Này
+								SPECIAL OFFER THIS WEEK!
 							</h1>
 							<p class="uk21 text-white mb-4">Get Discount 10% Off Pet Food.</p>
 							<p class="mb-5">Sed orci dolor, pulvinar nec luctus a, malesuada ac nisl. Aliquam eleifend et dui et suscipit. Nam semper accumsan ante, ac dapibus urna dapibus et.</p>
@@ -518,47 +557,47 @@ include 'view/component/banner.php';
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Thành Tựu Của Chúng Tôi
+							Our Awards
 						</h2>
-						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-6 col-sm-4 col-md-2">
 						<div class="client-img">
 							<a href="#">
-								<img src="../../../DuAn1/assets/images/client1.png" alt="" class="img-fluid">
+								<img src="assets/images/client1.png" alt="" class="img-fluid">
 							</a>
 						</div>
 					</div>
 
 					<div class="col-6 col-sm-4 col-md-2">
 						<div class="client-img">
-							<a href="#"><img src="../../../DuAn1/assets/images/client2.png" alt="" class="img-fluid"></a>
+							<a href="#"><img src="assets/images/client2.png" alt="" class="img-fluid"></a>
 						</div>
 					</div>
 
 					<div class="col-6 col-sm-4 col-md-2">
 						<div class="client-img">
-							<a href="#"><img src="../../../DuAn1/assets/images/client3.png" alt="" class="img-fluid"></a>
+							<a href="#"><img src="assets/images/client3.png" alt="" class="img-fluid"></a>
 						</div>
 					</div>
 
 					<div class="col-6 col-sm-4 col-md-2">
 						<div class="client-img">
-							<a href="#"><img src="../../../DuAn1/assets/images/client4.png" alt="" class="img-fluid"></a>
+							<a href="#"><img src="assets/images/client4.png" alt="" class="img-fluid"></a>
 						</div>
 					</div>
 
 					<div class="col-6 col-sm-4 col-md-2">
 						<div class="client-img">
-							<a href="#"><img src="../../../DuAn1/assets/images/client5.png" alt="" class="img-fluid"></a>
+							<a href="#"><img src="assets/images/client5.png" alt="" class="img-fluid"></a>
 						</div>
 					</div>
 
 					<div class="col-6 col-sm-4 col-md-2">
 						<div class="client-img">
-							<a href="#"><img src="../../../DuAn1/assets/images/client6.png" alt="" class="img-fluid"></a>
+							<a href="#"><img src="assets/images/client6.png" alt="" class="img-fluid"></a>
 						</div>
 					</div>
 					
@@ -568,18 +607,18 @@ include 'view/component/banner.php';
 	</div>
 
 	<!-- CTA -->
-	<div class="section cta bgi-cover-center" data-background="../../../DuAn1/assets/images/pattern_bg.jpg">
+	<div class="section cta bgi-cover-center" data-background="assets/images/pattern_bg.jpg">
 		<div class="content-wrap py-5">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-sm-12 col-md-12">
 						<div class="cta-1">
 			              	<div class="body-text text-white mb-3">
-			                	<h3 class="my-1">Giảm ngay 30% cho lần hẹn đầu tiên!</h3>
-			                	<p class="uk18 mb-0">Hãy liên hệ với chúng tôi ngay bây giờ và đặt lịch ngay hôm nay</p>
+			                	<h3 class="my-1">Get 30% off for the First Time Appointment!</h3>
+			                	<p class="uk18 mb-0">Contact us now and make an appointment today</p>
 			              	</div>
 			              	<div class="body-action">
-			                	<a href="#" class="btn btn-secondary">Đặt Lịch Ngay</a>
+			                	<a href="#" class="btn btn-secondary">Appointment Now!</a>
 			              	</div>
 			            </div>
 					</div>

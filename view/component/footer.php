@@ -1,33 +1,35 @@
 <!-- FOOTER SECTION -->
-<div class="footer bg-overlay-secondary" data-background="../../../DuAn1/assets/images/statistic_bg.jpg">
+<div class="footer bg-overlay-secondary" data-background="assets/images/statistic_bg.jpg">
 		<div class="content-wrap">
 			<div class="container">
 				
 				<div class="row">
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
-							<img src="../../../DuAn1/assets/images/logo_w.png" alt="logo bottom" class="logo-bottom">
+							<img src="assets/images/logo_w.png" alt="logo bottom" class="logo-bottom">
 							<div class="spacer-20"></div>
-							<p>Dịch vụ chăm sóc thú cưng cao cấp, vì thú cưng của bạn xứng đáng nhất.</p>
+							<p>We are pets center at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
 							<div class="spacer-20"></div>
-							<img src="../../../DuAn1/assets/images/payment.png" alt="">
+							<img src="assets/images/payment.png" alt="">
 						</div>
 					</div>
 
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
 							<div class="footer-title">
-								Giờ Mở Cửa
+								Opening Hours
 							</div>
-							<p>Chúng tôi luôn mở cửa và phục vụ khách hàng vào tất cả các ngày trong tuần. </p>
+							<p>Our support available to help you 24 hours a day. We provide our best.</p>
 							<ul class="list">
 								<li>
-									T2- T7 : 08.00 am - 22.00 pm
+									Mon - Fri : 08.00 am - 20.00 pm
 								</li>
 								<li>
-									Chủ Nhật : 09.00 am - 22.00 pm
+									Saturday : 09.00 am - 20.00 pm
 								</li>
-								
+								<li>
+									Sunday :  We Are Closed
+								</li>
 							</ul>
 
 						</div>
@@ -36,27 +38,27 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="footer-item">
 							<div class="footer-title">
-								Thông Tin Liên Hệ
+								Contact Info
 							</div>
-							<p>Bạn Có Thể Liên Hệ Với Tôi Qua</p>
+							<p>Lit sed The Best in dolor sit amet consectetur</p>
 							<ul class="list-info">
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-map-marker"></span>
 									</div>
-									<div class="info-text">Số 132 Trịnh Văn Bô,Nam Từ Liêm, Hà Nội</div> 
+									<div class="info-text">99 S.t Jomblo Park Pekanbaru 28292. Indonesia</div> 
 								</li>
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-phone"></span>
 									</div>
-									<div class="info-text">1900 1558</div>
+									<div class="info-text">(0761) 654-123987</div>
 								</li>
 								<li>
 									<div class="info-icon text-primary">
 										<span class="fa fa-envelope"></span>
 									</div>
-									<div class="info-text">Pestshop@gmail.com</div>
+									<div class="info-text">mail@hellopets.com</div>
 								</li>
 							</ul>
 						</div>
@@ -69,7 +71,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-md-6">
-						<p class="ftex">&copy; 2023 Coppy Right By  <span class="text-primary">Team 12</span></p> 
+						<p class="ftex">&copy; 2019 Your Company. All Rights Reserved. Designed By <span class="text-primary">Rometheme</span></p> 
 					</div>
 					<div class="col-sm-6 col-md-6">
 						<div class="sosmed-icon d-inline-flex float-right">
@@ -86,18 +88,18 @@
 	</div>
 	
 	<!-- JS VENDOR -->
-	<script src="../../../DuAn1/assets/js/vendor/jquery.min.js"></script>
-	<script src="../../../DuAn1/assets/js/vendor/bootstrap.min.js"></script>
-	<script src="../../../DuAn1/assets/js/vendor/owl.carousel.js"></script>
-	<script src="../../../DuAn1/assets/js/vendor/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/vendor/jquery.min.js"></script>
+	<script src="assets/js/vendor/bootstrap.min.js"></script>
+	<script src="assets/js/vendor/owl.carousel.js"></script>
+	<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
 
 	<!-- SENDMAIL -->
-	<script src="../../../DuAn1/assets/js/vendor/validator.min.js"></script>
-	<script src="../../../DuAn1/assets/js/vendor/form-scripts.js"></script>
+	<script src="assets/js/vendor/validator.min.js"></script>
+	<script src="assets/js/vendor/form-scripts.js"></script>
 
-	<script src="../../../DuAn1/assets/js/script.js"></script>
+	<script src="assets/js/script.js"></script>
 
 </body>
 
-<!-- Mirrored from html.rometheme.pro/pets/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Nov 2023 14:35:03 GMT -->
+<!-- Mirrored from html.rometheme.pro/pets/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Nov 2023 14:35:22 GMT -->
 </html>
