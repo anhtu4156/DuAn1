@@ -1,9 +1,9 @@
 var map;
       var peta = document.getElementById('maps');
 
-      var myLat = '-7.452278',
-		myLng = '112.708992',
-		myMarkerx = 'images/cd-icon-location.png';
+      var myLat = '105.74724899365772',
+		myLng = '21.038166754431977',
+		myMarkerx = '../images/cd-icon-location.png';
 	
 	
 		var latitude = myLat,
