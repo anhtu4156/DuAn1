@@ -119,19 +119,19 @@
 			        <div class="collapse navbar-collapse" id="navbarNavDropdown">
 			            <ul class="navbar-nav">
 			            	<li class="nav-item dropdown dmenu">
-			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			                    <a class="nav-link dropdown-toggle" href="index.php?act=" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						          TRANG CHỦ
 						        </a>
 			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="index.html">DỊCH VỤ THÚ CƯNG</a>
-	          						<a class="dropdown-item" href="pets-shop.html">CỬA HÀNG THÚ CƯNG</a>
+			                    	<a class="dropdown-item" href="index.php?act=">DỊCH VỤ THÚ CƯNG</a>
+	          						<a class="dropdown-item" href="index.php?act=shop">CỬA HÀNG THÚ CƯNG</a>
 							    </div>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="about-us.html">GIỚI THIỆU</a>
+			                    <a class="nav-link" href="index.php?act=about">GIỚI THIỆU</a>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="services.html">DỊCH VỤ</a>
+			                    <a class="nav-link" href="index.php?act=service">DỊCH VỤ</a>
 			                </li>
 			                <!-- <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -156,13 +156,13 @@
 							    </div>
 			                </li> -->
 			                <li class="nav-item">
-			                    <a class="nav-link" href="gallery.html">GALLERY</a>
+			                    <a class="nav-link" href="index.php?act=gallery">THƯ VIỆN</a>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="blog.html">BLOG</a>
+			                    <a class="nav-link" href="index.php?act=blog">BLOG</a>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="shop.html">SHOP</a>
+			                    <a class="nav-link" href="index.php?act=shop">SHOP</a>
 			                </li>
 			                <!-- <li class="nav-item dropdown dmenu">
 			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -184,11 +184,11 @@
 							    </div>
 			                </li> -->
 			                <li class="nav-item">
-			                    <a class="nav-link" href="contact.html">CONTACT</a>
+			                    <a class="nav-link" href="index.php?act=lienhe">LIÊN HỆ</a>
 			                </li>
 
 			            </ul>
-			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">GET AN APPOINTMENT</a>
+			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
 			        </div>
 			    </nav> <!-- -->
 			

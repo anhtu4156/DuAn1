@@ -49,7 +49,7 @@
 
 					</div>
 					<div class="col-12 col-sm-12 col-md-8">
-						<img src="../../images/services-img-detail.jpg" alt="" class="img-fluid">
+						<img src="assets/images/services-img-detail.jpg" alt="" class="img-fluid">
 						<h2 class="section-heading text-primary no-after mb-4">
 							Pet Barber Services
 						</h2>
@@ -122,7 +122,7 @@
 
 
 	<!-- CTA -->
-	<div class="section cta bgi-cover-center" data-background="../../images/pattern_bg.jpg">
+	<div class="section cta bgi-cover-center" data-background="assets/images/pattern_bg.jpg">
 		<div class="content-wrap py-5">
 			<div class="container">
 				<div class="row align-items-center">

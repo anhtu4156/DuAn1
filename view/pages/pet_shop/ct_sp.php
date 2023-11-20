@@ -4,7 +4,7 @@
 			<div class="container">
 			    <nav aria-label="breadcrumb">
 				  <ol class="breadcrumb ">
-				    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+				    <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
 				    <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm</li>
 				  </ol>
 				</nav>					
@@ -22,20 +22,20 @@
 					<div class="col-12 col-sm-6 col-md-6">
 						
 						<div class="media-detail">
-							<img src="../../images/shop-img-detail.jpg" alt="" class="img-fluid">
+							<img src="assets/images/shop-img-detail.jpg" alt="" class="img-fluid">
 						</div>
 						<div class="row mt-3">
 							<div class="col">
-								<a href="#"><img src="../../images/shop-img-5.jpg" alt="" class="border-img img-fluid"></a>
+								<a href="#"><img src="assets/images/shop-img-5.jpg" alt="" class="border-img img-fluid"></a>
 							</div>
 							<div class="col">
-								<a href="#"><img src="../../images/shop-img-6.jpg" alt="" class="border-img img-fluid"></a>
+								<a href="#"><img src="assets/images/shop-img-6.jpg" alt="" class="border-img img-fluid"></a>
 							</div>
 							<div class="col">
-								<a href="#"><img src="../../images/shop-img-7.jpg" alt="" class="border-img img-fluid"></a>
+								<a href="#"><img src="assets/images/shop-img-7.jpg" alt="" class="border-img img-fluid"></a>
 							</div>
 							<div class="col">
-								<a href="#"><img src="../../images/shop-img-2.jpg" alt="" class="border-img img-fluid"></a>
+								<a href="#"><img src="assets/images/shop-img-2.jpg" alt="" class="border-img img-fluid"></a>
 							</div>
 						</div>
 						
@@ -124,7 +124,7 @@
 
 									<!-- Item 1 -->
 									<div class="media media-review">
-									  <img src="../../images/team-1.jpg" alt="" class="img-fluid mr-3">
+									  <img src="assets/images/team-1.jpg" alt="" class="img-fluid mr-3">
 									  <div class="media-body">
 									    <div class="rating d-inline">
 												<span></span>
@@ -141,7 +141,7 @@
 									
 									<!-- Item 2 -->
 									<div class="media media-review">
-									  <img src="../../images/team-2.jpg" alt="" class="img-fluid mr-3">
+									  <img src="assets/images/team-2.jpg" alt="" class="img-fluid mr-3">
 									  <div class="media-body">
 									    <div class="rating d-inline">
 												<span></span>
@@ -257,7 +257,7 @@
 								<div class="col-sm-3 col-md-3">
 									<div class="rs-shop-box mb-5">
 										<div class="media">
-											<a href="shop-single.html"><img src="../../images/shop-img-1.jpg" alt="" class="img-fluid"></a>
+											<a href="shop-single.html"><img src="assets/images/shop-img-1.jpg" alt="" class="img-fluid"></a>
 										</div>
 										<div class="body-text">
 											<h4 class="title"><a href="shop-single.html">Cat & Small Dog Carrier</a></h4>
@@ -279,7 +279,7 @@
 								<div class="col-sm-3 col-md-3">
 									<div class="rs-shop-box mb-5">
 										<div class="media">
-											<a href="shop-single.html"><img src="../../images/shop-img-2.jpg" alt="" class="img-fluid"></a>
+											<a href="shop-single.html"><img src="assets/images/shop-img-2.jpg" alt="" class="img-fluid"></a>
 										</div>
 										<div class="body-text">
 											<h4 class="title"><a href="shop-single.html">Traveller Pet Carrier</a></h4>
@@ -302,7 +302,7 @@
 								<div class="col-sm-3 col-md-3">
 									<div class="rs-shop-box mb-5">
 										<div class="media">
-											<a href="shop-single.html"><img src="../../images/shop-img-3.jpg" alt="" class="img-fluid"></a>
+											<a href="shop-single.html"><img src="assets/images/shop-img-3.jpg" alt="" class="img-fluid"></a>
 										</div>
 										<div class="body-text">
 											<h4 class="title"><a href="shop-single.html">Leather Belt Pink</a></h4>
@@ -325,7 +325,7 @@
 								<div class="col-sm-3 col-md-3">
 									<div class="rs-shop-box mb-5">
 										<div class="media">
-											<a href="shop-single.html"><img src="../../images/shop-img-4.jpg" alt="" class="img-fluid"></a>
+											<a href="shop-single.html"><img src="assets/images/shop-img-4.jpg" alt="" class="img-fluid"></a>
 										</div>
 										<div class="body-text">
 											<h4 class="title"><a href="shop-single.html">Healthy Food</a></h4>
@@ -359,7 +359,7 @@
 
 
 	<!-- CTA -->
-	<div class="section cta bgi-cover-center" data-background="../../images/pattern_bg.jpg">
+	<div class="section cta bgi-cover-center" data-background="assets/images/pattern_bg.jpg">
 		<div class="content-wrap py-5">
 			<div class="container">
 				<div class="row align-items-center">

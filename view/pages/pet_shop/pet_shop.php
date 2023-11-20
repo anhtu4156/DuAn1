@@ -52,7 +52,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="rs-shop-box mb-5">
 							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-1.jpg" alt="" class="img-fluid"></a>
+								<a href="shop-single.html"><img src="../../../assets/images/shop-img-1.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
 								<h4 class="title"><a href="shop-single.html">Cat & Small Dog Carrier</a></h4>
@@ -73,7 +73,7 @@
 					<div class="col-sm-3 col-md-3">
 						<div class="rs-shop-box mb-5">
 							<div class="media">
-								<a href="shop-single.html"><img src="../../images/shop-img-2.jpg" alt="" class="img-fluid"></a>
+								<a href="shop-single.html"><img src="../../../assets/images/shop-img-2.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
 								<h4 class="title"><a href="shop-single.html">Traveller Pet Carrier</a></h4>

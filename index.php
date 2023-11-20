@@ -19,16 +19,55 @@
                 
                 break;
 ////////////////////////////////////////////////////////////////
-            case "":
-                
+// about us
+////////////////////////////////////////////////////////////////
+            case "about":
+                include "view/pages/about/about_us.php";
+                break;
+            case "our_staff":
+                include "view/pages/our_staff/our_staff.php";
+                break;
+            case "ct_our_staff":
+                include "view/pages/our_staff/ct_our_staff.php";
                 break;
 ////////////////////////////////////////////////////////////////
-            case "":
-                
+// sevice
+////////////////////////////////////////////////////////////////
+            case "service":
+                include "view/pages/service/service.php";
+                break;
+            case "ct_service":
+                include "view/pages/service/ct_service.php";
+                break;
+////////////////////////////////////////////////////////////////
+// gallery
+////////////////////////////////////////////////////////////////
+            case "gallery":
+                include "view/pages/gallery/gallery.php";
+                break;
+////////////////////////////////////////////////////////////////
+// blogs
+////////////////////////////////////////////////////////////////
+            case "ct_blog":
+                include "view/pages/blog/ct_blog.php";
+                break;
+            case "blog":
+                include "view/pages/blog/blog.php";
+                break;
+////////////////////////////////////////////////////////////////
+// shop và sản phẩm
+////////////////////////////////////////////////////////////////
+            case "shop":
+                include "view/pages/pet_shop/cua_hang.php";
+                break;
+            case "ct_sp":
+                include "view/pages/pet_shop/ct_sp.php";
                 break;
 ///////////////////////////////////////////////////////////////////
-            case "": 
-                
+// liên hệ
+///////////////////////////////////////////////////////////////////
+            case "lienhe": 
+                include "view/pages/about/contact.php";
                 break;
 ///////////////////////////////////////////////////////////
             case "":

@@ -23,10 +23,10 @@
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="images/services01.jpg" alt="" class="img-fluid"></a>
+								<a href="index.php?act=ct_service"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Pet Barber Services</a></h3>
+								<h3 class="title"><a href="index.php?act=ct_service">Pet Barber Services</a></h3>
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
@@ -36,10 +36,10 @@
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="images/services02.jpg" alt="" class="img-fluid"></a>
+								<a href="index.php?act=ct_service"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Vaccination Supply</a></h3>
+								<h3 class="title"><a href="index.php?act=ct_service">Vaccination Supply</a></h3>
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
@@ -49,10 +49,10 @@
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="images/services03.jpg" alt="" class="img-fluid"></a>
+								<a href="index.php?act=ct_service"><img src="assets/images/services03.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Pet Analysist</a></h3>
+								<h3 class="title"><a href="index.php?act=ct_service">Pet Analysist</a></h3>
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
@@ -62,10 +62,10 @@
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="images/services04.jpg" alt="" class="img-fluid"></a>
+								<a href="index.php?act=ct_service"><img src="assets/images/services04.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Preventive Medicine</a></h3>
+								<h3 class="title"><a href="index.php?act=ct_service">Preventive Medicine</a></h3>
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
@@ -75,10 +75,10 @@
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="images/services05.jpg" alt="" class="img-fluid"></a>
+								<a href="index.php?act=ct_service"><img src="assets/images/services05.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Pet Diagnostics</a></h3>
+								<h3 class="title"><a href="index.php?act=ct_service">Pet Diagnostics</a></h3>
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
@@ -88,10 +88,10 @@
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
-								<a href="services-single.html"><img src="images/services06.jpg" alt="" class="img-fluid"></a>
+								<a href="index.php?act=ct_service"><img src="assets/images/services06.jpg" alt="" class="img-fluid"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Patient Departement</a></h3>
+								<h3 class="title"><a href="index.php?act=ct_service">Patient Departement</a></h3>
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
@@ -104,7 +104,7 @@
 	</div>
 
 	<!-- CTA -->
-	<div class="section cta bgi-cover-center" data-background="images/pattern_bg.jpg">
+	<div class="section cta bgi-cover-center" data-background="assets/images/pattern_bg.jpg">
 		<div class="content-wrap py-5">
 			<div class="container">
 				<div class="row align-items-center">

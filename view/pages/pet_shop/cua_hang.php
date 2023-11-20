@@ -4,7 +4,7 @@
 			<div class="container">
 			    <nav aria-label="breadcrumb">
 				  <ol class="breadcrumb ">
-				    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+				    <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
 				    <li class="breadcrumb-item active" aria-current="page">Cửa hàng	</li>
 				  </ol>
 				</nav>					
@@ -41,30 +41,30 @@
 								<!-- Item 1 -->
 								<div class="shop-item-sidebar">
 									<div class="media">
-										<img src="../../images/shop-img-3.jpg" alt="" class="img-fluid">
+									<img src="assets/images/shop-img-3.jpg" alt="" class="img-fluid">
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Leather Belt</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Leather Belt</a></h4>
 										<div class="price">$12</div>
 									</div>
 								</div>
 								<!-- Item 2 -->
 								<div class="shop-item-sidebar">
 									<div class="media">
-										<img src="../../images/shop-img-2.jpg" alt="" class="img-fluid">
+										<img src="assets/images/shop-img-2.jpg" alt="" class="img-fluid">
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Traveller Carrier</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Traveller Carrier</a></h4>
 										<div class="price">$59</div>
 									</div>
 								</div>
 								<!-- Item 3 -->
 								<div class="shop-item-sidebar">
 									<div class="media">
-										<img src="../../images/shop-img-4.jpg" alt="" class="img-fluid">
+										<img src="assets/images/shop-img-4.jpg" alt="" class="img-fluid">
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Healthy Food</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Healthy Food</a></h4>
 										<div class="price">$79</div>
 									</div>
 								</div>
@@ -81,10 +81,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-1.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-1.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Cat & Small Dog Carrier</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Cat & Small Dog Carrier</a></h4>
 										<div class="meta">
 											<div class="price">$29</div>
 											<div class="rating">
@@ -102,10 +102,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-2.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-2.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Traveller Pet Carrier</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Traveller Pet Carrier</a></h4>
 										<div class="meta">
 											<div class="price">$29</div>
 											<div class="rating">
@@ -123,10 +123,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-3.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-3.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Leather Belt Pink</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Leather Belt Pink</a></h4>
 										<div class="meta">
 											<div class="price">$29</div>
 											<div class="rating">
@@ -144,10 +144,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-4.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-4.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Healthy Food</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Healthy Food</a></h4>
 										<div class="meta">
 											<div class="price">$29</div>
 											<div class="rating">
@@ -165,10 +165,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-5.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-5.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Big Carrier</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Big Carrier</a></h4>
 										<div class="meta">
 											<div class="price">$59</div>
 											<div class="rating">
@@ -186,10 +186,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-6.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-6.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Blank Leather Belt</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Blank Leather Belt</a></h4>
 										<div class="meta">
 											<div class="price">$12</div>
 											<div class="rating">
@@ -207,10 +207,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-7.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-7.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Rubber Pink Toy</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Rubber Pink Toy</a></h4>
 										<div class="meta">
 											<div class="price">$9</div>
 											<div class="rating">
@@ -228,10 +228,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-8.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-8.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Rubber Bone</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Rubber Bone</a></h4>
 										<div class="meta">
 											<div class="price">$7</div>
 											<div class="rating">
@@ -249,10 +249,10 @@
 							<div class="col-sm-4 col-md-4">
 								<div class="rs-shop-box mb-5">
 									<div class="media">
-										<a href="shop-single.html"><img src="../../images/shop-img-9.jpg" alt="" class="img-fluid"></a>
+										<a href="index.php?act=ct_sp"><img src="assets/images/shop-img-9.jpg" alt="" class="img-fluid"></a>
 									</div>
 									<div class="body-text">
-										<h4 class="title"><a href="shop-single.html">Safety Mask</a></h4>
+										<h4 class="title"><a href="index.php?act=ct_sp">Safety Mask</a></h4>
 										<div class="meta">
 											<div class="price">$19</div>
 											<div class="rating">
@@ -299,7 +299,7 @@
 
 
 	<!-- CTA -->
-	<div class="section cta bgi-cover-center" data-background="../../images/pattern_bg.jpg">
+	<div class="section cta bgi-cover-center" data-background="assets/images/pattern_bg.jpg">
 		<div class="content-wrap py-5">
 			<div class="container">
 				<div class="row align-items-center">
