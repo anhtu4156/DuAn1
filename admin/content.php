@@ -1,6 +1,5 @@
 <?php
-include "leftbar.php";
-include "topbar.php";
+
 ?>
         
             
