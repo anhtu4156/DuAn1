@@ -2,6 +2,7 @@
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 include "../model/pdo.php";
 include "../model/danhmuc_dv.php";
+include "../model/dich_vu.php";
 // include "model/pdo.php";
 
 
@@ -51,6 +52,49 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             $listdanhmuc_dv = loadall_danhmuc_dv();
             include "module/danhmuc_dv/list.php";
+            break;
+
+            // dịch vụ
+        case "them_dv":
+            if (isset($_POST['them']) && ($_POST['them'])) {
+                $tendv = isset($_POST['ten_dv']) ? $_POST['ten_dv'] : '';
+                $danhmuc = isset($_POST['danhmuc_dv']) ? $_POST['danhmuc_dv'] : '';
+                $mota = isset($_POST['mo_ta']) ? $_POST['mo_ta'] : '';
+
+                if (isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) {
+                    $hinh = $_FILES['file']['name'];
+                    $target_dir = "assets/images/upload/";
+                    $target_file = $target_dir . basename($_FILES['file']['name']);
+
+                    if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
+                        // Bạn có thể thêm mã xử lý khi upload ảnh thành công ở đây
+                    } else {
+                        // Bạn có thể thêm mã xử lý khi upload ảnh không thành công ở đây
+                    }
+
+                    
+                } else {
+                    // Xử lý trường hợp không có ảnh được chọn
+                }
+                them_dichvu($tendv, $danhmuc, $hinh, $mota);
+                $thanhcong = "Thêm thành công";
+            }
+
+
+            $listdanhmuc_dv = loadall_danhmuc_dv();
+            include "module/dich_vu/add.php";
+            break;
+        case "dich_vu":
+            if(isset($_POST['clickOK'])&&($_POST['clickOK'])){
+                $keyw=$_POST['keyw'];
+                $iddm=$_POST['iddm'];
+            }else{
+                $keyw="";
+                $iddm=0;
+            }
+            $listdanhmuc_dv= loadall_danhmuc_dv();
+            $listdichvu = loadall_dv($keyw,$iddm);
+            include "module/dich_vu/list.php";
             break;
     }
 } else {

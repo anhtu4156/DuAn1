@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="assets/libs/icofont/icofont.min.css">
         <link href="assets/libs/flatpickr/flatpickr.min.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/tailwind.min.css">
+        <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
 
     </head>
     
