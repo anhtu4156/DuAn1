@@ -1,10 +1,14 @@
 <?php
-// include_once "pdo.php";
+ include_once "pdo.php";
 
-// function sanpham_get_all(){
-//     $sql="select * from sanpham order by id desc limit 0,9";
-//     return pdo_query($sql);
-// }
+function dongvat_get_all(){
+    $sql="select * from loai_dong_vat";
+    return pdo_query($sql);
+}
+function cannang_get_all(){
+    $sql="select * from can_nang";
+    return pdo_query($sql);
+}
 // function sanpham_get_all_admin(){
 //     $sql="select * from sanpham order by id desc";
 //     return pdo_query($sql);

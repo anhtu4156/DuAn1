@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pets - Pet Care, Shop, and Veterinary Html Template</title>
+    <title>Đặt lịch cho thú cưng</title>
     <meta name="description" content="Pets is responsive multi-purpose HTML5 template compatible with Bootstrap 4. Take your Startup business website to the next level. it is designed for pet care, clinic, veterinary, shop, store, adopt, food, pets, businesses or any type of person or business who wants to showcase their work, services and professional way">
     <meta name="keywords" content="animals, business, cats, dogs, ecommerce, modern, pet care, pet services, pet shop, pet sitting, pets, shelter animals, store, veterinary">
     <meta name="author" content="rometheme.net"> 
@@ -37,7 +37,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 	
     <script src="assets/js/vendor/modernizr.min.js"></script>
+	<!--  code trang đặt lịch-->
 
+
+
+
+	
 </head>
 
 <body>
@@ -188,7 +193,7 @@
 			                </li>
 
 			            </ul>
-			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
+			            <a href="../../index.php?act=datlich" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
 			        </div>
 			    </nav> <!-- -->
 			

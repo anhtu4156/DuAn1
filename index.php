@@ -1,15 +1,17 @@
 <?php
     // session_start();
-    // include "model/pdo.php";
-    // include "model/sanpham.php";
-    // include "model/danhmuc.php";
+    include "model/pdo.php";
+    include "model/sanpham.php";
+    include "model/dichvu.php";
     // include "model/binhluan.php";
     // include "model/taikhoan.php";
 
     include "view/component/header.php";
     // include "global.php";
     // $spnew = loadall_sanpham_home();
-    // $dsdm = loadall_danhmuc();
+    $dsdv = loadall_dichvu();
+    $ds_thu_cung=dongvat_get_all();
+    $ds_can_nang=cannang_get_all();
     // $dstop10 = loadall_sanpham_top10();
     
     if(isset($_GET['act'])&&($_GET['act']!="")){
@@ -70,17 +72,30 @@
                 include "view/pages/about/contact.php";
                 break;
 ///////////////////////////////////////////////////////////
-            case "":
-                
+            case "datlich":
+                $dsdv = loadall_dichvu();
+
+                include "view/pages/datlich/trang1.php";
                 break;
-            case "":
-                
+            case "xacnhan":
+
+                if(isset($_POST['datlich'])&&$_POST['datlich']){
+                    $nguoi_hen=$_POST['nguoi-hen'];
+                    $sdt=$_POST['sdt'];
+                    $ngay=$_POST['ngay'];
+                    $gio=$_POST['gio'];
+                    $id_dv=$_POST['dv'];
+                    $id_loai_dong_vat=$_POST['dong_vat'];
+                    $id_cannang=$_POST['can_nang'];
+                }
+
+                include "view/pages/datlich/trang2.php";
                 break;
             
                 ///////////////////////////////////////////////////////////
-            case "":
-                
-            break;    
+            case "xong":
+                include "view/pages/datlich/trang3.php";
+                break;    
 ///////////////////////////////////////////////////////////
             case "":
                 
