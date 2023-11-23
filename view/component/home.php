@@ -153,22 +153,27 @@ include 'banner.php';
 				</div>
 
 				<div class="row mt-4">
-					
+				<?php foreach($dvnew as $dv){ 
+					extract($dv);
+					$hinh= $img_path.$anh_dv;
+					$linkdv= "index.php?act=ct_service&iddv=$id";
+					?>
 					<!-- Item 1 -->
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
-							<div class="media">
-								<a href="services-single.html"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
+							<div class="media"> 
+								<a href="<?php echo $linkdv ?>">
+									<img src="<?php echo $hinh ?>" alt="" class="img-fluid" height="600px"></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="services-single.html">Pet Barber Services</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<h3 class="title"><a href="<?php echo $linkdv ?>"><?php echo $ten_dv ?></a></h3>
+								<?php echo $mo_ta ?>
 							</div>
 						</div>
 					</div>
-
+					<?php } ?>
 					<!-- Item 2 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="services-single.html"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
@@ -178,10 +183,10 @@ include 'banner.php';
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 3 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="services-single.html"><img src="assets/images/services03.jpg" alt="" class="img-fluid"></a>
@@ -191,8 +196,7 @@ include 'banner.php';
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
-
+					</div> -->
 				</div>
 
 				<div class="row">
@@ -255,10 +259,15 @@ include 'banner.php';
 				<div class="row mt-4">
 					
 					<!-- Item 1 -->
+					<?php foreach($nvnew as $nv){ 
+					extract($nv);
+					$hinh= $img_path.$anh;
+					
+					?>
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-team-1">
 							<div class="media">
-								<img src="assets/images/vet05.jpg" alt="" class="img-fluid">
+								<img src="<?php echo $hinh ?>" alt="" class="img-fluid">
 								<div class="sosmed-icon">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -266,14 +275,14 @@ include 'banner.php';
 								</div>
 							</div>
 							<div class="body">
-								<div class="title">Dr. John Doel</div>
+								<div class="title"><?php echo $ten_nv ?></div>
 								<div class="text-primary">Veterinary</div>
 							</div>
 						</div>
 					</div>
-
+						<?php } ?>
 					<!-- Item 2 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-team-1">
 							<div class="media">
 								<img src="assets/images/vet06.jpg" alt="" class="img-fluid">
@@ -288,10 +297,10 @@ include 'banner.php';
 								<div class="text-primary">Veterinary</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 3 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-team-1">
 							<div class="media">
 								<img src="assets/images/vet07.jpg" alt="" class="img-fluid">
@@ -306,7 +315,7 @@ include 'banner.php';
 								<div class="text-primary">Veterinary</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 

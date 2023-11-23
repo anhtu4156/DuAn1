@@ -1,16 +1,19 @@
 <?php
     // session_start();
-    // include "model/pdo.php";
-    // include "model/sanpham.php";
+    include "model/pdo.php";
+    include "model/dichvu.php";
+    include "model/nhanvien.php";
+    include "global.php";
     // include "model/danhmuc.php";
     // include "model/binhluan.php";
     // include "model/taikhoan.php";
-
     include "view/component/header.php";
-    // include "global.php";
+   $dvnew= loadall_dichvu_home();
+   $nvnew= loadall_nhanvien_home();
+   $newdv=loadall_dichvu();
     // $spnew = loadall_sanpham_home();
     // $dsdm = loadall_danhmuc();
-    // $dstop10 = loadall_sanpham_top10();
+   
     
     if(isset($_GET['act'])&&($_GET['act']!="")){
         $act=$_GET['act'];
@@ -37,7 +40,11 @@
                 include "view/pages/service/service.php";
                 break;
             case "ct_service":
-                include "view/pages/service/ct_service.php";
+                if (isset($_GET['iddv'])&&$_GET['iddv']>0){
+                    $dv=loadone_dichvu($_GET['iddv']);
+                    include "view/pages/service/ct_service.php";
+                }
+
                 break;
 ////////////////////////////////////////////////////////////////
 // gallery

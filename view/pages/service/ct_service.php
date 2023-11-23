@@ -48,14 +48,17 @@
 						</div>
 
 					</div>
-					<div class="col-12 col-sm-12 col-md-8">
-						<img src="assets/images/services-img-detail.jpg" alt="" class="img-fluid">
+					<?php 
+					extract($dv);
+					?>
+					<div class="col-12 col-sm-12 col-md-8" >
+						<?php $anh= $img_path.$anh_dv;?>
+						<img src="<?php echo $anh ;?>" alt="" class="img-fluid" >
 						<h2 class="section-heading text-primary no-after mb-4">
-							Pet Barber Services
+							<?php echo $ten_dv ;?>
 						</h2>
-						<p class="text-black lead">We are pets clinic dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<p>Quisque ut dolor gravida, placerat libero vel, euismod. Ut enim ad minim veniam, quis nostrud exercitation. Quam temere in vitiis, legem sancimus haerentia. Pellentesque habitant morbi tristique senectus et netus. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.</p>
-						<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit.</p>
+						<p class="text-black lead"><?php echo $mo_ta ;?>.</p>
+						<p><?php echo $mo_ta ;?></p>
 
 						<div class="spacer-10"></div>
 						<h2 class="section-heading text-primary no-after mb-4">

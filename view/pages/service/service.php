@@ -19,21 +19,28 @@
 
 				<div class="row">
 					
+					<?php foreach($newdv as $dv){ 
+					extract($dv);
+					$hinh= $img_path.$anh_dv;
+					$linkdv= "index.php?act=ct_service&iddv=$id";
+					?>
 					<!-- Item 1 -->
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
+							<div class="media"> 
+								<a href="<?php echo $linkdv ?>">
+									<img src="<?php echo $hinh ?>" alt="" class="img-fluid" ></a>
 							</div>
 							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Pet Barber Services</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<h3 class="title"><a href="<?php echo $linkdv ?>"><?php echo $ten_dv ?></a></h3>
+								<?php echo $mo_ta ?>
 							</div>
 						</div>
 					</div>
+					<?php } ?>
 
 					<!-- Item 2 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
@@ -43,10 +50,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 3 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services03.jpg" alt="" class="img-fluid"></a>
@@ -56,10 +63,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 4 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services04.jpg" alt="" class="img-fluid"></a>
@@ -69,10 +76,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 5 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services05.jpg" alt="" class="img-fluid"></a>
@@ -82,10 +89,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 6 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services06.jpg" alt="" class="img-fluid"></a>
@@ -95,7 +102,7 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 
