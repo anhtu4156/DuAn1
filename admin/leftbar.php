@@ -21,7 +21,7 @@
                            <span class="text-[9px] text-slate-600 dark:text-slate-500 group-data-[sidebar=dark]:text-slate-500 group-data-[sidebar=brand]:text-slate-400">DashboardS & Apps</span></li>
                         <li>
                             <div id="parent-accordion" data-fc-type="accordion">
-                                <a href="#"
+                                <a href=""
                                    class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200 "
                                    data-fc-type="collapse" data-fc-parent="parent-accordion">
                                     <span data-lucide="home"
