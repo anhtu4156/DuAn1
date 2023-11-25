@@ -35,7 +35,7 @@
                     <div class="w-full relative mb-4">
                         <div class="flex-auto p-0 md:p-4">
 
-                            <form action="#" method="post">
+                           
                                 <div class="flex flex-wrap gap-4 mb-3">
                                     <div class="mb-2 w-44 flex" >
                                         <select name="iddm" id="Category" class="w-full inline-block rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
@@ -73,7 +73,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </form>
+                           
 
 
                             <div id="myTabContent">
@@ -161,8 +161,8 @@
                                                             ' . $trang_thai . '
                                                             </td>
                                                             <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                                <a href="index.php?act=sua_danhmuc_dv&iddm_dv=' . $id . '" class="me-3"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
-                                                                <a href="index.php?act=xoa_danhmuc_dv&iddm_dv=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn xóa")\'><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                                <a href="index.php?act=sua_dv&id_dv=' . $id . '" class="me-3"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                                <a href="index.php?act=xoa_dv&id_dv=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn xóa")\'><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
                                                             </td>
                                                         </tr>
                                                             ';
