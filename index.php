@@ -1,6 +1,13 @@
 <?php
-    // session_start();
-    // include "model/pdo.php";
+session_start();
+ob_start();
+// Các mã nguồn khác có thể ở đây
+
+
+    include "model/pdo.php";
+    include "model/login/reg.php";
+    include "model/login/login.php";
+    include "model/login/account.php";
     // include "model/sanpham.php";
     // include "model/danhmuc.php";
     // include "model/binhluan.php";
@@ -82,9 +89,87 @@
                 
             break;    
 ///////////////////////////////////////////////////////////
-            case "":
+// login
+///////////////////////////////////////////////////////////
+            case "login":
+                if(isset($_POST["login"]) && $_POST["login"]){
+                    $user = $_POST['username'];
+                    $pass = $_POST['password'];
+                    $thongbao = dangnhap($user, $pass);
+                    if(isset($_SESSION['user'])){
+                        header("Location: index.php");
+                    }
+                }
                 
+                include "view/pages/login/login.php";
             break;
+            case "reg":
+                if(isset($_POST['register']) && $_POST['register']){
+                    $user = $_POST['username'];
+                    $pass = $_POST['password'];
+                    $email = $_POST['email'];
+                    $repass = $_POST['repassword'];
+                    if ((strlen($user) >= 2) && ($pass === $repass) && ($pass != '')) {
+                        insert_taikhoan($user,$pass,$email);
+                        $thanhcong = "Đăng ký thành công, bạn đã có thể đăng nhập";
+                    }
+                }
+                include "view/pages/login/reg.php";
+            break;
+            //đăng xuất
+            case "logout":
+                dangxuat();
+                if(!isset($_SESSION['user'])){
+                    header("Location: index.php");
+                }
+                break;
+            // cập nhật pro5
+            case "profile":
+                $userId = "";
+                if(isset($_SESSION['user_id']) && $_SESSION['user_id'] != ""){
+                    $userId = $_SESSION['user_id'];
+                    $info = get_user($userId);
+                
+                }
+                if(isset($_POST['send']) && $_POST['send']){
+                    $user = $_POST['user'];
+                    $email = $_POST['email'];
+                    $address = $_POST['adr'];
+                    $tel = $_POST['sdt'];
+                    $get_date = $_POST['date'];
+                    $dateTimeObject = new DateTime($get_date);
+                    $date = $dateTimeObject->format('Y-m-d H:i:s');
+                    capnhat_tk($userId,$user,$email,$date,$address,$tel);
+                    $thongbao = "Cập nhật thành công";
+                }
+                if(isset($thongbao) && $thongbao != ""){
+                    header("Location: index.php?act=profile");
+                }
+                include "view/pages/account/pro5.php";
+                break;
+            // đổi mk:
+            case "pass":
+                if(isset($_SESSION['user_id']) && $_SESSION['user_id'] != ""){
+                    $userId = $_SESSION['user_id'];
+                    $info = get_user($userId);
+                }
+                if (is_array($info)) {
+                    extract($info);
+                }
+                if(isset($_POST['send']) && $_POST['send']){
+                    $oldpass = $_POST['oldpass'];
+                    $pass = $_POST['pass'];
+                    $repass = $_POST['repass'];
+                    if($oldpass != $mat_khau){
+                        $thongbao = "Mật khẩu không chính xác";
+                    }
+                    if(isset($thongbao) == false && $pass != "" && $repass === $pass){
+                        capnhat_mk($userId,$pass);
+                        $thanhcong = "Cập nhật thành công";
+                    }
+                }
+                include "view/pages/account/pass.php";
+                break;
 ///////////////////////////////////////////////////////////
 //             case "cart":
 //                 if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != "" && isset($_GET['idsp']) && $_GET['idsp'] != "") {
@@ -149,5 +234,5 @@
         include "view/component/home.php";
     }
    
-    include "view/component/footer.php";
+    include "view/component/footer.php"; 
 ?>

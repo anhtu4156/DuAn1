@@ -59,7 +59,7 @@ Version: 1.0
  * 8. - RESPONSIVE
  * -----------------------------------------------------------------------------
  */
-@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Arvo:400,700");
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,500;1,700&display=swap');
 
 @font-face {
   font-family: 'sas-webfont';
@@ -479,7 +479,7 @@ input,
 select,
 textarea {
   color: #999999;
-  font-family: "arvo", serif;
+  font-family: "roboto", serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.5;

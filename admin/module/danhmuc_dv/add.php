@@ -63,6 +63,8 @@
                                 <div class="">
                                     <input name="them" type="submit" value="Thêm danh mục" class="px-2 py-2 lg:px-4 bg-brand  text-white text-sm  rounded hover:bg-brand-600 border border-brand-500"></input>
                                     <button type="reset" class="px-2 py-2 lg:px-4 bg-transparent  text-red text-sm  rounded transition hover:bg-red-600 hover:text-white border border-red font-medium">Reset</button>
+                                    <a class="px-2 py-2 lg:px-4 bg-brand  text-white text-sm  rounded hover:bg-brand-600 border border-brand-500"" href="index.php?act=danhmuc_dv">Về danh sách</a>
+
                                 </div>
                             </form>
                         </div><!--end card-body-->

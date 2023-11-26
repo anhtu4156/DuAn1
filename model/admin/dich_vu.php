@@ -25,3 +25,18 @@ function them_dichvu($tendv, $danhmuc, $hinh,$mota){
     $result =pdo_execute($sql);
     return $result;
 }
+
+function loaddv_theoid($iddv){
+    $sql = "select * from dich_vu where id = " . $iddv;
+    $result = pdo_query_one($sql); 
+    return $result;
+}
+function update_dv($iddv, $hinh, $tendv, $danhmuc,$mota){
+    $sql = "UPDATE `dich_vu` SET `ten_dv` = '$tendv', `anh_dv` = '$hinh', `mo_ta` = '$mota', `id_loai_dv` = '$danhmuc' WHERE `dich_vu`.`id` = '$iddv';";
+    pdo_execute($sql);
+}
+
+function delete_dv($iddv){
+    $sql = "DELETE FROM dich_vu WHERE id=" .$iddv;
+    pdo_execute($sql);
+}

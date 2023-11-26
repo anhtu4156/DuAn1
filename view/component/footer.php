@@ -92,14 +92,15 @@
 	<script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
 
 	<!-- SENDMAIL -->
-	<script src="assets/js/vendor/validator.min.js"></script>
-	<script src="assets/js/vendor/form-scripts.js"></script>
+	<!-- <script src="assets/js/vendor/validator.min.js"></script> -->
+	<!-- <script src="assets/js/vendor/form-scripts.js"></script> -->
 
 	<!-- GOOGLEMAP -->
 	<!-- <script src="assets/js/googlemap-setting.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU&amp;callback=initMap"> </script> -->
 
 	<script src="assets/js/script.js"></script>
+	<!-- <script src="assets/js/login.js"></script> -->
 
 </body>
 
