@@ -37,7 +37,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 	
     <script src="assets/js/vendor/modernizr.min.js"></script>
-
+	<script src="../../assets/js/app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -188,7 +189,7 @@
 			                </li>
 
 			            </ul>
-			            <a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
+			            <a href="../../index.php?act=datlich" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
 			        </div>
 			    </nav> <!-- -->
 			
