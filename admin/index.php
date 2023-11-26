@@ -1,8 +1,8 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 include "../model/pdo.php";
-include "../model/danhmuc_dv.php";
-include "../model/dich_vu.php";
+include "../model/admin/danhmuc_dv.php";
+include "../model/admin/dich_vu.php";
 // include "model/pdo.php";
 
 
@@ -94,6 +94,45 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             $listdanhmuc_dv= loadall_danhmuc_dv();
             $listdichvu = loadall_dv($keyw,$iddm);
+            include "module/dich_vu/list.php";
+            break;
+        case "sua_dv":
+            if(isset($_GET['id_dv'])&&($_GET['id_dv']) != ""){
+                $iddv = $_GET['id_dv'];
+                if (isset($_POST['sua_dv']) && $_POST['sua_dv']) {
+                    
+                    $tendv = $_POST['ten_dv'];
+                    $danhmuc = $_POST['danhmuc_dv'];
+                    $mota = $_POST['mo_ta'];
+                    if (isset($_FILES['file']['name']) && !empty($_FILES['file']['name'])) {
+                        $hinh = $_FILES['file']['name'];
+                        $target_dir = "assets/images/upload/";
+                        $target_file = $target_dir . basename($_FILES['file']['name']);
+    
+                        if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
+                            // Bạn có thể thêm mã xử lý khi upload ảnh thành công ở đây
+                        } else {
+                            // Bạn có thể thêm mã xử lý khi upload ảnh không thành công ở đây
+                        }
+    
+                        
+                    } else {
+                        // Xử lý trường hợp không có ảnh được chọn
+                    }
+                    update_dv($iddv, $hinh, $tendv, $danhmuc,$mota);
+                    $thanhcong = "Sửa thành công";
+                }
+                $loaddv = loaddv_theoid($iddv);
+            }
+            $listdanhmuc_dv = loadall_danhmuc_dv();
+            include "module/dich_vu/update.php";
+            break;
+        case "xoa_dv":
+            if (isset($_GET['id_dv']) && $_GET['id_dv'] != "") {
+                $iddv = $_GET['id_dv'];
+                delete_dv($iddv);
+            }
+            $listdichvu = loadall_dv();
             include "module/dich_vu/list.php";
             break;
     }
