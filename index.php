@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 ob_start();
 // Các mã nguồn khác có thể ở đây
@@ -8,6 +9,7 @@ ob_start();
     include "model/login/reg.php";
     include "model/login/login.php";
     include "model/login/account.php";
+ include "model/datlich.php";
     // include "model/sanpham.php";
     // include "model/danhmuc.php";
     // include "model/binhluan.php";
@@ -170,6 +172,32 @@ ob_start();
                 }
                 include "view/pages/account/pass.php";
                 break;
+////////////////////////////////////////////////////////////
+            case "datlich":
+
+
+
+
+            include "view/pages/datlich/trang1.php";
+            break;
+        case "xacnhan":
+            if (isset($_POST['datlich'])) {
+                if (isset($_POST['ngay']) && isset($_POST['gio']) && isset($_POST['dv']) && isset($_POST['dong_vat']) && isset($_POST['nv']) && isset($_POST['pttt'])) {
+                    $ngay_dat_lich=$_POST['ngay'];
+                    $khoang_gio=$_POST['gio'];
+                    $dich_vu=$_POST['dv'];
+                    $thu_cung=$_POST['dong_vat'];
+                    $nhan_vien=$_POST['nv'];
+                    $pttt=$_POST['pttt'];
+                    $khoang_can=$_POST['can_nang'];
+                    insert_datlich_tt($ngay_dat_lich,$khoang_gio,$nguoi_dat,$thu_cung,$khoang_can,$dich_vu,$nhan_vien,$sdt, $pttt);
+                }else{
+                    $thongbao="Vui lòng nhập đầy đủ thông tin";
+                }
+            }
+
+            include "view/pages/datlich/trang2.php";
+            break;
 ///////////////////////////////////////////////////////////
 //             case "cart":
 //                 if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != "" && isset($_GET['idsp']) && $_GET['idsp'] != "") {
