@@ -5,7 +5,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb ">
                     <li class="breadcrumb-item"><a href="../../../index.php">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Đặt lịch thành công</li>
+                    <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
                 </ol>
             </nav>
         </div>
@@ -13,7 +13,9 @@
 </div>
 <section>
     <div class="container" style="margin-left: 500px;">
-        <img src="../../../assets/images" alt="" style="width: 400px; height: 400px; margin-left: 200px;">
-        <div class="title" style="color: green; font-size: 30px;"> Bạn đã đặt lịch thành công. Hẹn gặp bạn vào ngày hôm đó</div>
+        thanh toán online
+        <form action="index.php?act=thanhtoan" method="post">
+            <a href="index.php?act=thanhtoan"><input type="submit" name="thanhtoan" class="btn btn-primary" value="Thanh Toán" style="width: 100px;"></input></a>
+        </form>
     </div>
 </section>

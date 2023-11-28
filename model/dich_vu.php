@@ -18,6 +18,10 @@ function get_all_dv(){
 //     $sql="select * from kich_thuoc";
 //     return pdo_query($sql);
 // }
+function get_pttt(){
+    $sql="select * from phuong_thuc_tt";
+    return pdo_query($sql);
+ }
 
 
 
