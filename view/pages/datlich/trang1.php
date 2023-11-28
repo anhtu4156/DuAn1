@@ -1,5 +1,6 @@
 <!-- BREADCRUMB -->
 <?php //include "model/pdo.php"; 
+
 ?>
 
 <div class="section bg-breadcrumb">
@@ -17,7 +18,19 @@
 <section>
     <div class="container">
         <h1>Đặt lịch</h1>
-        <form action="" method="post" class="form">
+        <div style="color: red;">
+            <?php  
+                if(isset($thongbao)){
+                    echo $thongbao;
+                }else{
+                    echo"";
+                }
+            
+            
+            ?>
+    </div>
+        <form action="index.php?act=xacnhan" method="post" class="form">
+            <input type="hidden" value="<?php echo $_SESSION['user_id']; ?>" name="id_user">
             <div class="form-group">
                 <label for="ngay">Ngày</label>
                 <input type="date" class="form-control" id="ngay" name="ngay">
@@ -63,10 +76,10 @@
                     <option value="" selected>---Chọn khoảng cân---</option>
                     <?php
                     // $dsdv=loadAll_dichvu();
-                    foreach ($ds_cannang as $item) {
-                        extract($item);
-                        echo '<option value="' . $id . '">' . $can_nang . '</option>';
-                    }
+                    // foreach ($ds_cannang as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $can_nang . '</option>';
+                    // }
 
                     ?>
 
@@ -76,43 +89,30 @@
                 <label for="nguoi-hen">Chọn nhân viên</label>
                 <select name="nv" id="nhan_vien" class="form-control">
                     <option value="0">---Chọn nhân viên---</option>
-                    <?php
-                    // $dsdv=loadAll_dichvu();
-                    // foreach ($dsnv as $item) {
-                    //     extract($item);
-                    //     echo '<option value="' . $id . '">' . $ten_nv . '</option>';
-                    // }
-
-                    ?>
-
                 </select>
             </div>
             <div class="form-group">
                 <label for="nguoi-hen">Giá</label>
-                <input type="text" class="form-control" name="gia" id="gia" value="">
+                <input type="text" class="form-control" name="gia" id="gia" readonly value="">
             </div>
             <div class="form-group">
                 <label for="nguoi-hen">Chọn phương thức thanh toán</label>
                 <select name="pttt" id="" class="form-control">
-                    <option value="">---Chọn phương thức thanh toán---</option>
-                    <option value="1">Thanh toán online</option>
-                    <option value="2">Thanh toán sau khi hoàn thành dịch vụ</option>
+                    <option value="0">---Chọn phương thức thanh toán---</option>
+                    <?php
+                    
+                    foreach ($phuong_thuc_tt as $item) {
+                        extract($item);
+                        echo '<option value="' . $id . '">' . $pttt . '</option>';
+                    }
+
+                    ?>
                 </select>
             </div>
-            <a href="../../../index.php?act=xacnhan"><input type="button" name="datlich" class="btn btn-primary" value="Đặt lịch" style="width: 100px;"></input></a>
+            <a href="index.php?act=xacnhan"><input type="submit" name="datlich" class="btn btn-primary" value="Đặt lịch" style="width: 100px;"></input></a>
         </form>
     </div>
-    <div style="color: red;">
-            <?php  
-                if(isset($thongbao)){
-                    echo $thongbao;
-                }else{
-                    echo"";
-                }
-            
-            
-            ?>
-    </div>
+    
 
 </section>
 <!-- lấy dịch vụ: -->
@@ -132,9 +132,9 @@
                     </option>`;
                     $("#dichvu").append(str);
                 }
-                $("#dichvu").on("change", function(e) {
-                    layGia();
-                });
+                 $("#dichvu").on("change", function(e) {
+                     layGia();
+                 });
                 $("#dichvu").on("change", function(e) {
                     layNhanVien();
                 });
@@ -160,8 +160,8 @@
                     $("#thucung").append(str);
                 }
                 $("#thucung").on("change", function(e) {
-                    layGia();
-                });
+                     layGia();
+                 });
             }
         });
     })
@@ -219,7 +219,7 @@ function layGia(){
             url: "http://localhost:3000/model/json/nhan_vien.php?id_dv="+id_dv,
             dataType: 'json',
             success: function(data) {
-               console.log(data);
+               //console.log(data);
                 //$("#nhan_vien").html("");
                 for (i = 0; i < data.length; i++) {
                     var nhan_vien = data[i]; 
