@@ -54,54 +54,61 @@
                                             </a>
                                         </li>
                                         <li class="nav-item relative block">
-                                            <a href="admin-products.html"
+                                            <a href="index.php?act=thongke"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                                Products
+                                                Thống kê
+                                            </a>
+                                        </li>
+                                        <li class="nav-item relative block">
+                                            <a href="index.php?act=taikhoan"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Tài khoản
                                             </a>
                                         </li>
                                         <li class="nav-item relative block">
                                             <a href="admin-add-product.html"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                               Add New Product
+                                               Bình luận
                                             </a>
                                         </li>
                                         <li class="nav-item relative block">
                                             <a href="admin-customers.html"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                                Customers
+                                                Orders
                                             </a>
                                         </li>
-                                        <li class="nav-item relative block">
+                                        <!-- <li class="nav-item relative block">
                                             <a href="admin-customers-details.html"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                                                 Customers Details
                                             </a>
-                                        </li>
-                                        <li class="nav-item relative block">
+                                        </li> -->
+                                        <!-- <li class="nav-item relative block">
                                             <a href="admin-orders.html"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                                                 Orders
                                             </a>
-                                        </li>
-                                        <li class="nav-item relative block">
+                                        </li> -->
+                                        <!-- <li class="nav-item relative block">
                                             <a href="admin-order-details.html"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                                                 Order Details
                                             </a>
-                                        </li>
-                                        <li class="nav-item relative block">
+                                        </li> -->
+                                        <!-- <li class="nav-item relative block">
                                             <a href="admin-refund.html"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                                                Refund
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>                            
                                 </div>
                                 <!-- <a href="#"

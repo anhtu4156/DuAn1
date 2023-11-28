@@ -6,9 +6,7 @@ ob_start();
 
 
     include "model/pdo.php";
-    include "model/login/reg.php";
-    include "model/login/login.php";
-    include "model/login/account.php";
+    include "model/taikhoan.php";
  include "model/datlich.php";
     // include "model/sanpham.php";
     // include "model/danhmuc.php";
@@ -197,6 +195,12 @@ ob_start();
             }
 
             include "view/pages/datlich/trang2.php";
+            break;
+
+            //trang quản trị
+
+        case "quantri":
+            header("Location: admin/index.php");
             break;
 ///////////////////////////////////////////////////////////
 //             case "cart":
