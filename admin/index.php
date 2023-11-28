@@ -3,6 +3,8 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 include "../model/pdo.php";
 include "../model/admin/danhmuc_dv.php";
 include "../model/admin/dich_vu.php";
+include "../model/admin/thongke.php";
+include "../model/taikhoan.php";
 // include "model/pdo.php";
 
 
@@ -54,7 +56,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/danhmuc_dv/list.php";
             break;
 
-            // dịch vụ
+        // dịch vụ
         case "them_dv":
             if (isset($_POST['them']) && ($_POST['them'])) {
                 $tendv = isset($_POST['ten_dv']) ? $_POST['ten_dv'] : '';
@@ -134,6 +136,28 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             $listdichvu = loadall_dv();
             include "module/dich_vu/list.php";
+            break;
+        // thống kê
+        case "thongke":
+            $thongke = thongke();
+            include "module/thongke/list.php";
+            break;
+        //biểu đồ
+        case "bieudo":
+            $thongke = thongke();
+            include "module/thongke/bieudo.php";
+            break;
+        // quản lý tài khoản
+        case "taikhoan":
+            $tk_nv = get_tk_nv();
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
+            break;
+        case "sua_tk":
+            
+            break;
+        case "xoa_tk":
+
             break;
     }
 } else {

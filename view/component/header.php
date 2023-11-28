@@ -201,32 +201,41 @@
 						</ul>
 
 						<a href="index.php?act=datlich" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
-						<?php if (!$_SESSION) { ?>
-							<ul class="navbar-nav ml-2">
-								<li class="nav-item dropdown dmenu">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										TÀI KHOẢN
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="index.php?act=login">ĐĂNG NHẬP</a>
-										<a class="dropdown-item" href="index.php?act=reg">ĐĂNG KÝ</a>
-									</div>
-								</li>
-							</ul>
-						<?php } else { ?>
-							<ul class="navbar-nav ml-2">
-								<li class="nav-item dropdown dmenu">
-									<a class="nav-link dropdown-toggle " href="index.php?act=" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<i class='bx bx-user-circle'></i><?= $_SESSION['user'];  ?>
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="index.php?act=profile">CẬP NHẬT THÔNG TIN</a>
-										<a class="dropdown-item" href="index.php?act=pass">ĐỔI MẬT KHẨU</a>
-										<a class="dropdown-item" href="index.php?act=logout">ĐĂNG XUẤT</a>
-									</div>
-								</li>
-							</ul>
+						<?php if(!$_SESSION){?>
+						<ul class="navbar-nav ml-2">
+							<li class="nav-item dropdown dmenu">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									TÀI KHOẢN
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="index.php?act=login">ĐĂNG NHẬP</a>
+									<a class="dropdown-item" href="index.php?act=reg">ĐĂNG KÝ</a>
+								</div>
+							</li>
+						</ul>
+						<?php } else {?>
+						<ul class="navbar-nav ml-2">
+							<li class="nav-item dropdown dmenu">
+								<a class="nav-link dropdown-toggle " href="index.php?act=" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class='bx bx-user-circle' ></i><?= $_SESSION['user'];  ?>
+								</a>
+								<div class="dropdown-menu">
+									<?php
+									if(isset($_SESSION['user_id']) && $_SESSION['user'] != "" && $_SESSION['role'] == 1){
+                    
+										echo '<a class="dropdown-item" href="index.php?act=quantri">TRANG QUẢN TRỊ</a>';
+										
+									}
+									?>
+									
+									<a class="dropdown-item" href="index.php?act=profile">CẬP NHẬT THÔNG TIN</a>
+									<a class="dropdown-item" href="index.php?act=pass">ĐỔI MẬT KHẨU</a>
+									<a class="dropdown-item" href="index.php?act=logout">ĐĂNG XUẤT</a>
+								</div>
+							</li>
+						</ul>
 						<?php } ?>
+						
 
 					</div>
 				</nav> <!-- -->
