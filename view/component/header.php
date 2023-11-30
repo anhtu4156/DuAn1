@@ -1,5 +1,5 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <!-- Mirrored from html.rometheme.pro/pets/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Nov 2023 14:35:04 GMT -->
@@ -44,11 +44,10 @@
 	=============================================== -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-	
-    <script src="assets/js/vendor/modernizr.min.js"></script>
+
+	<script src="assets/js/vendor/modernizr.min.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 </head>
 
 <body>
@@ -200,7 +199,8 @@
 							</li>
 
 						</ul>
-						<a href="#" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
+
+						<a href="index.php?act=datlich" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
 						<?php if(!$_SESSION){?>
 						<ul class="navbar-nav ml-2">
 							<li class="nav-item dropdown dmenu">
@@ -220,6 +220,14 @@
 								<i class='bx bx-user-circle' ></i><?= $_SESSION['user'];  ?>
 								</a>
 								<div class="dropdown-menu">
+									<?php
+									if(isset($_SESSION['user_id']) && $_SESSION['user'] != "" && $_SESSION['role'] == 1){
+                    
+										echo '<a class="dropdown-item" href="index.php?act=quantri">TRANG QUẢN TRỊ</a>';
+										
+									}
+									?>
+									<a class="dropdown-item" href="index.php?act=lichsu">LỊCH SỬ ĐẶT LỊCH</a>
 									<a class="dropdown-item" href="index.php?act=profile">CẬP NHẬT THÔNG TIN</a>
 									<a class="dropdown-item" href="index.php?act=pass">ĐỔI MẬT KHẨU</a>
 									<a class="dropdown-item" href="index.php?act=logout">ĐĂNG XUẤT</a>
@@ -227,7 +235,8 @@
 							</li>
 						</ul>
 						<?php } ?>
-						<a href="../../index.php?act=datlich" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
+						
+
 					</div>
 				</nav> <!-- -->
 

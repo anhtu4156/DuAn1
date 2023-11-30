@@ -105,3 +105,8 @@
 .register-link p a:hover{
   text-decoration: underline;
 }
+
+.select select{
+  color: black !important;
+  background-color: #333;
+}

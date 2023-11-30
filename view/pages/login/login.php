@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
 ?>
 <div class="t_container">
     <div class="wrapper">
-        <form method="post" action="#" ">
+        <form method="post" action="" >
             <h1>ĐĂNG NHẬP</h1>
             <div class=" input-box">
             <input name="username" id="username" type="text" placeholder="Tên tài khoản">

@@ -1,56 +1,132 @@
-<?php  
-include_once "pdo.php";
+<?php
+
+//dang ky
 function insert_taikhoan($user,$pass,$email){
-    $sql="INSERT INTO tai_khoan (user,pass,email) VALUES ('$user','$pass','$email')";
+    $sql="INSERT INTO `tai_khoan` ( `ten_tai_khoan`, `mat_khau`, `email`) VALUES ( '$user', '$pass','$email') ";
     pdo_execute($sql);
 }
-function insert_taikhoan_admin($user,$pass,$email,$role){
-    $sql="INSERT INTO taikhoan (user,pass,email,role) VALUES ('$user','$pass','$email','$role')";
+//dang ky nhân viên
+function insert_taikhoan_nv($user,$pass,$email,$dv,$ca){
+    $sql="INSERT INTO `nhan_vien` ( `ten_nv`, `pass`, `email`,`id_dv`, `ca_lam`) VALUES ( '$user', '$pass','$email','$dv','$ca') ";
+    pdo_execute($sql);
+}
+// đăng nhập
+function dangnhap($user, $pass) {
+    $sql = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='$user' and mat_khau='$pass'";
+    
+    $taikhoan = pdo_query_one($sql);
+
+    if ($taikhoan != "") {
+        // Lưu ID người dùng vào session sau khi đăng nhập thành công
+        $_SESSION['user'] = $user;
+        $_SESSION['user_id'] = $taikhoan['id'];
+        $_SESSION['role'] = $taikhoan['vai_tro'];
+        return "Đăng nhập thành công";
+    } else {
+        return "Thông tin tài khoản sai";
+    }
+}
+// đăng xuất
+function dangxuat() {
+    if (isset($_SESSION['user'])) {
+        unset($_SESSION['user']);
+        unset($_SESSION['user_id']);
+        unset($_SESSION['role']);
+    }
+}
+// cập nhật
+function get_user($user){
+    $sql="SELECT * FROM `tai_khoan` WHERE `id` = $user";
+    $data =  pdo_query_one($sql);
+    return $data;
+}
+
+function capnhat_tk($id,$user,$email,$date,$address,$tel){
+    $sql ="UPDATE `tai_khoan` SET `ten_tai_khoan` = '$user', `email` = '$email', `so_dien_thoai` = '$tel', `ngay_sinh` = '$date', `dia_chi` = '$address' WHERE `tai_khoan`.`id` = '$id';";
     pdo_execute($sql);
 }
 
-function getuserinfo($user,$pass){
-    $sql="select * from tai_khoan where ten_tk='".$user."' AND mat_khau='".$pass."'";
-    $user=pdo_query_one($sql);
-    return $user;
-}
-function getadmininfo($role){
-    $sql="select * from tai_khoan where vai_tro='".$role."'";
-    $user=pdo_query_one($sql);
-    return $user;
-}
-function getadmininfo1($id,$role){
-    $sql="select * from tai_khoan where  id='".$id."' AND vai_tro='".$role."'";
-    $user=pdo_query_one($sql);
-    return $user;
-}
-function getuserinfo1($id){
-    $sql="select * from tai_khoan where id='".$id."'";
-    $user=pdo_query_one($sql);
-    return $user;
-}
-
-function update_info($id,$user,$pass,$email,$address,$tel){
-    $sql="UPDATE tai_khoan set ten_tk='".$user."', mat_khau='".$pass."', email='".$email."', dia_chi='".$address."', so_dien_thoai='".$tel."' where id=".$id;
+function capnhat_mk($id, $pass) {
+    $sql ="UPDATE `tai_khoan` SET `mat_khau` = '$pass' WHERE `tai_khoan`.`id` = '$id';";
     pdo_execute($sql);
 }
 
-function checkemail($user,$email){
-    $sql="select * from tai_khoan where ten_tk='".$user."' AND email='".$email."'";
-    $user=pdo_query_one($sql);
-    return $user;
-}
-function kh_get_all(){
-    $sql="select * from tai_khoan where vai_tro=0";
-    return pdo_query($sql);
+// lấy all tài khoản
+
+function get_all_user() {
+    $sql = "SELECT * FROM `tai_khoan` ";
+    $result = pdo_query($sql);
+    return $result;
 }
 
-function tk_get_all(){
-    $sql="select * from tai_khoan where vai_tro=1 OR vai_tro=2";
-    return pdo_query($sql);
+// lấy all tài khoản nhân viên
+
+function get_tk_nv(){
+    $sql = "SELECT * FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` != 3";
+    $result = pdo_query($sql);
+    return $result;
 }
-function delete_kh($id){
-    $sql="delete from tai_khoan where id=".$id;
-    pdo_query($sql);
+// lấy tài khoản khách hàng
+function get_tk_kh(){
+    $sql = "SELECT * FROM tai_khoan WHERE vai_tro = 0 and trang_thai != 3";
+    $result = pdo_query($sql);
+    return $result;
 }
-?>
+
+//Khóa tài khoản khách hàng
+
+function khoa_kh($idkh){
+    $sql = "UPDATE tai_khoan SET `trang_thai` = 1 WHERE id = '$idkh'";
+    return pdo_execute($sql);
+}   
+// mở tk kh
+function mo_kh($idkh){
+    $sql = "UPDATE tai_khoan SET `trang_thai` = 0 WHERE id = '$idkh'";
+    return pdo_execute($sql);
+}
+// xóa tk kh
+function xoa_kh($idkh){
+    $sql = "UPDATE tai_khoan SET `trang_thai` = 3 WHERE id = '$idkh'";
+    return pdo_execute($sql);
+}
+// thùng rác
+function thungrac(){
+    $sql = "SELECT * FROM tai_khoan WHERE vai_tro = 0 and trang_thai = 3";
+    $result = pdo_query($sql);
+    return $result;
+}
+//Khóa tài khoản nhân viên
+
+function khoa_nv($idnv){
+    $sql = "UPDATE nhan_vien SET `status` = 1 WHERE id = '$idnv'";
+    return pdo_execute($sql);
+}   
+// mở tk kh
+function mo_nv($idnv){
+    $sql = "UPDATE nhan_vien SET `status` = 0 WHERE id = '$idnv'";
+    return pdo_execute($sql);
+}
+// xóa tk kh
+function xoa_nv($idnv){
+    $sql = "UPDATE nhan_vien SET `status` = 3 WHERE id = '$idnv'";
+    return pdo_execute($sql);
+}
+// thùng rác
+function thungrac_nv(){
+    $sql = "SELECT * FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` = 3";
+    $result = pdo_query($sql);
+    return $result;
+}
+
+// lấy ca làm 
+
+function get_calam(){
+    $sql = "SELECT * FROM ca_lam";
+    $result = pdo_query($sql);
+    return $result;
+}
+function get_3_nv(){
+    $sql = "SELECT * FROM nhan_vien limit 1,3";
+    $result = pdo_query($sql);
+    return $result;
+}
