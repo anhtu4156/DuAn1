@@ -6,15 +6,15 @@ ob_start();
 
 
 
-    include "model/pdo.php";
-    include "model/taikhoan.php";
- include "model/datlich.php";
+include "model/pdo.php";
+include "model/taikhoan.php";
+include "model/datlich.php";
 include "model/dich_vu.php";
 include "model/hoa_don.php";
-    // include "model/sanpham.php";
-    // include "model/danhmuc.php";
-    // include "model/binhluan.php";
-    // include "model/taikhoan.php";
+include "model/lichsu.php";
+// include "model/danhmuc.php";
+// include "model/binhluan.php";
+// include "model/taikhoan.php";
 
 
 include "view/component/header.php";
@@ -48,6 +48,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/pages/service/service.php";
             break;
         case "ct_service":
+
+
+            
             include "view/pages/service/ct_service.php";
             break;
             ////////////////////////////////////////////////////////////////
@@ -179,11 +182,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/pages/datlich/trang1.php";
                 //break;
             } else {
-                 header("location:index.php?act=login");
+                header("location:index.php?act=login");
                 //include "view/pages/login/login.php";
                 $thongbao = "Vui lòng đăng nhập";
                 //break;
             }
+
             break;
         case "xacnhan":
             if (isset($_POST['datlich']) && $_POST['datlich']) {
@@ -220,7 +224,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     isset($_POST['ngay']) && $_POST['ngay'] != "" && isset($_POST['gio']) && $_POST['gio'] != "" && isset($_POST['dv']) && $_POST['dv'] != "" &&
                     isset($_POST['dong_vat']) && $_POST['dong_vat'] != "" && isset($_POST['nv']) && $_POST['nv'] != "" && isset($_POST['pttt']) && $_POST['pttt'] != ""
                 ) {
-                    $id_dl=$_POST['id_dl'];
+                    $id_dl = $_POST['id_dl'];
                     $ngay_dat_lich = $_POST['ngay'];
                     $khoang_gio = $_POST['gio'];
                     $id_dich_vu = $_POST['dv'];
@@ -230,12 +234,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $id_khoang_can = $_POST['can_nang'];
                     $id_tai_khoan = $_POST['id_user'];
                     $gia = $_POST['gia'];
-                    update_dl($ngay_dat_lich,$khoang_gio,$id_thu_cung,$id_khoang_can,$id_dich_vu,$id_nhan_vien, $id_pttt,$gia,$id_dl);
-                    insert_hoadon($ngay_dat_lich,$khoang_gio,$id_tai_khoan,$id_dich_vu,$id_nhan_vien);
+                    update_dl($ngay_dat_lich, $khoang_gio, $id_thu_cung, $id_khoang_can, $id_dich_vu, $id_nhan_vien, $id_pttt, $gia, $id_dl);
+                    insert_hoadon($ngay_dat_lich, $khoang_gio, $id_tai_khoan, $id_dich_vu, $id_nhan_vien);
                     if ($id_pttt == 1) {
                         include "view/pages/datlich/trang3.php";
                         break;
-                    }if($id_pttt==2){
+                    }
+                    if ($id_pttt == 2) {
                         include "view/pages/datlich/trang4.php";
                     }
                 } else {
@@ -244,86 +249,112 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     break;
                 }
             }
-            case "thanhtoan":
-                if(isset($_POST['thanhtoan'])){
-                    $hd_dv_nv=get_hd_dv_nv();
-                    extract($hd_dv_nv);
-                    update_trang_thai($id);
-                    include "view/pages/datlich/trang4.php";
+        case "thanhtoan":
+            $id_tk=$_SESSION['user_id'];
+            // $hd_dv_nv = get_hd_dv_nv();
+            // extract($hd_dv_nv);
+            // update_trang_thai($id);
+            //include "view/pages/datlich/trang4.php";
+
+            if (isset($_SESSION['user_id'])) {
+
+                $id_tk = $_SESSION['user_id'];
+                $dl = get_all_dl($id_tk);
+                //extract($dl);
+                foreach ($dl as $item) {
+                    extract($item);
                 }
-
-
-
-                break;
-
-
-            include "view/pages/datlich/trang2.php";
+                $bien_the = get_id_bien_the($id_thu_cung, $id_khoang_can, $id_dich_vu);
+                extract($bien_the);
+                $hd = get_hd($id_tk);
+                //extract($hd);
+                foreach ($hd as $item) {
+                    extract($item);
+                }
+                insert_ct_hoa_don($id_hd, $id_tk, $id_bien_the, $id_nv);
+            }
             break;
+            // include "view/pages/datlich/trang2.php";
+            // break;
+            // case "hoantatthanhtoan":
 
+
+
+            //     include "view/pages/datlich/trang4.php";
+            //     break;
             //trang quản trị
+        case "lichsu":
 
+            include "view/pages/datlich/lichsu.php";
+
+
+
+
+
+
+            break;
         case "quantri":
             header("Location: admin/index.php");
             break;
-///////////////////////////////////////////////////////////
-//             case "cart":
-//                 if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != "" && isset($_GET['idsp']) && $_GET['idsp'] != "") {
-//                     // Load thông tin sản phẩm
-//                     $ttsp = loadone_sanpham($_GET['idsp']);
-//                     extract($ttsp);
-//                     $soluong = 1;
-                
-//                     // Tạo mảng sản phẩm mới
-//                     $item = array(
-//                         'id' => $id,
-//                         'name' => $name,
-//                         'price' => $price,
-//                         'img' => $img,
-//                         'soluong' => $soluong,
-//                     );
-                
-//                     // Kiểm tra xem giỏ hàng đã tồn tại hay chưa
-//                     if (isset($_SESSION['cart'])) {
-//                         // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
-//                         $product_exists = false;
-//                         foreach ($_SESSION['cart'] as &$cart_item) {
-//                             if ($cart_item['name'] === $name) {
-//                                 $cart_item['soluong'] += $soluong;
-//                                 $product_exists = true;
-//                                 break;
-//                             }
-//                         }
-                
-//                         // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới vào giỏ hàng
-//                         if (!$product_exists) {
-//                             $_SESSION['cart'][] = $item;
-//                         }
-//                     } else {
-//                         $_SESSION['cart'] = array($item);
-//                     }
-//                 } else {
-//                     $thongbao = "Vui lòng đăng nhập và chọn sản phẩm để thêm sản phẩm vào giỏ hàng!!";
-//                 }
-//                 include "view/cart/view.php";
-//             break;
-// ///////////////////////////////////////////////////////////
-//             case "remove":
-//                 if (isset($_GET['name']) && !empty($_GET['name'])) {
-//                     $remove_product = $_GET['name'];
-//                     if (isset($_SESSION['cart'])) {
-//                         foreach ($_SESSION['cart'] as $key => $item) {
-//                             if ($item['name'] === $remove_product) {
-//                                 unset($_SESSION['cart'][$key]);
-//                             }
-//                         }
-//                         // Đặt lại chỉ mục của mảng
-//                         $_SESSION['cart'] = array_values($_SESSION['cart']);
-//                     }
-//                 }
-//                 include "view/cart/view.php";
-//             break;
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////
+            //             case "cart":
+            //                 if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != "" && isset($_GET['idsp']) && $_GET['idsp'] != "") {
+            //                     // Load thông tin sản phẩm
+            //                     $ttsp = loadone_sanpham($_GET['idsp']);
+            //                     extract($ttsp);
+            //                     $soluong = 1;
+
+            //                     // Tạo mảng sản phẩm mới
+            //                     $item = array(
+            //                         'id' => $id,
+            //                         'name' => $name,
+            //                         'price' => $price,
+            //                         'img' => $img,
+            //                         'soluong' => $soluong,
+            //                     );
+
+            //                     // Kiểm tra xem giỏ hàng đã tồn tại hay chưa
+            //                     if (isset($_SESSION['cart'])) {
+            //                         // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+            //                         $product_exists = false;
+            //                         foreach ($_SESSION['cart'] as &$cart_item) {
+            //                             if ($cart_item['name'] === $name) {
+            //                                 $cart_item['soluong'] += $soluong;
+            //                                 $product_exists = true;
+            //                                 break;
+            //                             }
+            //                         }
+
+            //                         // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới vào giỏ hàng
+            //                         if (!$product_exists) {
+            //                             $_SESSION['cart'][] = $item;
+            //                         }
+            //                     } else {
+            //                         $_SESSION['cart'] = array($item);
+            //                     }
+            //                 } else {
+            //                     $thongbao = "Vui lòng đăng nhập và chọn sản phẩm để thêm sản phẩm vào giỏ hàng!!";
+            //                 }
+            //                 include "view/cart/view.php";
+            //             break;
+            // ///////////////////////////////////////////////////////////
+            //             case "remove":
+            //                 if (isset($_GET['name']) && !empty($_GET['name'])) {
+            //                     $remove_product = $_GET['name'];
+            //                     if (isset($_SESSION['cart'])) {
+            //                         foreach ($_SESSION['cart'] as $key => $item) {
+            //                             if ($item['name'] === $remove_product) {
+            //                                 unset($_SESSION['cart'][$key]);
+            //                             }
+            //                         }
+            //                         // Đặt lại chỉ mục của mảng
+            //                         $_SESSION['cart'] = array_values($_SESSION['cart']);
+            //                     }
+            //                 }
+            //                 include "view/cart/view.php";
+            //             break;
+            ///////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////
 
     }
 } else {

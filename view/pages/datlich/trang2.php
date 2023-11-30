@@ -7,6 +7,8 @@
     extract($dl_kt_nv);
     $dl_pttt_tk=get_dl_pttt_tk();
     extract($dl_pttt_tk);
+    $dl_cl=get_dl_cl();
+    extract($dl_cl);
 ?>
 
 <div class="section bg-breadcrumb">
@@ -43,8 +45,19 @@
                 <input type="date" class="form-control" id="ngay" name="ngay" value="<?=$ngay?>">
             </div>
             <div class="form-group">
-                <label for="gio">Giờ</label>
-                <input type="time" class="form-control" name="gio" value="<?=$gio?>">
+                <label for="gio">Khoảng giờ</label>
+                <select name="gio" id="khoang_gio" class="form-control">
+                    <option value="<?=$id_khoang_gio?>"><?=$ca_lam?></option>
+                    <?php
+                    // $dsdv=loadAll_dichvu();
+                    // foreach ($dsdv as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $ten_dv . '</option>';
+                    // }
+
+                    ?>
+
+                </select>
             </div>
 
             <div class="form-group">
@@ -218,7 +231,7 @@ function layGia(){
         
         dataType:'json',         
         success: function(data){  
-            console.log(data);  
+            //console.log(data);  
             for (i=0; i<data.length; i++){            
                 var gia = data[i]; 
                 document.getElementById("gia").value=gia['gia'];
@@ -227,15 +240,42 @@ function layGia(){
     });
 }
 </script>
+<!-- lấy khoảng giờ: -->
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://localhost:3000/model/json/time.php",
+            dataType: 'json',
+            success: function(data) {
+              // console.log(data);
+                //$("#dichvu").html("");
+                for (i = 0; i < data.length; i++) {
+                    var khoang_gio = data[i]; 
+                    var str = ` 
+                    <option value="${khoang_gio['id']}">
+                         ${khoang_gio['ca_lam']} 
+                    </option>`;
+                    $("#khoang_gio").append(str);
+                }
+                $("#khoang_gio").on("change", function(e) {
+                    layNhanVien();
+                });
+            }
+        });
+    })
+</script>
+
 <!-- lấy nhân viên -->
 <script>
     function layNhanVien() {
         var id_dv=$("#dichvu").val();
+        var id_time=$("#khoang_gio").val();
         $.ajax({
-            url: "http://localhost:3000/model/json/nhan_vien.php?id_dv="+id_dv,
+            url: "http://localhost:3000/model/json/nhan_vien.php?id_dv="+id_dv+"&&id_time="+id_time+"",
             dataType: 'json',
             success: function(data) {
-               //console.log(data);
+               console.log(data);
                 //$("#nhan_vien").html("");
                 for (i = 0; i < data.length; i++) {
                     var nhan_vien = data[i]; 
@@ -250,4 +290,5 @@ function layGia(){
         });
     }
 </script>
+
 

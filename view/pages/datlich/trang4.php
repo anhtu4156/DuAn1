@@ -2,6 +2,8 @@
 <?php
 $hd_dv_nv = get_hd_dv_nv();
 extract($hd_dv_nv);
+$hd_cl=get_hd_cl();
+extract($hd_cl);
 
 ?>
 <div class="section bg-breadcrumb">
@@ -33,7 +35,7 @@ extract($hd_dv_nv);
             <tbody>
                 <tr class="table-active">
                     <td><?= $ngay_dat_lich ?></td>
-                    <td><?= $khoang_gio ?></td>
+                    <td><?= $ca_lam ?></td>
                     <td><?= $ten_dv ?></td>
                     <td><?= $ten_nv ?></td>
                     <td>

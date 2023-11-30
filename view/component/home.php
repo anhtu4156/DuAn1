@@ -154,8 +154,8 @@ include 'banner.php';
 
 				<div class="row mt-4">
 					
-					<!-- Item 1 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="services-single.html"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
@@ -165,10 +165,31 @@ include 'banner.php';
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
-
+					</div> -->
+					<?php
+					$dsdv=get_3_dv();
+					foreach($dsdv as $item){
+						extract($item);
+						echo "<div class='col-12 col-sm-6 col-md-4'>
+						<div class='rs-image-box'>
+							<div class='media'>
+								<a href='../../index.php?act=ct_service&&id=".$id."'><img src='../../admin/assets/images/upload/".$anh_dv."' class='img-fluid'></a>
+							</div>
+							<div class='body-text'>
+								<h3 class='title'><a href='../../index.php?act=ct_service&&id=".$id."'>".$ten_dv."</a></h3>
+								".$mo_ta."
+							</div>
+						</div>
+					</div>	";
+					}
+					
+					
+					
+					
+					?>
+					
 					<!-- Item 2 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="services-single.html"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
@@ -180,7 +201,7 @@ include 'banner.php';
 						</div>
 					</div>
 
-					<!-- Item 3 -->
+					 Item 3 
 					<div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
@@ -191,7 +212,7 @@ include 'banner.php';
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 
@@ -254,59 +275,33 @@ include 'banner.php';
 
 				<div class="row mt-4">
 					
-					<!-- Item 1 -->
-					<div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-team-1">
-							<div class="media">
-								<img src="assets/images/vet05.jpg" alt="" class="img-fluid">
-								<div class="sosmed-icon">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
+					
+					<?php  
+						$dsnv=get_3_nv();
+						foreach($dsnv as $item){
+							extract($item);
+							echo "	<div class='col-12 col-sm-6 col-md-4'>
+							<div class='rs-team-1'>
+								<div class='media'>
+									<img src='assets/images/vet05.jpg' alt='' class='img-fluid'>
+									<div class='sosmed-icon'>
+										<a href=''><i class='fa fa-facebook'></i></a>
+										<a href=''><i class='fa fa-twitter'></i></a>
+										<a href=''><i class='fa fa-google-plus'></i></a>
+									</div>
+								</div>
+								<div class='body'>
+									<div class='title'>".$ten_nv."</div>
+									<div class='text-primary'>Veterinary</div>
 								</div>
 							</div>
-							<div class="body">
-								<div class="title">Dr. John Doel</div>
-								<div class="text-primary">Veterinary</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item 2 -->
-					<div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-team-1">
-							<div class="media">
-								<img src="assets/images/vet06.jpg" alt="" class="img-fluid">
-								<div class="sosmed-icon">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-							<div class="body">
-								<div class="title">Dr. Mellisa Doel</div>
-								<div class="text-primary">Veterinary</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item 3 -->
-					<div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-team-1">
-							<div class="media">
-								<img src="assets/images/vet07.jpg" alt="" class="img-fluid">
-								<div class="sosmed-icon">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-							<div class="body">
-								<div class="title">Dr. Aldizza Doel</div>
-								<div class="text-primary">Veterinary</div>
-							</div>
-						</div>
-					</div>
+						</div>";
+						}
+					
+					
+					
+					?>
+					
 
 				</div>
 

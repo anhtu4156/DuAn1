@@ -20,7 +20,7 @@
 				<div class="row">
 					
 					<!-- Item 1 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
@@ -30,10 +30,30 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
-
+					</div> -->
+					<?php
+						$dsdv=get_all_dv();
+						foreach($dsdv as $item){
+							extract($item);
+							echo "<div class='col-12 col-sm-6 col-md-4'>
+							<div class='rs-image-box'>
+								<div class='media'>
+									<a href='../../../index.php?act=ct_service&&id=".$id."'><img src='assets/images/services01.jpg' alt='' class='img-fluid'></a>
+								</div>
+								<div class='body-text'>
+									<h3 class='title'><a href='index.php?act=ct_service'>".$ten_dv."</a></h3>
+									".$mo_ta."
+								</div>
+							</div>
+						</div>";
+						}
+					
+					
+					
+					
+					?>
 					<!-- Item 2 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
@@ -43,10 +63,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 3 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services03.jpg" alt="" class="img-fluid"></a>
@@ -56,10 +76,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 4 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services04.jpg" alt="" class="img-fluid"></a>
@@ -69,10 +89,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 5 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services05.jpg" alt="" class="img-fluid"></a>
@@ -82,10 +102,10 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Item 6 -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<!-- <div class="col-12 col-sm-6 col-md-4">
 						<div class="rs-image-box">
 							<div class="media">
 								<a href="index.php?act=ct_service"><img src="assets/images/services06.jpg" alt="" class="img-fluid"></a>
@@ -95,7 +115,7 @@
 								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 

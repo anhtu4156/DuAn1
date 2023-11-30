@@ -125,3 +125,8 @@ function get_calam(){
     $result = pdo_query($sql);
     return $result;
 }
+function get_3_nv(){
+    $sql = "SELECT * FROM nhan_vien limit 1,3";
+    $result = pdo_query($sql);
+    return $result;
+}
