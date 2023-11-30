@@ -150,14 +150,155 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         // quản lý tài khoản
         case "taikhoan":
             $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
+            
             $list_tk= get_all_user();
             include "module/taikhoan/list.php";
             break;
-        case "sua_tk":
+        case "khoa_kh":
+            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+                $idkh = $_GET['id_kh'];
+                khoa_kh($idkh);
+            }
+            $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
             
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
             break;
-        case "xoa_tk":
+        case "mokhoa_kh":
+            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+                $idkh = $_GET['id_kh'];
+                mo_kh($idkh);
+            }
+            $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
+            
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
+            break;
+        // xóa kh
+        case "xoa_kh":
+            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+                $idkh = $_GET['id_kh'];
+                xoa_kh($idkh);
+            }
+            $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
+            
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
+            break;
+        //thùng rác
+        case "thungrac_kh":
 
+            
+            $tk_kh = thungrac();
+            
+            
+            include "module/taikhoan/thungrac.php";
+            break;
+        //khôi phục kh
+        case "khoiphuc_kh":
+            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+                $idkh = $_GET['id_kh'];
+                mo_kh($idkh);
+            }
+            $tk_kh = thungrac();
+            
+            include "module/taikhoan/thungrac.php";
+            break;
+    ///////////
+        //khóa nv
+        case "khoa_nv":
+            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+                $idnv = $_GET['id_nv'];
+                khoa_nv($idnv);
+            }
+            $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
+            
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
+            break;
+        // mở khóa nv
+        case "mokhoa_nv":
+            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+                $idnv = $_GET['id_nv'];
+                mo_nv($idnv);
+            }
+            $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
+            
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
+            break;
+        // xóa nv
+        case "xoa_nv":
+            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+                $idnv = $_GET['id_nv'];
+                xoa_nv($idnv);
+            }
+            $tk_nv = get_tk_nv();
+            $tk_kh = get_tk_kh();
+            
+            $list_tk= get_all_user();
+            include "module/taikhoan/list.php";
+            break;
+        // thùng rác nv
+        case "thungrac_nv":
+            $tk_nv = thungrac_nv();
+            
+            include "module/taikhoan/thungrac_nv.php";
+            break;
+         //khôi phục nv
+         case "khoiphuc_nv":
+            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+                $idnv = $_GET['id_nv'];
+                mo_nv($idnv);
+            }
+            $tk_nv = thungrac_nv();
+            
+            include "module/taikhoan/thungrac_nv.php";
+            break;
+        // thêm khách hàng
+        case "them_kh":
+            if (isset($_POST['register']) && $_POST['register']) {
+                $user = $_POST['username'];
+                $pass = $_POST['password'];
+                $email = $_POST['email'];
+                $repass = $_POST['repassword'];
+                if ((strlen($user) >= 2) && ($pass === $repass) && ($pass != '')) {
+                    insert_taikhoan($user, $pass, $email);
+                    $thanhcong = "Đăng ký thành công, bạn đã có thể đăng nhập";
+                }
+            }
+            include "module/taikhoan/add_kh.php";
+            break;
+        // thêm nhân viên
+        case "them_nv":
+            if (isset($_POST['register']) && $_POST['register']) {
+                $user = $_POST['username'];
+                $pass = $_POST['password'];
+                $email = $_POST['email'];
+                $dv = $_POST['dv'];
+                $ca = $_POST['ca'];
+                $repass = $_POST['repassword'];
+                if ((strlen($user) >= 2) && ($pass === $repass) && ($pass != '') && $dv != '' && $ca != '') {
+                    insert_taikhoan_nv($user, $pass, $email,$dv, $ca);
+                    $thanhcong = "Đăng ký thành công, bạn đã có thể đăng nhập";
+                }
+            }
+            $ca = get_calam();
+            $listdichvu = $listdichvu = loadall_dv();
+            include "module/taikhoan/add_nv.php";
+            break;
+
+        // hóa đơn
+
+        case "hoadon":
+            
+            include "module/hoadon/list.php";
             break;
     }
 } else {

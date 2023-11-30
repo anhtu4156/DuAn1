@@ -29,5 +29,4 @@ function get_hd($id_tk){
 }
 
 
-//print_r(get_hd(1)) ;
 ?>
