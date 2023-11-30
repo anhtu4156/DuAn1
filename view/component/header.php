@@ -227,7 +227,7 @@
 										
 									}
 									?>
-									
+									<a class="dropdown-item" href="index.php?act=lichsu">LỊCH SỬ ĐẶT LỊCH</a>
 									<a class="dropdown-item" href="index.php?act=profile">CẬP NHẬT THÔNG TIN</a>
 									<a class="dropdown-item" href="index.php?act=pass">ĐỔI MẬT KHẨU</a>
 									<a class="dropdown-item" href="index.php?act=logout">ĐĂNG XUẤT</a>

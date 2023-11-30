@@ -26,7 +26,7 @@
                     echo"";
                 }
             
-            
+            // echo $_SESSION['user_id'];
             ?>
     </div>
         <form action="index.php?act=xacnhan" method="post" class="form">
@@ -36,14 +36,25 @@
                 <input type="date" class="form-control" id="ngay" name="ngay">
             </div>
             <div class="form-group">
-                <label for="gio">Giờ</label>
-                <input type="time" class="form-control" name="gio">
+                <label for="gio">Khoảng giờ</label>
+                <select name="gio" id="khoang_gio" class="form-control">
+                    <option value="">Chọn khoảng giờ</option>
+                    <?php
+                    // $dsdv=loadAll_dichvu();
+                    // foreach ($dsdv as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $ten_dv . '</option>';
+                    // }
+
+                    ?>
+
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="nguoi-hen">Chọn dịch vụ</label>
                 <select name="dv" id="dichvu" class="form-control">
-                    <option value="0">Chọn dịch vụ</option>
+                    <option value="">Chọn dịch vụ</option>
                     <?php
                     // $dsdv=loadAll_dichvu();
                     // foreach ($dsdv as $item) {
@@ -58,7 +69,7 @@
             <div class="form-group">
                 <label for="nguoi-hen">Chọn loài thú cưng</label>
                 <select name="dong_vat" id="thucung" class="form-control">
-                    <option value="0">Chọn loài thú cưng</option>
+                    <option value="">Chọn loài thú cưng</option>
                     <?php
                     // $dsdv=loadAll_dichvu();
                     // foreach ($dstc as $item) {
@@ -73,7 +84,7 @@
             <div class="form-group">
                 <label for="nguoi-hen">Chọn khoảng cân</label>
                 <select name="can_nang" id="can_nang" class="form-control">
-                    <option value="" selected>---Chọn khoảng cân---</option>
+                    <option value="">---Chọn khoảng cân---</option>
                     <?php
                     // $dsdv=loadAll_dichvu();
                     // foreach ($ds_cannang as $item) {
@@ -88,7 +99,7 @@
             <div class="form-group">
                 <label for="nguoi-hen">Chọn nhân viên</label>
                 <select name="nv" id="nhan_vien" class="form-control">
-                    <option value="0">---Chọn nhân viên---</option>
+                    <option value="">---Chọn nhân viên---</option>
                 </select>
             </div>
             <div class="form-group">
@@ -98,7 +109,7 @@
             <div class="form-group">
                 <label for="nguoi-hen">Chọn phương thức thanh toán</label>
                 <select name="pttt" id="" class="form-control">
-                    <option value="0">---Chọn phương thức thanh toán---</option>
+                    <option value="">---Chọn phương thức thanh toán---</option>
                     <?php
                     
                     foreach ($phuong_thuc_tt as $item) {
@@ -211,15 +222,44 @@ function layGia(){
     });
 }
 </script>
+
+
+<!-- lấy khoảng giờ: -->
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://localhost:3000/model/json/time.php",
+            dataType: 'json',
+            success: function(data) {
+              // console.log(data);
+                //$("#dichvu").html("");
+                for (i = 0; i < data.length; i++) {
+                    var khoang_gio = data[i]; 
+                    var str = ` 
+                    <option value="${khoang_gio['id']}">
+                         ${khoang_gio['ca_lam']} 
+                    </option>`;
+                    $("#khoang_gio").append(str);
+                }
+                $("#khoang_gio").on("change", function(e) {
+                    layNhanVien();
+                });
+            }
+        });
+    })
+</script>
+
 <!-- lấy nhân viên -->
 <script>
     function layNhanVien() {
         var id_dv=$("#dichvu").val();
+        var id_time=$("#khoang_gio").val();
         $.ajax({
-            url: "http://localhost:3000/model/json/nhan_vien.php?id_dv="+id_dv,
+            url: "http://localhost:3000/model/json/nhan_vien.php?id_dv="+id_dv+"&&id_time="+id_time+"",
             dataType: 'json',
             success: function(data) {
-               //console.log(data);
+               console.log(data);
                 //$("#nhan_vien").html("");
                 for (i = 0; i < data.length; i++) {
                     var nhan_vien = data[i]; 
