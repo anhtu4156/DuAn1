@@ -62,7 +62,7 @@ function get_all_user() {
 // lấy all tài khoản nhân viên
 
 function get_tk_nv(){
-    $sql = "SELECT * FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` != 3";
+    $sql = "SELECT nv.id, nv.ten_nv, nv.sdt,nv.email, nv.status, dv.ten_dv FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` != 3";
     $result = pdo_query($sql);
     return $result;
 }
@@ -89,6 +89,11 @@ function xoa_kh($idkh){
     $sql = "UPDATE tai_khoan SET `trang_thai` = 3 WHERE id = '$idkh'";
     return pdo_execute($sql);
 }
+// xóa vv kh
+function xoa_vv_kh($id){
+    $sql = "DELETE FROM `tai_khoan` WHERE id = $id";
+    pdo_execute($sql);
+}
 // thùng rác
 function thungrac(){
     $sql = "SELECT * FROM tai_khoan WHERE vai_tro = 0 and trang_thai = 3";
@@ -110,6 +115,11 @@ function mo_nv($idnv){
 function xoa_nv($idnv){
     $sql = "UPDATE nhan_vien SET `status` = 3 WHERE id = '$idnv'";
     return pdo_execute($sql);
+}
+// xóa vv nv
+function xoa_vv_nv($id){
+    $sql = "DELETE FROM `nhan_vien` WHERE id = $id";
+    pdo_execute($sql);
 }
 // thùng rác
 function thungrac_nv(){

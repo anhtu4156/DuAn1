@@ -67,6 +67,54 @@ function update_dl($ngay_dat_lich,$khoang_gio,$id_thu_cung,$id_khoang_can,$id_di
 //  echo '</pre>';
 
 
+// lấy ds order
+function loadOrder() {
+    $sql = "SELECT dl.id, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt where dl.status != 1";
+    $data = pdo_query($sql);
+    return $data;
+}
+// đếm ds order
+function countOrder() {
+    $sql = "SELECT COUNT(dl.id) sl FROM ds_dat_lich dl where dl.status !=1";
+    $data = pdo_query($sql);
+    return $data;
+}
+// lấy order theo id
+function load_order_id($id) {
+    $sql = "SELECT dl.id, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt WHERE dl.id = '$id'";
+    $data = pdo_query_one($sql);
+    return $data;
+}
+// update order
+function update_order($id, $gia, $ngay, $pt, $tt){
+    $sql = "UPDATE `ds_dat_lich` SET `ngay_dat_lich`='$ngay',`id_pttt`='$pt',`gia`='$gia',`trang_thai_dv`='$tt' WHERE id = '$id'";
+    return pdo_execute($sql);
+}
+// xóa order vào thùng rác
+function xoa_order($id){
+    $sql = "UPDATE `ds_dat_lich` SET `status`='1' WHERE id = $id";
+    pdo_execute($sql);
+}
+// xóa order vv
+function xoa_vv_order($id){
+    $sql = "DELETE FROM `ds_dat_lich` WHERE id = $id";
+    pdo_execute($sql);
+}
+
+// khôi phục order từ thùng rác
+function khoiphuc_order($id){
+    $sql = "UPDATE `ds_dat_lich` SET `status`='0' WHERE id = $id";
+    pdo_execute($sql);
+}
+
+// load ds order trong thùng rác
+function thungrac_order() {
+    $sql = "SELECT dl.id, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt where dl.status = 1";
+    $data = pdo_query($sql);
+    return $data;
+}
+
+
 
 
 

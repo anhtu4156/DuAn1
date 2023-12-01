@@ -5,6 +5,8 @@ include "../model/admin/danhmuc_dv.php";
 include "../model/admin/dich_vu.php";
 include "../model/admin/thongke.php";
 include "../model/taikhoan.php";
+include "../model/datlich.php";
+include "../model/dich_vu.php";
 // include "model/pdo.php";
 
 
@@ -147,35 +149,31 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $thongke = thongke();
             include "module/thongke/bieudo.php";
             break;
-        // quản lý tài khoản
-        case "taikhoan":
-            $tk_nv = get_tk_nv();
-            $tk_kh = get_tk_kh();
+///////////////////////////////
+        //tài khoản kh
+        case "taikhoan_kh":
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            $tk_kh = get_tk_kh();
+            include "module/taikhoan/list_kh.php";
             break;
+        
         case "khoa_kh":
             if(isset($_GET['id_kh']) && $_GET['id_kh']){
                 $idkh = $_GET['id_kh'];
                 khoa_kh($idkh);
             }
-            $tk_nv = get_tk_nv();
             $tk_kh = get_tk_kh();
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            include "module/taikhoan/list_kh.php";
             break;
         case "mokhoa_kh":
             if(isset($_GET['id_kh']) && $_GET['id_kh']){
                 $idkh = $_GET['id_kh'];
                 mo_kh($idkh);
             }
-            $tk_nv = get_tk_nv();
             $tk_kh = get_tk_kh();
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            include "module/taikhoan/list_kh.php";
             break;
         // xóa kh
         case "xoa_kh":
@@ -183,11 +181,19 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $idkh = $_GET['id_kh'];
                 xoa_kh($idkh);
             }
-            $tk_nv = get_tk_nv();
             $tk_kh = get_tk_kh();
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            include "module/taikhoan/list_kh.php";
+            break;
+        // xóa kh vv
+        case "xoa_kh_vv":
+            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+                $idkh = $_GET['id_kh'];
+                xoa_vv_kh($idkh);
+            }
+            $tk_kh = get_tk_kh();
+            
+            include "module/taikhoan/list_kh.php";
             break;
         //thùng rác
         case "thungrac_kh":
@@ -209,6 +215,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/taikhoan/thungrac.php";
             break;
     ///////////
+    // tài khoản nv
+        case "taikhoan_nv":
+            $tk_nv = get_tk_nv();
+            
+            include "module/taikhoan/list_nv.php";
+            break;
         //khóa nv
         case "khoa_nv":
             if(isset($_GET['id_nv']) && $_GET['id_nv']){
@@ -216,10 +228,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 khoa_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            $tk_kh = get_tk_kh();
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            include "module/taikhoan/list_nv.php";
             break;
         // mở khóa nv
         case "mokhoa_nv":
@@ -228,10 +238,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 mo_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            $tk_kh = get_tk_kh();
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            include "module/taikhoan/list_nv.php";
             break;
         // xóa nv
         case "xoa_nv":
@@ -240,10 +248,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 xoa_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            $tk_kh = get_tk_kh();
             
-            $list_tk= get_all_user();
-            include "module/taikhoan/list.php";
+            include "module/taikhoan/list_nv.php";
+            break;
+        // xóa nv vv
+        case "xoa_nv_vv":
+            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+                $idnv = $_GET['id_nv'];
+                xoa_vv_nv($idnv);
+            }
+            $tk_nv = get_tk_nv();
+            
+            include "module/taikhoan/list_nv.php";
             break;
         // thùng rác nv
         case "thungrac_nv":
@@ -294,11 +310,63 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/taikhoan/add_nv.php";
             break;
 
-        // hóa đơn
+        // đơn đặt
+        case "order":
+            $count = countOrder();
+            $ds = loadOrder();
+            include "module/dondat/order.php";
+            break;
+        // sửa đơn đặt
+        case "sua_order":
+            if(isset($_GET['id_order']) && $_GET['id_order']){
+                $id = $_GET['id_order'];
+                $load = load_order_id($id);
+                if(isset($_POST['sua_order']) && $_POST['sua_order']){
+                    $gia = $_POST['gia'];
+                    $ngay = $_POST['ngay'];
+                    $pt = $_POST['pt'];
+                    $tt = $_POST['tt'];
 
-        case "hoadon":
-            
-            include "module/hoadon/list.php";
+                    update_order($id, $gia, $ngay, $pt, $tt);
+                }
+            }
+            $load_pt = get_pttt();
+            include "module/dondat/update_order.php";
+            break;
+        // xoá đơn đặt vào thùng rác
+        case "xoa_order":
+            if(isset($_GET['id_order']) && $_GET['id_order']){
+                $id = $_GET['id_order'];
+                xoa_order($id);
+            }
+            $count = countOrder();
+            $ds = loadOrder();
+            include "module/dondat/order.php";
+            break;
+        // xoá đơn đặt vĩnh viễn
+        case "xoa_ordervv":
+            if(isset($_GET['id_order']) && $_GET['id_order']){
+                $id = $_GET['id_order'];
+                xoa_vv_order($id);
+            }
+            $count = countOrder();
+            $ds = loadOrder();
+            include "module/dondat/order.php";
+            break;
+        // thùng rác order
+        case "thungrac_order":
+            $ds = thungrac_order();
+            include "module/dondat/thungrac_order.php";
+            break;
+
+        // khôi phục order từ thùng rác
+        case "khoiphuc_order":
+            if(isset($_GET['id_order']) && $_GET['id_order']){
+                $id = $_GET['id_order'];
+                khoiphuc_order($id);
+            }
+            $ds = thungrac_order();
+            include "module/dondat/thungrac_order.php";
             break;
     }
 } else {

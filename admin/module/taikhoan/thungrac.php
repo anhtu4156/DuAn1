@@ -75,7 +75,7 @@
                                             </form>
                                         </div> -->
                                         <div>
-                                            <a href="index.php?act=taikhoan">
+                                            <a href="index.php?act=taikhoan_kh">
                                             <button class="inline-block focus:outline-none bg-brand-500 mt-1 text-white hover:bg-brand-600 hover:text-white  text-md font-medium py-2 px-4 rounded">
                                                 Quay lại danh sách
                                             </button>
@@ -160,7 +160,7 @@
                                                                     }else if($trang_thai == 1){
                                                                         echo ' <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Đã khóa</span>';
                                                                     }else{
-                                                                        echo ' <span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Đã xóa</span>';
+                                                                        echo ' <span class="bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Đã xóa</span>';
 
                                                                     }
                                                                     ?>
@@ -175,6 +175,7 @@
                                                                     </td> -->
                                                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                                                                         <a class="me-2" href="index.php?act=khoiphuc_kh&id_kh='.$id.'" onclick=\'return confirm("Bạn có chắc chắn muốn khôi phục cho khách hàng này không?")\'><i class="icofont-arrow-left text-2xl text-red-500 dark:text-red-400"></i></a>
+                                                                        <a href="index.php?act=xoa_kh_vv&id_kh=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn xóa vĩnh viễn order này không")\'><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
                                                                     </td>
                                                                 </tr>';
                                                                 ?>
