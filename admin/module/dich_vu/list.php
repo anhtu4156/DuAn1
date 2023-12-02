@@ -182,7 +182,7 @@
                                             </div><!--end div-->
                                         </div><!--end div-->
                                     </div><!--end grid-->
-                                    <div class="flex justify-between mt-4">
+                                    <!-- <div class="flex justify-between mt-4">
                                         <div class="self-center">
                                             <p class="dark:text-slate-400">Showing 1 - 20 of 1,524</p>
                                         </div>
@@ -209,7 +209,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
 

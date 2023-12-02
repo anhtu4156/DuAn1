@@ -1,9 +1,7 @@
 <!-- BREADCRUMB -->
 <?php
-$hd_dv_nv = get_hd_dv_nv();
-extract($hd_dv_nv);
-$hd_cl=get_hd_cl();
-extract($hd_cl);
+
+
 
 ?>
 <div class="section bg-breadcrumb">
@@ -42,7 +40,7 @@ extract($hd_cl);
                         <?php
                         if ($trang_thai == 0) {
                             echo "Chưa thanh toán";
-                        } else {
+                        } else if($trang_thai==1) {
                             echo "Đã thanh toán";
                         }
                         ?>

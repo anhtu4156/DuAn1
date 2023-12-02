@@ -95,6 +95,7 @@
 					<div class="box-icon-1">
 						<div class="icon">
 							<div class="fa fa-clock-o"></div>
+							
 						</div>
 						<div class="body-content">
 							<div class="heading">Giờ Mở Cửa :</div>

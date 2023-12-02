@@ -1,17 +1,6 @@
 <?php
-$cthd_bt_dv = get_cthd_bt_dv($id_tk);
- foreach($cthd_bt_dv as $item){
-    extract($item);
- }
-$cthd_hd_cl = get_cthd_hd_cl($id_tk);
- foreach($cthd_hd_cl as $item){
-    extract($item);
- }
-$cthd_nv = get_cthd_nv($id_tk);
-foreach($cthd_nv as $item){
-    extract($item);
-}
-$cthd = get_cthd($id_tk);
+$id_tk = $_SESSION['user_id'];
+$get_ls = get_ls($id_tk);
 
 
 ?>
@@ -46,21 +35,24 @@ $cthd = get_cthd($id_tk);
             <tbody>
                 <?php
                 $stt = 1;
-                foreach ($cthd as $item) {
-                    
+                foreach ($get_ls as $item) {
+
                     extract($item);
-                    if($trang_thai==0){
-                        $tt="Chưa hoàn thành";
-                    }else{
-                        $tt="Đã hoàn thành";
+                    $ten_dv = load_ten_dv($id_dich_vu);
+                    $ca_lam = get_ca_lam($id_khoang_gio);
+                    $ten_nv = get_ten_nv($id_nhan_vien);
+                    if ($trang_thai_dv == 0) {
+                        $tt = "Chưa hoàn thành";
+                    } else {
+                        $tt = "Đã hoàn thành";
                     }
                     echo "<tr>
                         <td>" . $stt++ . "</td>
                         <td>" . $ngay_dat_lich . "</td>
-                        <td>" . $ca_lam . "</td>
-                        <td>" . $ten_dv . "</td>
-                        <td>" . $ten_nv . "</td>
-                        <td>".$tt."</td>
+                        <td>" . $ca_lam['ca_lam'] . "</td>
+                        <td>" . $ten_nv['ten_nv'] . "</td>
+                        <td>" . $ten_dv['ten_dv'] . "</td>
+                        <td>" . $tt . "</td>
                     </tr>";
                 }
 
