@@ -114,8 +114,15 @@ function thungrac_order() {
     return $data;
 }
 
-
-
+// load order của nhân viên
+function loadOrder_nv($idnv) {
+    $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
+    JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
+    JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status != 1 and dl.id_nhan_vien ='$idnv'";
+    $data = pdo_query($sql);
+    return $data;
+}
 
 
 

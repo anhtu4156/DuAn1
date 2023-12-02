@@ -1,4 +1,11 @@
 <?php
+
+// if(isset($_SESSION['admin']) && $_SESSION['admin'] != '' ){
+
+// }else{
+//     header("Location: login.php");
+// }
+
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 include "../model/pdo.php";
 include "../model/admin/danhmuc_dv.php";
@@ -295,12 +302,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $email = $_POST['email'];
                 $dv = $_POST['dv'];
                 $ca = $_POST['ca'];
+                $vt = $_POST['vt'];
                 $repass = $_POST['repassword'];
                 if ((strlen($user) >= 2) && ($pass === $repass) && ($pass != '') && $dv != '' && $ca != '') {
-                    insert_taikhoan_nv($user, $pass, $email, $dv, $ca);
+                    insert_taikhoan_nv($user, $pass, $email, $dv, $ca, $vt);
                     $thanhcong = "Đăng ký thành công, bạn đã có thể đăng nhập";
                 }
             }
+            $vaitro = get_vaitro();
             $ca = get_calam();
             $listdichvu = $listdichvu = loadall_dv();
             include "module/taikhoan/add_nv.php";
@@ -426,6 +435,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $dv = laydv();
             $ca = ca();
             include "module/hoadon/update_hd.php";
+            break;
+// xác nhận đơn của nhân viên
+        case "xacnhan":
+            $count = countOrder();
+            $ds = loadOrder_nv(2);
+            include "module/nhanvien/dondat.php";
             break;
     }
 } else {

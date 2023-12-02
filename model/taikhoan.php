@@ -6,11 +6,11 @@ function insert_taikhoan($user,$pass,$email){
     pdo_execute($sql);
 }
 //dang ky nhân viên
-function insert_taikhoan_nv($user,$pass,$email,$dv,$ca){
-    $sql="INSERT INTO `nhan_vien` ( `ten_nv`, `pass`, `email`,`id_dv`, `ca_lam`) VALUES ( '$user', '$pass','$email','$dv','$ca') ";
+function insert_taikhoan_nv($user,$pass,$email,$dv,$ca,$vt){
+    $sql="INSERT INTO `nhan_vien` ( `ten_nv`, `pass`, `email`,`id_dv`, `ca_lam`,`vai_tro`) VALUES ( '$user', '$pass','$email','$dv','$ca','$vt') ";
     pdo_execute($sql);
 }
-// đăng nhập
+// đăng nhập khách hàng
 function dangnhap($user, $pass) {
     $sql = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='$user' and mat_khau='$pass'";
     
@@ -26,6 +26,8 @@ function dangnhap($user, $pass) {
         return "Thông tin tài khoản sai";
     }
 }
+
+
 // đăng xuất
 function dangxuat() {
     if (isset($_SESSION['user'])) {
@@ -139,4 +141,12 @@ function get_3_nv(){
     $sql = "SELECT * FROM nhan_vien limit 1,3";
     $result = pdo_query($sql);
     return $result;
+}
+
+// lấy vai trò
+
+function get_vaitro(){
+    $sql = "SELECT id as id_vt, ten_vaitro FROM vai_tro";
+    $data = pdo_query($sql);
+    return $data;
 }

@@ -63,6 +63,13 @@
                                                 Dịch vụ
                                             </a>
                                         </li>
+                                        <li class="nav-item relative block">
+                                            <a href="index.php?act=dich_vu"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Thêm biến thể dv
+                                            </a>
+                                        </li>
 
                                     </ul>
                                 </div>
@@ -169,13 +176,36 @@
                                                 Hóa đơn
                                             </a>
                                         </li>
-                                        <li class="nav-item relative block">
+                                        <!-- <li class="nav-item relative block">
                                             <a href="index.php?act=hoadon"
                                                class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                                 <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                                                 Orders
                                             </a>
+                                        </li> -->
+                                    </ul>
+                                </div>
+<!-- Xác nhận đơn -->
+                                <a href="#"
+                                   class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200"
+                                   data-fc-type="collapse" data-fc-parent="parent-accordion">
+                                        <span data-lucide="scroll-text"
+                                              class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
+                                    <span>Đơn đặt</span>
+                                    <i class="icofont-thin-down  fc-collapse-open:rotate-180 ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></i>
+                                </a>
+
+                                <div id="Authentication-flush" class="hidden  overflow-hidden"
+                                     aria-labelledby="Authentication">
+                                    <ul class="nav flex-col flex flex-wrap ps-0 mb-0 ms-2">
+                                        <li class="nav-item relative block">
+                                            <a href="index.php?act=xacnhan"
+                                               class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                                <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
+                                                Đơn đặt
+                                            </a>
                                         </li>
+                                        
                                     </ul>
                                 </div>
 
