@@ -63,7 +63,7 @@ if (isset($_POST['register'])) {
                                         <span><?php echo isset($errMsg['email']) ? $errMsg['email'] : ''; ?></span>
                                     </div>
                                     <div class="select">
-                                        <select class="text-dark " name="dv" id="">
+                                        <select class="text-white " name="dv" id="">
                                             <option value="">Chọn dịch vụ</option>
                                             <?php
                                             foreach ($listdichvu as $item) {
@@ -80,6 +80,17 @@ if (isset($_POST['register'])) {
                                             foreach ($ca as $item) {
                                                 extract($item);
                                                 echo '<option class="dark:text-slate-700" value="' . $id . '">' . $ca_lam . '</option>';
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="select">
+                                        <select class="text-dark " name="vt" id="">
+                                            <option value="">Chọn vai trò</option>
+                                            <?php
+                                            foreach ($vaitro as $item) {
+                                                extract($item);
+                                                echo '<option class="dark:text-slate-700" value="' . $id_vt . '">' . $ten_vaitro . '</option>';
                                             }
                                             ?>
                                         </select>

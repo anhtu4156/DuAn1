@@ -28,7 +28,8 @@ function load_one_dv($id){
 // }
 function get_pttt(){
     $sql="select * from phuong_thuc_tt";
-    return pdo_query($sql);
+    $data = pdo_query($sql);
+    return $data;
  }
 function load_dm_dv(){
     $sql="SELECT * from loai_dv";

@@ -6,11 +6,11 @@ function insert_taikhoan($user,$pass,$email){
     pdo_execute($sql);
 }
 //dang ky nhân viên
-function insert_taikhoan_nv($user,$pass,$email,$dv,$ca){
-    $sql="INSERT INTO `nhan_vien` ( `ten_nv`, `pass`, `email`,`id_dv`, `ca_lam`) VALUES ( '$user', '$pass','$email','$dv','$ca') ";
+function insert_taikhoan_nv($user,$pass,$email,$dv,$ca,$vt){
+    $sql="INSERT INTO `nhan_vien` ( `ten_nv`, `pass`, `email`,`id_dv`, `ca_lam`,`vai_tro`) VALUES ( '$user', '$pass','$email','$dv','$ca','$vt') ";
     pdo_execute($sql);
 }
-// đăng nhập
+// đăng nhập khách hàng
 function dangnhap($user, $pass) {
     $sql = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='$user' and mat_khau='$pass'";
     
@@ -26,6 +26,8 @@ function dangnhap($user, $pass) {
         return "Thông tin tài khoản sai";
     }
 }
+
+
 // đăng xuất
 function dangxuat() {
     if (isset($_SESSION['user'])) {
@@ -62,7 +64,7 @@ function get_all_user() {
 // lấy all tài khoản nhân viên
 
 function get_tk_nv(){
-    $sql = "SELECT * FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` != 3";
+    $sql = "SELECT nv.id, nv.ten_nv, nv.sdt,nv.email, nv.status, dv.ten_dv FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` != 3";
     $result = pdo_query($sql);
     return $result;
 }
@@ -89,6 +91,11 @@ function xoa_kh($idkh){
     $sql = "UPDATE tai_khoan SET `trang_thai` = 3 WHERE id = '$idkh'";
     return pdo_execute($sql);
 }
+// xóa vv kh
+function xoa_vv_kh($id){
+    $sql = "DELETE FROM `tai_khoan` WHERE id = $id";
+    pdo_execute($sql);
+}
 // thùng rác
 function thungrac(){
     $sql = "SELECT * FROM tai_khoan WHERE vai_tro = 0 and trang_thai = 3";
@@ -111,6 +118,11 @@ function xoa_nv($idnv){
     $sql = "UPDATE nhan_vien SET `status` = 3 WHERE id = '$idnv'";
     return pdo_execute($sql);
 }
+// xóa vv nv
+function xoa_vv_nv($id){
+    $sql = "DELETE FROM `nhan_vien` WHERE id = $id";
+    pdo_execute($sql);
+}
 // thùng rác
 function thungrac_nv(){
     $sql = "SELECT * FROM nhan_vien  nv join `dich_vu` dv on nv.id_dv = dv.id where `status` = 3";
@@ -131,7 +143,16 @@ function get_3_nv(){
     return $result;
 }
 
+
 function get_ten_tk($id){
     $sql="SELECT ten_tai_khoan from tai_khoan where id=".$id;
     return pdo_query_one($sql);
+
+// lấy vai trò
+
+function get_vaitro(){
+    $sql = "SELECT id as id_vt, ten_vaitro FROM vai_tro";
+    $data = pdo_query($sql);
+    return $data;
+
 }
