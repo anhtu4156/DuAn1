@@ -7,7 +7,7 @@ include "../model/admin/thongke.php";
 include "../model/taikhoan.php";
 include "../model/datlich.php";
 include "../model/dich_vu.php";
-// include "model/pdo.php";
+include "../model/hoa_don.php";
 
 
 include "header.php";
@@ -58,7 +58,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/danhmuc_dv/list.php";
             break;
 
-        // dịch vụ
+            // dịch vụ
         case "them_dv":
             if (isset($_POST['them']) && ($_POST['them'])) {
                 $tendv = isset($_POST['ten_dv']) ? $_POST['ten_dv'] : '';
@@ -75,8 +75,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     } else {
                         // Bạn có thể thêm mã xử lý khi upload ảnh không thành công ở đây
                     }
-
-                    
                 } else {
                     // Xử lý trường hợp không có ảnh được chọn
                 }
@@ -89,22 +87,22 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/dich_vu/add.php";
             break;
         case "dich_vu":
-            if(isset($_POST['clickOK'])&&($_POST['clickOK'])){
-                $keyw=$_POST['keyw'];
-                $iddm=$_POST['iddm'];
-            }else{
-                $keyw="";
-                $iddm=0;
+            if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
+                $keyw = $_POST['keyw'];
+                $iddm = $_POST['iddm'];
+            } else {
+                $keyw = "";
+                $iddm = 0;
             }
-            $listdanhmuc_dv= loadall_danhmuc_dv();
-            $listdichvu = loadall_dv($keyw,$iddm);
+            $listdanhmuc_dv = loadall_danhmuc_dv();
+            $listdichvu = loadall_dv($keyw, $iddm);
             include "module/dich_vu/list.php";
             break;
         case "sua_dv":
-            if(isset($_GET['id_dv'])&&($_GET['id_dv']) != ""){
+            if (isset($_GET['id_dv']) && ($_GET['id_dv']) != "") {
                 $iddv = $_GET['id_dv'];
                 if (isset($_POST['sua_dv']) && $_POST['sua_dv']) {
-                    
+
                     $tendv = $_POST['ten_dv'];
                     $danhmuc = $_POST['danhmuc_dv'];
                     $mota = $_POST['mo_ta'];
@@ -112,18 +110,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                         $hinh = $_FILES['file']['name'];
                         $target_dir = "assets/images/upload/";
                         $target_file = $target_dir . basename($_FILES['file']['name']);
-    
+
                         if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
                             // Bạn có thể thêm mã xử lý khi upload ảnh thành công ở đây
                         } else {
                             // Bạn có thể thêm mã xử lý khi upload ảnh không thành công ở đây
                         }
-    
-                        
                     } else {
                         // Xử lý trường hợp không có ảnh được chọn
                     }
-                    update_dv($iddv, $hinh, $tendv, $danhmuc,$mota);
+                    update_dv($iddv, $hinh, $tendv, $danhmuc, $mota);
                     $thanhcong = "Sửa thành công";
                 }
                 $loaddv = loaddv_theoid($iddv);
@@ -139,145 +135,145 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdichvu = loadall_dv();
             include "module/dich_vu/list.php";
             break;
-        // thống kê
+            // thống kê
         case "thongke":
             $thongke = thongke();
             include "module/thongke/list.php";
             break;
-        //biểu đồ
+            //biểu đồ
         case "bieudo":
             $thongke = thongke();
             include "module/thongke/bieudo.php";
             break;
-///////////////////////////////
-        //tài khoản kh
+            ///////////////////////////////
+            //tài khoản kh
         case "taikhoan_kh":
-            
+
             $tk_kh = get_tk_kh();
             include "module/taikhoan/list_kh.php";
             break;
-        
+
         case "khoa_kh":
-            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+            if (isset($_GET['id_kh']) && $_GET['id_kh']) {
                 $idkh = $_GET['id_kh'];
                 khoa_kh($idkh);
             }
             $tk_kh = get_tk_kh();
-            
+
             include "module/taikhoan/list_kh.php";
             break;
         case "mokhoa_kh":
-            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+            if (isset($_GET['id_kh']) && $_GET['id_kh']) {
                 $idkh = $_GET['id_kh'];
                 mo_kh($idkh);
             }
             $tk_kh = get_tk_kh();
-            
+
             include "module/taikhoan/list_kh.php";
             break;
-        // xóa kh
+            // xóa kh
         case "xoa_kh":
-            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+            if (isset($_GET['id_kh']) && $_GET['id_kh']) {
                 $idkh = $_GET['id_kh'];
                 xoa_kh($idkh);
             }
             $tk_kh = get_tk_kh();
-            
+
             include "module/taikhoan/list_kh.php";
             break;
-        // xóa kh vv
+            // xóa kh vv
         case "xoa_kh_vv":
-            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+            if (isset($_GET['id_kh']) && $_GET['id_kh']) {
                 $idkh = $_GET['id_kh'];
                 xoa_vv_kh($idkh);
             }
             $tk_kh = get_tk_kh();
-            
+
             include "module/taikhoan/list_kh.php";
             break;
-        //thùng rác
+            //thùng rác
         case "thungrac_kh":
 
-            
+
             $tk_kh = thungrac();
-            
-            
+
+
             include "module/taikhoan/thungrac.php";
             break;
-        //khôi phục kh
+            //khôi phục kh
         case "khoiphuc_kh":
-            if(isset($_GET['id_kh']) && $_GET['id_kh']){
+            if (isset($_GET['id_kh']) && $_GET['id_kh']) {
                 $idkh = $_GET['id_kh'];
                 mo_kh($idkh);
             }
             $tk_kh = thungrac();
-            
+
             include "module/taikhoan/thungrac.php";
             break;
-    ///////////
-    // tài khoản nv
+            ///////////
+            // tài khoản nv
         case "taikhoan_nv":
             $tk_nv = get_tk_nv();
-            
+
             include "module/taikhoan/list_nv.php";
             break;
-        //khóa nv
+            //khóa nv
         case "khoa_nv":
-            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+            if (isset($_GET['id_nv']) && $_GET['id_nv']) {
                 $idnv = $_GET['id_nv'];
                 khoa_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            
+
             include "module/taikhoan/list_nv.php";
             break;
-        // mở khóa nv
+            // mở khóa nv
         case "mokhoa_nv":
-            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+            if (isset($_GET['id_nv']) && $_GET['id_nv']) {
                 $idnv = $_GET['id_nv'];
                 mo_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            
+
             include "module/taikhoan/list_nv.php";
             break;
-        // xóa nv
+            // xóa nv
         case "xoa_nv":
-            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+            if (isset($_GET['id_nv']) && $_GET['id_nv']) {
                 $idnv = $_GET['id_nv'];
                 xoa_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            
+
             include "module/taikhoan/list_nv.php";
             break;
-        // xóa nv vv
+            // xóa nv vv
         case "xoa_nv_vv":
-            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+            if (isset($_GET['id_nv']) && $_GET['id_nv']) {
                 $idnv = $_GET['id_nv'];
                 xoa_vv_nv($idnv);
             }
             $tk_nv = get_tk_nv();
-            
+
             include "module/taikhoan/list_nv.php";
             break;
-        // thùng rác nv
+            // thùng rác nv
         case "thungrac_nv":
             $tk_nv = thungrac_nv();
-            
+
             include "module/taikhoan/thungrac_nv.php";
             break;
-         //khôi phục nv
-         case "khoiphuc_nv":
-            if(isset($_GET['id_nv']) && $_GET['id_nv']){
+            //khôi phục nv
+        case "khoiphuc_nv":
+            if (isset($_GET['id_nv']) && $_GET['id_nv']) {
                 $idnv = $_GET['id_nv'];
                 mo_nv($idnv);
             }
             $tk_nv = thungrac_nv();
-            
+
             include "module/taikhoan/thungrac_nv.php";
             break;
-        // thêm khách hàng
+            // thêm khách hàng
         case "them_kh":
             if (isset($_POST['register']) && $_POST['register']) {
                 $user = $_POST['username'];
@@ -291,7 +287,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "module/taikhoan/add_kh.php";
             break;
-        // thêm nhân viên
+            // thêm nhân viên
         case "them_nv":
             if (isset($_POST['register']) && $_POST['register']) {
                 $user = $_POST['username'];
@@ -301,7 +297,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $ca = $_POST['ca'];
                 $repass = $_POST['repassword'];
                 if ((strlen($user) >= 2) && ($pass === $repass) && ($pass != '') && $dv != '' && $ca != '') {
-                    insert_taikhoan_nv($user, $pass, $email,$dv, $ca);
+                    insert_taikhoan_nv($user, $pass, $email, $dv, $ca);
                     $thanhcong = "Đăng ký thành công, bạn đã có thể đăng nhập";
                 }
             }
@@ -309,19 +305,19 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdichvu = $listdichvu = loadall_dv();
             include "module/taikhoan/add_nv.php";
             break;
-
-        // đơn đặt
+            /////////////////////////
+            // đơn đặt
         case "order":
             $count = countOrder();
             $ds = loadOrder();
             include "module/dondat/order.php";
             break;
-        // sửa đơn đặt
+            // sửa đơn đặt
         case "sua_order":
-            if(isset($_GET['id_order']) && $_GET['id_order']){
+            if (isset($_GET['id_order']) && $_GET['id_order']) {
                 $id = $_GET['id_order'];
                 $load = load_order_id($id);
-                if(isset($_POST['sua_order']) && $_POST['sua_order']){
+                if (isset($_POST['sua_order']) && $_POST['sua_order']) {
                     $gia = $_POST['gia'];
                     $ngay = $_POST['ngay'];
                     $pt = $_POST['pt'];
@@ -333,9 +329,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $load_pt = get_pttt();
             include "module/dondat/update_order.php";
             break;
-        // xoá đơn đặt vào thùng rác
+            // xoá đơn đặt vào thùng rác
         case "xoa_order":
-            if(isset($_GET['id_order']) && $_GET['id_order']){
+            if (isset($_GET['id_order']) && $_GET['id_order']) {
                 $id = $_GET['id_order'];
                 xoa_order($id);
             }
@@ -343,9 +339,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds = loadOrder();
             include "module/dondat/order.php";
             break;
-        // xoá đơn đặt vĩnh viễn
+            // xoá đơn đặt vĩnh viễn
         case "xoa_ordervv":
-            if(isset($_GET['id_order']) && $_GET['id_order']){
+            if (isset($_GET['id_order']) && $_GET['id_order']) {
                 $id = $_GET['id_order'];
                 xoa_vv_order($id);
             }
@@ -353,20 +349,83 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds = loadOrder();
             include "module/dondat/order.php";
             break;
-        // thùng rác order
+            // thùng rác order
         case "thungrac_order":
             $ds = thungrac_order();
             include "module/dondat/thungrac_order.php";
             break;
 
-        // khôi phục order từ thùng rác
+            // khôi phục order từ thùng rác
         case "khoiphuc_order":
-            if(isset($_GET['id_order']) && $_GET['id_order']){
+            if (isset($_GET['id_order']) && $_GET['id_order']) {
                 $id = $_GET['id_order'];
                 khoiphuc_order($id);
             }
             $ds = thungrac_order();
             include "module/dondat/thungrac_order.php";
+            break;
+            //////////////////////////
+            // hóa đơn
+        case "hoadon":
+            $counthd = countHd();
+            $dshd = get_hd_admin();
+            include "module/hoadon/hoadon.php";
+            break;
+            // thùng rác hóa đơn 
+        case "thungrac_hd":
+            $counthd = countHd_tr();
+            $dshd = get_thungrac_hd();
+            include "module/hoadon/thungrac_hd.php";
+            break;
+            // xóa hóa đơn vào thùng rác
+        case "xoa_hd":
+            if (isset($_GET['id_hd']) && $_GET['id_hd']) {
+                $id = $_GET['id_hd'];
+                xoa_hd($id);
+            }
+            $counthd = countHd();
+            $dshd = get_hd_admin();
+            include "module/hoadon/hoadon.php";
+            break;
+            // Khôi phục hóa đơn
+        case "khoiphuc_hd":
+            if (isset($_GET['id_hd']) && $_GET['id_hd']) {
+                $id = $_GET['id_hd'];
+                khoiphuc_hd($id);
+            }
+            $counthd = countHd_tr();
+            $dshd = get_thungrac_hd();
+            include "module/hoadon/thungrac_hd.php";
+            break;
+            // xóa vv hd
+        case "xoa_hd_vv":
+            if (isset($_GET['id_hd']) && $_GET['id_hd']) {
+                $id = $_GET['id_hd'];
+                xoa_vv_hd($id);
+            }
+            $counthd = countHd_tr();
+            $dshd = get_thungrac_hd();
+            include "module/hoadon/thungrac_hd.php";
+            break;
+            // sửa hóa đơn
+        case "sua_hd":
+            if (isset($_GET['id_hd']) && $_GET['id_hd']) {
+                $id = $_GET['id_hd'];
+                if (isset($_POST['sua_hd']) && $_POST['sua_hd']) {
+                    
+                    $ngaydat = $_POST['ngay'];
+                    $calam = $_POST['ca'];
+                    $dv = $_POST['dv'];
+                    $tt = $_POST['tt'];
+                    update_hd($id, $ngaydat, $calam, $dv, $tt);
+                    $thanhcong = "Cập nhật thành công";
+                }
+
+                $dshd = get_hd_admin_id($id);
+            }
+            $dv = laydv();
+            $ca = ca();
+            include "module/hoadon/update_hd.php";
             break;
     }
 } else {
