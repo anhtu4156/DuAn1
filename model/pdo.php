@@ -83,6 +83,7 @@ function pdo_query_value($sql){
         $stmt=$conn->prepare($sql);
         $stmt->execute($sql_args);
         $row=$stmt->fetch(PDO::FETCH_ASSOC);
+        //return array_values(($row[0]));
         return array_values(($row[0]));
     }
     catch(PDOException $e){
@@ -92,5 +93,6 @@ function pdo_query_value($sql){
         unset($conn);
     }
 }
+
 
 ?>

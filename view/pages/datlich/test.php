@@ -1,8 +1,3 @@
-<!-- BREADCRUMB -->
-<?php //include "model/pdo.php"; 
-
-?>
-
 <div class="section bg-breadcrumb">
     <div class="content-wrap py-0 pos-relative">
         <div class="container">
@@ -18,10 +13,8 @@
 
 <section>
     <div class="container">
-        <?php if(isset($thongbao)){
-
-        ?>
-        <div style="color: red;" class="fault">
+        <h1>Đặt lịch</h1>
+        <div style="color: red;">
             <?php
             if (isset($thongbao)) {
                 echo $thongbao;
@@ -32,11 +25,6 @@
             // echo $_SESSION['user_id'];
             ?>
         </div>
-    <?php }else{
-        echo "";
-    }  ?>
-        <h1>Đặt lịch</h1>
-
         <form action="index.php?act=xacnhan" method="post" class="form">
             <input type="hidden" value="<?php echo $_SESSION['user_id']; ?>" name="id_user">
             <div class="form-group">
@@ -61,17 +49,22 @@
 
             <div class="form-group">
                 <label for="nguoi-hen">Chọn dịch vụ</label>
-                <select name="dv" id="dichvu" class="form-control">
+                <select name="dv" id="dichvu" class="form-control" onclick="openPopup()">
                     <option value="">Chọn dịch vụ</option>
-                    <?php
-                    // $dsdv=loadAll_dichvu();
-                    // foreach ($dsdv as $item) {
-                    //     extract($item);
-                    //     echo '<option value="' . $id . '">' . $ten_dv . '</option>';
-                    // }
+                    <!-- POPUP -->
 
-                    ?>
 
+                    <div id="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closePopup()">×</a> <!-- Button đóng popup -->
+
+                        <!-- Nội dung trong Popup -->
+                        <div class="overlay-content">
+                            <h3>REVIEW KHÁCH SẠN ĐÀ NẴNG</h3>
+                            <p>
+                                Đà Nẵng luôn nổi danh là thành phố đáng sống nhất Việt Nam. Chính vì lẽ đó mà đây cũng trở thành một trong những địa điểm du lịch yêu thích. Không khó để có thể tìm được một nơi dừng chân chất lượng với sự mến khách của con người Đà Nẵng. Cùng Tico travel tìm hiểu top 20 khách sạn Đà Nẵng ngay nhé!
+                            </p>
+                        </div>
+                    </div>
                 </select>
             </div>
             <div class="form-group">
@@ -280,5 +273,14 @@
 
             }
         });
+    }
+</script>
+<script>
+    function openPopup() { // Click vào button thì gán style cho Popup là display:block để hiển thị lên
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function closePopup() { // Click vào close thì gán style cho Popup là display:none để ẩn đi
+        document.getElementById("overlay").style.display = "none";
     }
 </script>

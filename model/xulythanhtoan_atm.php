@@ -33,8 +33,8 @@ $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 $orderInfo = "Thanh toán qua ATM";
 $amount = $_POST['price'];
 $orderId = time() ."";
-$redirectUrl = "http://localhost:3000/index.php?act=hoanthanh";
-$ipnUrl = "http://localhost:3000/index.php?act=hoanthanh";
+$redirectUrl = "http://localhost:3000/index.php?act=thanhtoan";
+$ipnUrl = "http://localhost:3000/index.php?act=thanhtoan";
 $extraData = "";
 
 

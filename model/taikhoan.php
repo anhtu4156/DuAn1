@@ -143,10 +143,16 @@ function get_3_nv(){
     return $result;
 }
 
+
+function get_ten_tk($id){
+    $sql="SELECT ten_tai_khoan from tai_khoan where id=".$id;
+    return pdo_query_one($sql);
+
 // lấy vai trò
 
 function get_vaitro(){
     $sql = "SELECT id as id_vt, ten_vaitro FROM vai_tro";
     $data = pdo_query($sql);
     return $data;
+
 }
