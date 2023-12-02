@@ -68,7 +68,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-sm-6 col-md-6">
-						<p class="mb-0">Welcome to The Best Pets Care at Melboune</p>
+						<p class="mb-0">Chào mừng bạn đến với Dịch vụ chăm sóc thú cưng tốt nhất tại Hà Nội </p>
 					</div>
 
 					<div class="col-sm-6 col-md-6">
@@ -98,7 +98,7 @@
 						</div>
 						<div class="body-content">
 							<div class="heading">Giờ Mở Cửa :</div>
-							T2 - CN : 08:00 - 20:00
+							T2 - CN : 08:00 - 22:00
 						</div>
 					</div>
 					<!-- INFO 2 -->
