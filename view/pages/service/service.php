@@ -14,23 +14,14 @@
 
 	<!-- CONTENT -->
 	<div id="class" class="">
-		<div class="content-wrap">
+		<div class="content-wrap" style="padding: 0px;">
 			<div class="container">
-
+				<form action="../../../index.php?act=timkiem" class="form1" method="post">
+					<input type="text" class="form-control" name="kyw" style="width: 300px;">
+					<!-- <a href="index.php?act=timkiem"><input type="submit" name="tim" value="Tìm kiếm" class="button"></a> -->
+					<button type="submit" class="button"><a href="../../../index.php?act=timkiem">Tìm kiếm</a></button>
+				</form>
 				<div class="row">
-					
-					<!-- Item 1 -->
-					<!-- <div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services01.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Pet Barber Services</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
-						</div>
-					</div> -->
 					<?php
 						$dsdv=get_all_dv();
 						foreach($dsdv as $item){
@@ -52,70 +43,6 @@
 					
 					
 					?>
-					<!-- Item 2 -->
-					<!-- <div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services02.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Vaccination Supply</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Item 3 -->
-					<!-- <div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services03.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Pet Analysist</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Item 4 -->
-					<!-- <div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services04.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Preventive Medicine</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Item 5 -->
-					<!-- <div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services05.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Pet Diagnostics</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Item 6 -->
-					<!-- <div class="col-12 col-sm-6 col-md-4">
-						<div class="rs-image-box">
-							<div class="media">
-								<a href="index.php?act=ct_service"><img src="assets/images/services06.jpg" alt="" class="img-fluid"></a>
-							</div>
-							<div class="body-text">
-								<h3 class="title"><a href="index.php?act=ct_service">Patient Departement</a></h3>
-								Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
-						</div>
-					</div> -->
 
 				</div>
 

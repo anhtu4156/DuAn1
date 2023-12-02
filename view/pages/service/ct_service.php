@@ -22,13 +22,13 @@
 
 					<div class="widget categories">
 						<ul class="category-nav">
-							<li class="active"><a href="#">Pet Barber Services</a></li>
+							<!-- <li class="active"><a href="#">Pet Barber Services</a></li> -->
 							<?php
 
 								$dm = load_dm_dv();
 								foreach($dm as $item){
 									extract($item);
-									echo "<li><a href='#'>".$ten_loai_dv."</a></li>";
+									echo "<li class=''><a href='#'>".$ten_loai_dv."</a></li>";
 								}
 
 
@@ -65,6 +65,7 @@
 					$id = $_GET['id'];
 					$dv = load_one_dv($id);
 					extract($dv);
+					//echo $ten_dv;
 				}
 
 
@@ -78,12 +79,12 @@
 
 					<div class="spacer-10"></div>
 					<h2 class="section-heading text-primary no-after mb-4">
-						What We Do
+						BÌNH LUẬN CỦA KHÁCH HÀNG	
 					</h2>
 
 					<div class="accordion rs-accordion" id="accordionExample">
 						<!-- Item 1 -->
-						<div class="card">
+						<!-- <div class="card">
 							<div class="card-header" id="headingOne">
 								<h3 class="title">
 									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -96,9 +97,35 @@
 									Create and publilsh dynamic websites for desktop, tablet, and mobile devices that meet the latest web standards- without writing code. Design freely using familiar tools and hundreds of web fonts. easily add interactivity, including slide shows, forms, and more.
 								</div>
 							</div>
-						</div>
+						</div> -->
+
+						
+						<?php
+						$ds_bl=load_all_bl($_GET['id']);
+						
+						foreach($ds_bl as $item){
+							extract($item);
+							$ten_tk=get_ten_tk($id_tk);
+							echo "<div class='card'>
+							<div class='card-header' id='headingOne'>
+								<h3 class='title'>
+									<button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>
+										".$ten_tk['ten_tai_khoan']."
+									</button>
+								</h3>
+							</div>
+							<div id='collapseOne' class='collapse show' aria-labelledby='headingOne' data-parent='#accordionExample'>
+								<div class='card-body'>
+									".$noi_dung."
+								</div>
+							</div>
+						</div>";
+						}
+						
+						
+						?>
 						<!-- Item 2 -->
-						<div class="card">
+						<!-- <div class="card">
 							<div class="card-header" id="headingTwo">
 								<h3 class="title">
 									<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -111,9 +138,9 @@
 									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<!-- Item 3 -->
-						<div class="card">
+						<!-- <div class="card">
 							<div class="card-header" id="headingThree">
 								<h3 class="title">
 									<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -127,10 +154,22 @@
 									<p>You can't re-distribute the Item as stock, in a tool or template, or with source files. You can't re-distribute or make available the Item as-is or with superficial modifications. These things are not allowed even if the re-distribution is for Free.</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<!-- end accordion -->
-
+					<?php 
+					if(isset($_SESSION['user_id'])){?>
+						<form action="../../../index.php?act=binhluan" class="form" method="post">
+							<input type="text" class="form-control" name="binhluan" style="margin-bottom: 20px; margin-top:20px;">
+							<a href="../../../index.php?act=binhluan"><input type="submit" name="gui_bl" class="btn btn-primary" value="Gửi bình luận"></input></a>
+							<input type="hidden" value="<?php echo date('Y-m-d') ?>" name="ngay_bl">
+							<input type="hidden" name="id_tk" value="<?=$_SESSION['user_id'] ?>">
+							<input type="hidden" value="<?=$_GET['id']?>" name="id_dv">
+						</form>
+					<?php }
+					
+					
+					?>
 				</div>
 
 			</div>

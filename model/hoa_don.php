@@ -20,7 +20,7 @@ function get_hd_cl(){
     return pdo_query_one($sql);
 }
 function update_trang_thai($id){
-    $sql="UPDATE hoa_don SET trang_thai='1' where id=".$id;
+    $sql="UPDATE hoa_don SET trang_thai_tt='1' where id=".$id;
     pdo_execute($sql);
 }
 function get_hd($id_tk){
