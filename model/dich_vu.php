@@ -2,7 +2,7 @@
 include_once "pdo.php";
 
 function get_all_dv(){
-    $sql="select * from dich_vu";
+    $sql="select * from dich_vu order by id desc limit 0,6";
     return pdo_query($sql);
 }
 function get_3_dv(){
@@ -28,12 +28,30 @@ function load_one_dv($id){
 // }
 function get_pttt(){
     $sql="select * from phuong_thuc_tt";
-    return pdo_query($sql);
+    $data = pdo_query($sql);
+    return $data;
  }
 function load_dm_dv(){
     $sql="SELECT * from loai_dv";
     return pdo_query($sql);
 }
 
+function load_ten_dv($id_dv){
+    $sql="SELECT ten_dv FROM dich_vu where id=".$id_dv;
+    return pdo_query_one($sql);
+}
+// print_r( load_ten_dv(1));
+
+function load_dv_timkiem($kyw){
+    $sql= "select * from dich_vu where ten_dv like '%".$kyw."%'";
+    $dv=pdo_query($sql); 
+    return $dv;
+}
+//print_r(load_dv_timkiem('ga'));
+function load_dv_theodm($iddm){
+    $sql= "select * from dich_vu where id_loai_dv=".$iddm;
+    $listdv=pdo_query($sql);
+    return $listdv;
+ }
 
 ?>
