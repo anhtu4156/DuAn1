@@ -3775,10 +3775,77 @@ Back To Top Section
   display: table-cell;
   vertical-align: top;
 }
-
+.fault{
+  background-color: rgb(250, 133, 133);
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  height: 50px;
+  padding-top: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.form1{
+  display: inline-flex;
+  margin-bottom: 30px;
+  padding: 0px;
+}
+.button{
+  height: 40px;
+  width: 100px;
+  background-color: rgb(232, 176, 70);
+  color: black;
+  border-radius: 5px;
+  border: 1px solid yellow;
+  margin-left: 20px;
+}
+.button:hover{
+  background-color: rgb(185, 185, 60);
+  box-shadow: 2px rgb(231, 231, 8);
+}
 /**
  * 7. - RESPONSIVE
  * -----------------------------------------------------------------------------
  */
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* style   */
+#overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #0b3f67f5;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    color: white;
+    position: relative;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial;
+}
+
+#overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
