@@ -7,12 +7,15 @@ function insert_hoadon($ngay_dat_lich,$khoang_gio,$id_tk,$id_dv,$id_nv){
     pdo_execute($sql);
 }
 function get_hd_dv_nv(){
-    $sql="SELECT hoa_don.id,hoa_don.ngay_dat_lich,hoa_don.trang_thai,dich_vu.ten_dv,nhan_vien.ten_nv,nhan_vien.id as id_nv FROM dich_vu JOIN hoa_don ON dich_vu.id = hoa_don.id_dv
+    $sql="SELECT hoa_don.id,hoa_don.ngay_dat_lich,hoa_don.trang_thai_tt,dich_vu.ten_dv,nhan_vien.ten_nv,nhan_vien.id as id_nv FROM dich_vu JOIN hoa_don ON dich_vu.id = hoa_don.id_dv
     JOIN nhan_vien ON nhan_vien.id= hoa_don.id_nv
     ORDER BY hoa_don.id desc
     LIMIT 1";
     return pdo_query_one($sql);
 }
+// $x=get_hd_dv_nv();
+// extract($x);
+// echo $id;
 function get_hd_cl(){
     $sql="SELECT ca_lam.ca_lam, hoa_don.id from hoa_don join ca_lam on hoa_don.id_khoang_gio=ca_lam.id
     order by hoa_don.id desc

@@ -13,7 +13,7 @@ function insert_datlich($ngay_dat_lich,$khoang_gio,$id_tai_khoan,$id_thu_cung,$i
 
 
 function get_dl_dv_tc(){
-    $sql="SELECT ds_dat_lich.ngay_dat_lich as ngay,ds_dat_lich.id_dich_vu,ds_dat_lich.id_thu_cung, dich_vu.ten_dv, thu_cung.ten_loai
+    $sql="SELECT ds_dat_lich.ngay_dat_lich as ngay,ds_dat_lich.trang_thai_dv,ds_dat_lich.id_dich_vu,ds_dat_lich.id_thu_cung, dich_vu.ten_dv, thu_cung.ten_loai
      FROM dich_vu JOIN ds_dat_lich ON ds_dat_lich.id_dich_vu=dich_vu.id
     JOIN thu_cung ON ds_dat_lich.id_thu_cung=thu_cung.id
     ORDER BY ds_dat_lich.id desc
@@ -22,11 +22,12 @@ function get_dl_dv_tc(){
 }
 function get_dl_cl(){
     $sql="SELECT ca_lam.ca_lam
-     FROM ca_lam JOIN ds_dat_lich ON ds_dat_lich.id_khoang_gio=ca_lam.id
+    FROM ca_lam JOIN ds_dat_lich ON ds_dat_lich.id_khoang_gio=ca_lam.id
     ORDER BY ds_dat_lich.id desc
     LIMIT 1";
     return pdo_query_one($sql);
 }
+//print_r(get_dl_dv_tc());
 function get_dl_kt_nv(){
     $sql="SELECT ds_dat_lich.id as id_dl,ds_dat_lich.id_khoang_gio,kich_thuoc.can_nang ,ds_dat_lich.id_khoang_can, ds_dat_lich.id_nhan_vien, nhan_vien.ten_nv FROM kich_thuoc JOIN ds_dat_lich ON kich_thuoc.id = ds_dat_lich.id_khoang_can
     JOIN nhan_vien ON nhan_vien.id= ds_dat_lich.id_nhan_vien
