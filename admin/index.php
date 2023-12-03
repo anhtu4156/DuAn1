@@ -322,6 +322,64 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/dondat/order.php";
             break;
             // sửa đơn đặt
+
+        case "add_bien_the":
+            if (isset($_POST['them'])) {
+                if ($_POST['dich_vu'] != "" && $_POST['thu_cung'] != "" && $_POST['kich_thuoc'] != "") {
+                    $id_dv = $_POST['dich_vu'];
+                    $id_tc = $_POST['thu_cung'];
+                    $id_kt = $_POST['kich_thuoc'];
+                    $gia = $_POST['gia'];
+                    $bt = load_bien_the();
+                    foreach ($bt as $item) {
+                        if ($id_dv == $item['id_dv'] && $id_tc = $item['id_loai_dong_vat'] && $id_kt = $item['id_kich_thuoc']) {
+                            $fault = "Biến thể này dã tồn tại";
+                            break;
+                        } else {
+                            insert_bien_the($id_dv, $id_tc, $id_kt, $gia);
+                            $thanhcong = "Thêm thành công";
+                            break;
+                        }
+                    }
+                } else {
+                    $fault = "Vui lòng nhập đủ thông tin";
+                }
+                //    include "module/bien_the/list.php";
+
+            }
+            include "module/bien_the/add.php";
+
+            break;
+        case "list_bt":
+
+            $bt = load_bien_the();
+
+            include "module/bien_the/list.php";
+            break;
+        case "xoa_bt":{
+            if(isset($_GET['id_bt'])&&$_GET['id_bt']!=""){
+                $id_bt=$_GET['id_bt'];
+                delete_bt($id_bt);
+                //include "module/bien_the/list.php";
+                $thanhcong="Xoá thành công";
+            }
+        }
+        case "sua_bt":
+            if (isset($_GET['id_bt']) && $_GET['id_bt'] != "") {
+                $id = $_GET['id_bt'];
+                if (isset($_POST['luu']) && $_POST['luu']) {
+                    $id_dv = $_POST['id_dv'];
+                    $id_tc = $_POST['id_tc'];
+                    $id_kt = $_POST['id_kt'];
+                    $gia = $_POST['gia'];
+                    update_bt($id, $id_dv, $id_tc, $id_kt, $gia);
+                    $thanhcong = "Update thành công";
+                }
+                $loadbt = load_one_bt($_GET['id_bt']);
+            }
+            include "module/bien_the/update.php";
+            break;
+            break;
         case "sua_order":
             if (isset($_GET['id_order']) && $_GET['id_order']) {
                 $id = $_GET['id_order'];
@@ -331,7 +389,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $ngay = $_POST['ngay'];
                     $pt = $_POST['pt'];
                     $tt = $_POST['tt'];
-
                     update_order($id, $gia, $ngay, $pt, $tt);
                 }
             }
@@ -421,7 +478,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_GET['id_hd']) && $_GET['id_hd']) {
                 $id = $_GET['id_hd'];
                 if (isset($_POST['sua_hd']) && $_POST['sua_hd']) {
-                    
+
                     $ngaydat = $_POST['ngay'];
                     $calam = $_POST['ca'];
                     $dv = $_POST['dv'];
@@ -436,7 +493,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ca = ca();
             include "module/hoadon/update_hd.php";
             break;
-// xác nhận đơn của nhân viên
+            // xác nhận đơn của nhân viên
         case "xacnhan":
             $count = countOrder();
             $ds = loadOrder_nv(2);
