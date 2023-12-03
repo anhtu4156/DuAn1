@@ -1,10 +1,10 @@
 <?php
+session_start();
+if(isset($_SESSION['admin']) && $_SESSION['admin'] != '' ){
 
-// if(isset($_SESSION['admin']) && $_SESSION['admin'] != '' ){
-
-// }else{
-//     header("Location: login.php");
-// }
+}else{
+    header("Location: login.php");
+}
 
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 include "../model/pdo.php";
@@ -442,6 +442,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds = loadOrder_nv(2);
             include "module/nhanvien/dondat.php";
             break;
+
+    
     }
 } else {
     include "content.php";

@@ -25,3 +25,9 @@ function dangxuat_admin() {
         unset($_SESSION['role']);
     }
 }
+
+// lấy ra tài khoản admin
+
+function get_acc_admin($id) {
+    
+}
