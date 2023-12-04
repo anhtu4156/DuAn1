@@ -160,7 +160,7 @@
                 Earnings</a>
             </li>
             <li>
-              <a href="auth-lockscreen.html" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600
+              <a href="index.php?act=logout" class="flex items-center py-2 px-3 text-sm text-red-500 hover:bg-gray-50 hover:text-red-600
                           dark:text-red-500 dark:hover:bg-gray-900/20
                           dark:hover:text-red-500">
                 <span data-lucide="power" class="w-4 h-4 inline-block text-red-500 dark:text-red-500 me-2"></span>

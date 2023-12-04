@@ -28,6 +28,3 @@ function dangxuat_admin() {
 
 // lấy ra tài khoản admin
 
-function get_acc_admin($id) {
-    
-}

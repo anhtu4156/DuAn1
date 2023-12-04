@@ -136,17 +136,66 @@ function thungrac_order() {
     $data = pdo_query($sql);
     return $data;
 }
-
+// load order cần xác nhận để làm 
+function load_don_choxacnhan($idnv){
+    $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
+    JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
+    JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status = 0 and dl.id_nhan_vien ='$idnv' and dl.trang_thai_xac_nhan = 0";
+    $data = pdo_query($sql);
+    return $data;
+}
 // load order của nhân viên
 function loadOrder_nv($idnv) {
     $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
     JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
     JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
-    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status != 1 and dl.id_nhan_vien ='$idnv'";
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status = 0 and dl.id_nhan_vien ='$idnv' and dl.trang_thai_xac_nhan = 1";
     $data = pdo_query($sql);
     return $data;
 }
 
+// đồng ý tiếp nhận đơn đặt
 
+function xacnhan_don($id_don){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_xac_nhan`='1' WHERE id = $id_don";
+    pdo_execute($sql);
+}
+
+
+// hủy tiếp nhận đơn đặt
+function huy_don($id_don){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_xac_nhan`='2' WHERE id = $id_don";
+    pdo_execute($sql);
+}
+
+// danh sách đơn bị hủy
+
+function ds_donhuy($idnv) {
+    $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
+    JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
+    JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status = 0 and dl.id_nhan_vien ='$idnv' and dl.trang_thai_xac_nhan = 2";
+    $data = pdo_query($sql);
+    return $data;
+}
+
+// khôi phục đơn bị hủy
+function khoiphuc_don($id_don){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_xac_nhan`='0' WHERE id = $id_don";
+    pdo_execute($sql);
+}
+
+// xóa vv đơn đặt
+function xoa_vv_dondat($id_don){
+    $sql = "DELETE FROM `ds_dat_lich` where id = $id_don";
+    pdo_execute($sql);
+}
+
+// xác nhận hoàn thành đơn hàng
+function duyetdon($id){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_dv` = 1 where id = $id";
+    pdo_execute($sql);
+}
 
 ?>
