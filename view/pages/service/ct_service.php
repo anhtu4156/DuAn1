@@ -67,11 +67,11 @@
 					extract($dv);
 					//echo $ten_dv;
 				}
-
+				$anh="../../../admin/assets/images/upload/".$anh_dv;
 
 				?>
 				<div class="col-12 col-sm-12 col-md-8">
-					<img src="assets/images/services-img-detail.jpg" alt="" class="img-fluid">
+					<img src="<?php echo $anh ?>" alt="" class="img-fluid">
 					<h2 class="section-heading text-primary no-after mb-4">
 						<?php echo $ten_dv ?>
 					</h2>
