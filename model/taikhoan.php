@@ -20,7 +20,7 @@ function dangnhap($user, $pass) {
         // Lưu ID người dùng vào session sau khi đăng nhập thành công
         $_SESSION['user'] = $user;
         $_SESSION['user_id'] = $taikhoan['id'];
-        $_SESSION['role'] = $taikhoan['vai_tro'];
+       
         return "Đăng nhập thành công";
     } else {
         return "Thông tin tài khoản sai";
@@ -33,7 +33,7 @@ function dangxuat() {
     if (isset($_SESSION['user'])) {
         unset($_SESSION['user']);
         unset($_SESSION['user_id']);
-        unset($_SESSION['role']);
+        
     }
 }
 // cập nhật
@@ -147,7 +147,7 @@ function get_3_nv(){
 function get_ten_tk($id){
     $sql="SELECT ten_tai_khoan from tai_khoan where id=".$id;
     return pdo_query_one($sql);
-
+}
 // lấy vai trò
 
 function get_vaitro(){

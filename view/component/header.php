@@ -202,7 +202,7 @@
 						</ul>
 
 						<a href="index.php?act=datlich" class="btn btn-secondary btn-nav btn-rect ml-auto">ĐẶT LỊCH NGAY</a>
-						<?php if(!$_SESSION){?>
+						<?php if(!isset($_SESSION['user'])){?>
 						<ul class="navbar-nav ml-2">
 							<li class="nav-item dropdown dmenu">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

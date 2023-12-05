@@ -19,7 +19,7 @@
         <h1>Danh sách tìm kiếm</h1>
             <form action="../../../index.php?act=timkiem" class="form1" method="post">
                 <input type="text" class="form-control" name="kyw" style="width: 300px;">
-                <button type="submit" class="button"><a href="../../../index.php?act=timkiem" >Tìm kiếm</a></button>
+                <button type="submit" class="button"><a href="../../../index.php?act=timkiem">Tìm kiếm</a></button>
             </form>
             <div class="row">
             

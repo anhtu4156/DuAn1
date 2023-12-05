@@ -257,6 +257,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                         break;
                     }
                     if ($id_pttt == 2) {
+                        
                         include "view/pages/datlich/trang4.php";
                     }
                 } else {
@@ -267,12 +268,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             break;
         case "thanhtoan":
-            $id_tk = $_SESSION['user_id'];
-            if (isset($_POST['momo'])) {
+            $id_tk = $_SESSION['user_id'];           
                 $hd_dv_nv = get_hd_dv_nv();
                 extract($hd_dv_nv);
                 update_trang_thai($id);
-            }
             include "view/pages/datlich/trang4.php";
             break;
         case "lichsu":
@@ -388,6 +387,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
     }
 } else {
+    $bl=load_all_bl_home();
     include "view/component/home.php";
 }
 

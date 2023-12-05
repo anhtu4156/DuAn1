@@ -1,7 +1,7 @@
 <?php
 $id_tk = $_SESSION['user_id'];
 $get_ls = get_ls($id_tk);
-
+$thanh_toan=get_hd_dv_nv();
 
 ?>
 <div class="section bg-breadcrumb">
@@ -30,6 +30,9 @@ $get_ls = get_ls($id_tk);
                     <th>Dịch vụ</th>
                     <th>Nhân viên phụ trách</th>
                     <th>Trạng thái đơn</th>
+                    <th>Trạng thái thanh toán</th>
+                    <th>Trạng thái dịch vụ</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -42,9 +45,18 @@ $get_ls = get_ls($id_tk);
                     $ca_lam = get_ca_lam($id_khoang_gio);
                     $ten_nv = get_ten_nv($id_nhan_vien);
                     if ($trang_thai_dv == 0) {
-                        $tt = "Chưa hoàn thành";
+                        $dv = "Chưa hoàn thành";
                     } else {
-                        $tt = "Đã hoàn thành";
+                        $dv = "Đã hoàn thành";
+                    }
+                    if ($trang_thai_xac_nhan == 0) {
+                        $xn = "Chờ xác nhận";
+                    } else {
+                        $xn = "Đã xác nhận";
+                    } if ($thanh_toan['trang_thai_tt'] == 0) {
+                        $tt = "Chưa thanh toán";
+                    } else {
+                        $tt = "Đã thanh toán";
                     }
                     echo "<tr>
                         <td>" . $stt++ . "</td>
@@ -52,7 +64,9 @@ $get_ls = get_ls($id_tk);
                         <td>" . $ca_lam['ca_lam'] . "</td>
                         <td>" . $ten_nv['ten_nv'] . "</td>
                         <td>" . $ten_dv['ten_dv'] . "</td>
-                        <td>" . $tt . "</td>
+                        <td>" .$xn. "</td>
+                        <td>" .$tt. "</td>
+                        <td>" . $dv . "</td>
                     </tr>";
                 }
 

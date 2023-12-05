@@ -1,10 +1,10 @@
 <?php
-
-// if(isset($_SESSION['admin']) && $_SESSION['admin'] != '' ){
-
-// }else{
-//     header("Location: login.php");
-// }
+session_start();
+ob_start();
+if (isset($_SESSION['admin']) && $_SESSION['admin'] != '') {
+} else {
+    header("Location: login.php");
+}
 
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 include "../model/pdo.php";
@@ -15,6 +15,7 @@ include "../model/taikhoan.php";
 include "../model/datlich.php";
 include "../model/dich_vu.php";
 include "../model/hoa_don.php";
+include "../model/admin/login.php";
 
 
 include "header.php";
@@ -24,6 +25,7 @@ include "topbar.php";
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
+    $id_nv = $_SESSION['admin_id'];
     switch ($act) {
             // danh mục dịch vụ
         case "danhmuc_dv":
@@ -322,6 +324,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/dondat/order.php";
             break;
             // sửa đơn đặt
+
         case "sua_order":
             if (isset($_GET['id_order']) && $_GET['id_order']) {
                 $id = $_GET['id_order'];
@@ -331,7 +334,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $ngay = $_POST['ngay'];
                     $pt = $_POST['pt'];
                     $tt = $_POST['tt'];
-
                     update_order($id, $gia, $ngay, $pt, $tt);
                 }
             }
@@ -421,7 +423,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_GET['id_hd']) && $_GET['id_hd']) {
                 $id = $_GET['id_hd'];
                 if (isset($_POST['sua_hd']) && $_POST['sua_hd']) {
-                    
+
                     $ngaydat = $_POST['ngay'];
                     $calam = $_POST['ca'];
                     $dv = $_POST['dv'];
@@ -436,10 +438,146 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ca = ca();
             include "module/hoadon/update_hd.php";
             break;
-// xác nhận đơn của nhân viên
+            // thêm biến thể dịch vụ
+        case "add_bien_the":
+            if (isset($_POST['them'])) {
+                if ($_POST['dich_vu'] != "" && $_POST['thu_cung'] != "" && $_POST['kich_thuoc'] != "") {
+                    $id_dv = $_POST['dich_vu'];
+                    $id_tc = $_POST['thu_cung'];
+                    $id_kt = $_POST['kich_thuoc'];
+                    $gia = $_POST['gia'];
+                    $bt = load_bien_the();
+                    foreach ($bt as $item) {
+                        if ($id_dv == $item['id_dv'] && $id_tc = $item['id_loai_dong_vat'] && $id_kt = $item['id_kich_thuoc']) {
+                            $fault = "Biến thể này dã tồn tại";
+                            break;
+                        } else {
+                            insert_bien_the($id_dv, $id_tc, $id_kt, $gia);
+                            $thanhcong = "Thêm thành công";
+                            break;
+                        }
+                    }
+                } else {
+                    $fault = "Vui lòng nhập đủ thông tin";
+                }
+                //    include "module/bien_the/list.php";
+
+            }
+            include "module/bien_the/add.php";
+
+            break;
+        case "list_bt":
+
+            $bt = load_bien_the();
+
+            include "module/bien_the/list.php";
+            break;
+        case "xoa_bt": {
+                if (isset($_GET['id_bt']) && $_GET['id_bt'] != "") {
+                    $id_bt = $_GET['id_bt'];
+                    delete_bt($id_bt);
+                    //include "module/bien_the/list.php";
+                    $thanhcong = "Xoá thành công";
+                }
+            }
+        case "sua_bt":
+            if (isset($_GET['id_bt']) && $_GET['id_bt'] != "") {
+                $id = $_GET['id_bt'];
+                if (isset($_POST['luu']) && $_POST['luu']) {
+                    $id_dv = $_POST['id_dv'];
+                    $id_tc = $_POST['id_tc'];
+                    $id_kt = $_POST['id_kt'];
+                    $gia = $_POST['gia'];
+                    update_bt($id, $id_dv, $id_tc, $id_kt, $gia);
+                    $thanhcong = "Update thành công";
+                }
+                $loadbt = load_one_bt($_GET['id_bt']);
+            }
+            include "module/bien_the/update.php";
+            break;
+            break;
+/////////////////////////////
+        // đăng xuất
+        case "logout":
+            dangxuat_admin();
+            header("Location: index.php");
+            break;
+/////////////////////////////
+        // xác nhận đơn của nhân viên
         case "xacnhan":
             $count = countOrder();
-            $ds = loadOrder_nv(2);
+            $ds = loadOrder_nv($id_nv);
+            include "module/nhanvien/dondat.php";
+            break;
+        // xác nhận đơn tiến hành của nhân viên
+        case "xacnhan_don":
+            $count = countOrder();
+            $ds = load_don_choxacnhan($id_nv);
+            include "module/nhanvien/xacnhan_don.php";
+            break;
+
+            //đồng ý đơn
+        case "tiepnhan_don":
+            if (isset($_GET['id_order']) && $_GET['id_order'] != '') {
+                $id = $_GET['id_order'];
+                xacnhan_don($id);
+            }
+            $count = countOrder();
+            $ds = load_don_choxacnhan($id_nv);
+            include "module/nhanvien/xacnhan_don.php";
+            break;
+
+            //hủy đơn
+        case "huy_don":
+            if (isset($_GET['id_order']) && $_GET['id_order'] != '') {
+                $id = $_GET['id_order'];
+                huy_don($id);
+            }
+            $count = countOrder();
+            $ds = load_don_choxacnhan($id_nv);
+            include "module/nhanvien/xacnhan_don.php";
+            break;
+
+        // ds đơn hủy
+        case "ds_donhuy":
+            if (isset($_GET['id_order']) && $_GET['id_order'] != '') {
+                $id = $_GET['id_order'];
+                // xacnhan_don($id);
+            }
+            $count = countOrder();
+            $ds = ds_donhuy($id_nv);
+            include "module/nhanvien/list_donhuy.php";
+            break;
+
+        //khôi phục đơn bị hủy
+        case "khoiphuc_dondat":
+            if (isset($_GET['id_don']) && $_GET['id_don'] != '') {
+                $id = $_GET['id_don'];
+                khoiphuc_don($id);
+            }
+            $count = countOrder();
+            $ds = ds_donhuy($id_nv);
+            include "module/nhanvien/list_donhuy.php";
+            break;
+        
+        // xóa vv đơn đặt
+        case "xoa_dondat_vv":
+            if (isset($_GET['id_don']) && $_GET['id_don'] != '') {
+                $id = $_GET['id_don'];
+                xoa_vv_dondat($id);
+            }
+            break;
+            $count = countOrder();
+            $ds = ds_donhuy($id_nv);
+            include "module/nhanvien/list_donhuy.php";
+        // xác nhận hoàn thành dịch vụ thành công
+        case "duyetdon":
+            if (isset($_GET['id_order']) && $_GET['id_order'] != '') {
+                $id = $_GET['id_order'];
+                duyetdon($id);
+            }
+            $count = countOrder();
+            $ds = loadOrder_nv($id_nv);
             include "module/nhanvien/dondat.php";
             break;
     }

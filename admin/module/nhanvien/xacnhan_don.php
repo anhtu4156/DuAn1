@@ -11,13 +11,13 @@
                         <div class="">
                             <div class="flex flex-wrap justify-between">
                                 <div class="items-center ">
-                                    <h1 class="font-medium text-3xl block dark:text-slate-100">Xác nhận trạng thái đơn</h1>
+                                    <h1 class="font-medium text-3xl block dark:text-slate-100">Đơn đặt</h1>
                                     <ol class="list-reset flex text-sm">
                                         <li><a href="index.php" class="text-gray-500 dark:text-slate-400">Trang chủ</a></li>
                                         <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
                                         <li class="text-gray-500 dark:text-slate-400">Admin</li>
                                         <li><span class="text-gray-500 dark:text-slate-400 mx-2">/</span></li>
-                                        <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Xác nhận trạng thái đơn</li>
+                                        <li class="text-primary-500 hover:text-primary-600 dark:text-primary-400">Đơn đặt</li>
                                     </ol>
                                 </div>
                                 <div class="flex items-center">
@@ -54,7 +54,7 @@
                                 </ul>
                             </div>
                             <div class="flex flex-wrap gap-4 mb-3">
-                                <div class="mb-2 w-44">
+                                <!-- <div class="mb-2 w-44">
                                     <select id="Category" class="w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-2 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
                                         <option class="dark:text-slate-700">All Category</option>
                                         <option class="dark:text-slate-700">Electronics</option>
@@ -70,7 +70,7 @@
                                         <option class="dark:text-slate-700">Check</option>
                                         <option class="dark:text-slate-700">Cash</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="ms-auto">
                                     <form>
                                         <div class="relative">
@@ -91,9 +91,9 @@
 
                             <div id="myTabContent">
                                 <div>
-                                    <a href="index.php?act=thungrac_order">
+                                    <a href="index.php?act=ds_donhuy">
                                         <button class="inline-block focus:outline-none bg-brand-500 mt-1 text-white hover:bg-brand-600 hover:text-white  text-md font-medium py-2 px-4 rounded">
-                                            Thùng rác
+                                            Đơn hủy
                                         </button>
                                     </a>
 
@@ -121,9 +121,7 @@
                                                             <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                                 Phương thức thanh toán
                                                             </th>
-                                                            <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                                Trạng thái dịch vụ
-                                                            </th>
+
                                                             <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                                 Hành động
                                                             </th>
@@ -156,31 +154,10 @@
                                                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                                                                         ' . $pttt . '
                                                                     </td>
-                                                                    <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">';
-                                                        ?>
-                                                            <?php
-                                                            if ($trang_thai_dv == 1) {
-                                                                echo '<span class="bg-green-600/5 text-green-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Đã hoàn thành</span>';
-                                                            } else {
-                                                                echo '<span class="bg-red-600/5 text-red-600 text-[11px] font-medium px-2.5 py-0.5 rounded h-5">Chưa hoàn thành</span>';
-                                                            }
-                                                            ?>
-                                                            <?php
-                                                            echo '
-                                                                    </td>
+                                                                    
                                                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                                    <a href="index.php?act=sua_order&id_order=' . $id . '" class="me-3"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
-                                                                    <a href="index.php?act=xoa_order&id_order=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn xóa vào thùng rác")\'><i class="mr-3 icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
-                                                                    ';
-                                                            ?>
-                                                            <?php
-                                                            if ($trang_thai_dv == 1) {
-                                                            } else {
-                                                                echo '<a href="index.php?act=duyetdon&id_order=' . $id . '" class="ml-8 border p-4 border-green-500 bg-green-400"><i class="fa-solid fa-check text-lg text-white dark:text-white-400"></i></a>';
-                                                            }
-                                                            ?>
-                                                        <?php
-                                                            echo '
+                                                                    <a href="index.php?act=tiepnhan_don&id_order=' . $id . '" class="me-3"><i class="fa-solid fa-check text-lg text-gray-500 dark:text-gray-400"></i></a>
+                                                                    <a href="index.php?act=huy_don&id_order=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn hủy đơn hàng không")\'><i class="fa-solid fa-ban text-lg text-red-500 dark:text-red-400"></i></a>
                                                                     </td>
                                                                 </tr>';
                                                         }

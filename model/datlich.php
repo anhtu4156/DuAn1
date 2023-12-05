@@ -13,7 +13,7 @@ function insert_datlich($ngay_dat_lich,$khoang_gio,$id_tai_khoan,$id_thu_cung,$i
 
 
 function get_dl_dv_tc(){
-    $sql="SELECT ds_dat_lich.ngay_dat_lich as ngay,ds_dat_lich.id_dich_vu,ds_dat_lich.id_thu_cung, dich_vu.ten_dv, thu_cung.ten_loai
+    $sql="SELECT ds_dat_lich.ngay_dat_lich as ngay,ds_dat_lich.trang_thai_dv,ds_dat_lich.id_dich_vu,ds_dat_lich.id_thu_cung, dich_vu.ten_dv, thu_cung.ten_loai
      FROM dich_vu JOIN ds_dat_lich ON ds_dat_lich.id_dich_vu=dich_vu.id
     JOIN thu_cung ON ds_dat_lich.id_thu_cung=thu_cung.id
     ORDER BY ds_dat_lich.id desc
@@ -22,13 +22,14 @@ function get_dl_dv_tc(){
 }
 function get_dl_cl(){
     $sql="SELECT ca_lam.ca_lam
-     FROM ca_lam JOIN ds_dat_lich ON ds_dat_lich.id_khoang_gio=ca_lam.id
+    FROM ca_lam JOIN ds_dat_lich ON ds_dat_lich.id_khoang_gio=ca_lam.id
     ORDER BY ds_dat_lich.id desc
     LIMIT 1";
     return pdo_query_one($sql);
 }
+//print_r(get_dl_dv_tc());
 function get_dl_kt_nv(){
-    $sql="SELECT ds_dat_lich.id as id_dl,ds_dat_lich.id_khoang_gio,kich_thuoc.can_nang ,ds_dat_lich.id_khoang_can, ds_dat_lich.id_nhan_vien, nhan_vien.ten_nv FROM kich_thuoc JOIN ds_dat_lich ON kich_thuoc.id = ds_dat_lich.id_khoang_can
+    $sql="SELECT ds_dat_lich.id as id_dl,ds_dat_lich.id_khoang_gio,kich_thuoc.can_nang ,ds_dat_lich.id_khoang_can, ds_dat_lich.id_nhan_vien, nhan_vien.ten_nv, nhan_vien.anh as anh_nv FROM kich_thuoc JOIN ds_dat_lich ON kich_thuoc.id = ds_dat_lich.id_khoang_can
     JOIN nhan_vien ON nhan_vien.id= ds_dat_lich.id_nhan_vien
     ORDER BY ds_dat_lich.id desc
     LIMIT 1";
@@ -135,17 +136,66 @@ function thungrac_order() {
     $data = pdo_query($sql);
     return $data;
 }
-
+// load order cần xác nhận để làm 
+function load_don_choxacnhan($idnv){
+    $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
+    JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
+    JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status = 0 and dl.id_nhan_vien ='$idnv' and dl.trang_thai_xac_nhan = 0";
+    $data = pdo_query($sql);
+    return $data;
+}
 // load order của nhân viên
 function loadOrder_nv($idnv) {
     $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
     JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
     JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
-    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status != 1 and dl.id_nhan_vien ='$idnv'";
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status = 0 and dl.id_nhan_vien ='$idnv' and dl.trang_thai_xac_nhan = 1";
     $data = pdo_query($sql);
     return $data;
 }
 
+// đồng ý tiếp nhận đơn đặt
 
+function xacnhan_don($id_don){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_xac_nhan`='1' WHERE id = $id_don";
+    pdo_execute($sql);
+}
+
+
+// hủy tiếp nhận đơn đặt
+function huy_don($id_don){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_xac_nhan`='2' WHERE id = $id_don";
+    pdo_execute($sql);
+}
+
+// danh sách đơn bị hủy
+
+function ds_donhuy($idnv) {
+    $sql = "SELECT dl.id, dl.id_nhan_vien, tk.ten_tai_khoan, tk.dia_chi, dl.gia, dl.ngay_dat_lich, pt.pttt, dl.trang_thai_dv FROM ds_dat_lich dl 
+    JOIN tai_khoan tk ON tk.id = dl.id_tai_khoan 
+    JOIN phuong_thuc_tt pt ON pt.id = dl.id_pttt
+    JOIN nhan_vien nv ON nv.id = dl.id_nhan_vien where dl.status = 0 and dl.id_nhan_vien ='$idnv' and dl.trang_thai_xac_nhan = 2";
+    $data = pdo_query($sql);
+    return $data;
+}
+
+// khôi phục đơn bị hủy
+function khoiphuc_don($id_don){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_xac_nhan`='0' WHERE id = $id_don";
+    pdo_execute($sql);
+}
+
+// xóa vv đơn đặt
+function xoa_vv_dondat($id_don){
+    $sql = "DELETE FROM `ds_dat_lich` where id = $id_don";
+    pdo_execute($sql);
+}
+
+// xác nhận hoàn thành đơn hàng
+function duyetdon($id){
+    $sql = "UPDATE `ds_dat_lich` SET `trang_thai_dv` = 1 where id = $id";
+    pdo_execute($sql);
+}
 
 ?>
