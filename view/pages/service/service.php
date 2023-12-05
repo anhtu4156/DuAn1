@@ -29,10 +29,10 @@
 							echo "<div class='col-12 col-sm-6 col-md-4'>
 							<div class='rs-image-box'>
 								<div class='media'>
-									<a href='../../../index.php?act=ct_service&&id=".$id."'><img src='assets/images/services01.jpg' alt='' class='img-fluid'></a>
+									<a href='../../../index.php?act=ct_service&id=".$id."'><img src='../../../admin/assets/images/upload/".$anh_dv."' alt='' class='img-fluid'></a>
 								</div>
 								<div class='body-text'>
-									<h3 class='title'><a href='index.php?act=ct_service'>".$ten_dv."</a></h3>
+									<h3 class='title'><a href='index.php?act=ct_service&id=".$id."'>".$ten_dv."</a></h3>
 									".$mo_ta."
 								</div>
 							</div>

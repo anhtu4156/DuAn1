@@ -29,7 +29,7 @@ function get_dl_cl(){
 }
 //print_r(get_dl_dv_tc());
 function get_dl_kt_nv(){
-    $sql="SELECT ds_dat_lich.id as id_dl,ds_dat_lich.id_khoang_gio,kich_thuoc.can_nang ,ds_dat_lich.id_khoang_can, ds_dat_lich.id_nhan_vien, nhan_vien.ten_nv FROM kich_thuoc JOIN ds_dat_lich ON kich_thuoc.id = ds_dat_lich.id_khoang_can
+    $sql="SELECT ds_dat_lich.id as id_dl,ds_dat_lich.id_khoang_gio,kich_thuoc.can_nang ,ds_dat_lich.id_khoang_can, ds_dat_lich.id_nhan_vien, nhan_vien.ten_nv, nhan_vien.anh as anh_nv FROM kich_thuoc JOIN ds_dat_lich ON kich_thuoc.id = ds_dat_lich.id_khoang_can
     JOIN nhan_vien ON nhan_vien.id= ds_dat_lich.id_nhan_vien
     ORDER BY ds_dat_lich.id desc
     LIMIT 1";

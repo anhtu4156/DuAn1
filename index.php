@@ -387,6 +387,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
     }
 } else {
+    $bl=load_all_bl_home();
     include "view/component/home.php";
 }
 
