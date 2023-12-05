@@ -278,12 +278,14 @@ include 'banner.php';
 					
 					<?php  
 						$dsnv=get_3_nv();
+						
 						foreach($dsnv as $item){
 							extract($item);
+							$anh_nv="../../admin/assets/images".$anh;
 							echo "	<div class='col-12 col-sm-6 col-md-4'>
 							<div class='rs-team-1'>
 								<div class='media'>
-									<img src='assets/images/vet05.jpg' alt='' class='img-fluid'>
+									<img src='".$anh_nv."' alt='' class='img-fluid'>
 									<div class='sosmed-icon'>
 										<a href=''><i class='fa fa-facebook'></i></a>
 										<a href=''><i class='fa fa-twitter'></i></a>
@@ -333,7 +335,7 @@ include 'banner.php';
 					<div class="col-sm-12 col-md-10 offset-md-1">
 						<div id="testimonial">
 							<!-- Item 1 -->
-							<div class="item">
+							<!-- <div class="item">
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
@@ -347,9 +349,33 @@ include 'banner.php';
 										</p>                        
 									</div>
 								</div>
-							</div>
+							</div> -->
+							<?php
+								foreach($bl as $item ){
+									extract($item);
+									$anh="../../admin/assets/images/".$anh;
+									echo '<div class="item">
+									<div class="rs-box-testimony">
+										<div class="quote-box">
+											<div class="media">
+												<img src="'.$anh.'" alt="" class="rounded-circle">
+											</div>
+											<blockquote class="text-black">
+											 '.$noi_dung.'
+											</blockquote>
+											<p class="quote-name">
+												'.$ten_tai_khoan.' <span></span>
+											</p>                        
+										</div>
+									</div>
+								</div>';
+								}
+							
+							
+							
+							?>
 							<!-- Item 2 -->
-							<div class="item">
+							<!-- <div class="item">
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
@@ -363,9 +389,9 @@ include 'banner.php';
 										</p>                        
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- Item 3 -->
-							<div class="item">
+							<!-- <div class="item">
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
@@ -379,9 +405,9 @@ include 'banner.php';
 										</p>                        
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- Item 4 -->
-							<div class="item">
+							<!-- <div class="item">
 								<div class="rs-box-testimony">
 									<div class="quote-box">
 										<div class="media">
@@ -395,7 +421,7 @@ include 'banner.php';
 										</p>                        
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 
