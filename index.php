@@ -279,10 +279,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/pages/datlich/lichsu.php";
 
 
-
-
-
-
             break;
         case "binhluan":
             if (isset($_POST['gui_bl'])) {
@@ -322,8 +318,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
 
 
-        case "quantri":
-            header("Location: admin/index.php");
+        case "quenmk":
+            
+            include "view/pages/login/quenmk.php";
             break;
             ///////////////////////////////////////////////////////////
             //             case "cart":

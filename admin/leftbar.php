@@ -120,7 +120,7 @@
                             <div id="Authentication-flush" class="hidden  overflow-hidden" aria-labelledby="Authentication">
                                 <ul class="nav flex-col flex flex-wrap ps-0 mb-0 ms-2">
                                     <li class="nav-item relative block">
-                                        <a href="" class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
+                                        <a href="index.php?act=binhluan" class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                             <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
                                             Bình luận
                                         </a>
@@ -140,7 +140,7 @@
                                     <li class="nav-item relative block">
                                         <a href="index.php?act=order" class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                             <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                            Đơn đặt
+                                            Đơn đặt tổng
                                         </a>
                                     </li>
                                     <li class="nav-item relative block">
