@@ -196,31 +196,33 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     isset($_POST['dong_vat']) && $_POST['dong_vat'] != "" && isset($_POST['nv']) && $_POST['nv'] != "" && isset($_POST['pttt']) && $_POST['pttt'] != ""
                 ) {
                     if (strtotime($_POST['ngay']) >= strtotime(date('Y-m-d'))) {
+                        if (strtotime($_POST['ngay']) - strtotime(date('Y-m-d')) <= 604800) {
+                            $ngay_dat_lich = $_POST['ngay'];
+                            $khoang_gio = $_POST['gio'];
+                            $id_dich_vu = $_POST['dv'];
+                            $id_thu_cung = $_POST['dong_vat'];
 
+                            $id_nhan_vien = $_POST['nv'];
+                            $count_nv = count_nv($id_nhan_vien, $khoang_gio);
 
-
-                        $ngay_dat_lich = $_POST['ngay'];
-                        $khoang_gio = $_POST['gio'];
-                        $id_dich_vu = $_POST['dv'];
-                        $id_thu_cung = $_POST['dong_vat'];
-
-                        $id_nhan_vien = $_POST['nv'];
-                        $count_nv = count_nv($id_nhan_vien, $khoang_gio);
-
-                        $id_pttt = $_POST['pttt'];
-                        $id_khoang_can = $_POST['can_nang'];
-                        $id_tai_khoan = $_POST['id_user'];
-                        $gia = $_POST['gia'];
-                        if ($count_nv['count(id)'] >= 2) {
-                            $thongbao = "Nhân viên  đã nhận đủ số khách cho 1 ca. Vui lòng chọn ca khác hoặc book nhân viên khác";
+                            $id_pttt = $_POST['pttt'];
+                            $id_khoang_can = $_POST['can_nang'];
+                            $id_tai_khoan = $_POST['id_user'];
+                            $gia = $_POST['gia'];
+                            if (isset($count_nv['count(id)']) && $count_nv['count(id)'] >= 2) {
+                                $thongbao = "Nhân viên  đã nhận đủ số khách cho 1 ca. Vui lòng chọn ca khác hoặc book nhân viên khác";
+                                include "view/pages/datlich/trang1.php";
+                                break;
+                            } else {
+                                insert_datlich($ngay_dat_lich, $khoang_gio, $id_tai_khoan, $id_thu_cung, $id_khoang_can, $id_dich_vu, $id_nhan_vien, $id_pttt, $gia);
+                            }
+                        } else {
+                            $thongbao = "Vui lòng chọn ngày cách ngày hiện tại tối đa 7 ngày";
                             include "view/pages/datlich/trang1.php";
                             break;
-                        } else {
-                            insert_datlich($ngay_dat_lich, $khoang_gio, $id_tai_khoan, $id_thu_cung, $id_khoang_can, $id_dich_vu, $id_nhan_vien, $id_pttt, $gia);
                         }
-                        // insert_datlich($ngay_dat_lich, $khoang_gio, $id_tai_khoan, $id_thu_cung, $id_khoang_can, $id_dich_vu, $id_nhan_vien, $id_pttt, $gia);
                     } else {
-                        $thongbao = "Vui lòng chọn ngày đặt dịch vụ hợp lệ";
+                        $thongbao = "Vui lòng không chọn ngày trong quá khứ";
                         include "view/pages/datlich/trang1.php";
                         break;
                     }
@@ -250,14 +252,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $id_khoang_can = $_POST['can_nang'];
                     $id_tai_khoan = $_POST['id_user'];
                     $gia = $_POST['gia'];
+                    // $ds_dl=get_dl_kt_nv();
+                    // $id_dl=$ds_dl['id'];
                     update_dl($ngay_dat_lich, $khoang_gio, $id_thu_cung, $id_khoang_can, $id_dich_vu, $id_nhan_vien, $id_pttt, $gia, $id_dl);
-                    insert_hoadon($ngay_dat_lich, $khoang_gio, $id_tai_khoan, $id_dich_vu, $id_nhan_vien);
+                    insert_hoadon($ngay_dat_lich, $khoang_gio, $id_tai_khoan, $id_dich_vu, $id_nhan_vien, $id_dl);
                     if ($id_pttt == 1) {
                         include "view/pages/datlich/trang3.php";
                         break;
                     }
                     if ($id_pttt == 2) {
-                        
+
                         include "view/pages/datlich/trang4.php";
                     }
                 } else {
@@ -268,22 +272,17 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             break;
         case "thanhtoan":
-            $id_tk = $_SESSION['user_id'];           
-                $hd_dv_nv = get_hd_dv_nv();
-                extract($hd_dv_nv);
-                update_trang_thai($id);
+            $id_tk = $_SESSION['user_id'];
+            $hd_dv_nv = get_hd_dv_nv();
+            extract($hd_dv_nv);
+            update_trang_thai($id);
             include "view/pages/datlich/trang4.php";
             break;
+        
         case "lichsu":
-
             include "view/pages/datlich/lichsu.php";
-
-
-
-
-
-
             break;
+        
         case "binhluan":
             if (isset($_POST['gui_bl'])) {
                 $id_dv = $_POST['id_dv'];
@@ -293,21 +292,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_bl($ngay_bl, $id_tk, $noi_dung, $id_dv);
                 header("location: index.php?act=ct_service&&id=" . $id_dv);
             }
-
             break;
-
-
-        case "test":
-
-
-            include "view/pages/datlich/test.php";
-
-            break;
-
+        
         case "timkiem":
             if (isset($_POST['kyw']) && $_POST['kyw'] != "") {
                 $kyw = $_POST['kyw'];
-                $dv=load_dv_timkiem($kyw);
+                $dv = load_dv_timkiem($kyw);
                 include "view/pages/service/tk_service.php";
                 //header("location: view/pages/service/tk_service.php");
                 break;
@@ -317,13 +307,35 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             break;
 
+        case "timkiem_theodm":
+            if (isset($_GET['id_dm'])) {
+                $id_dm = $_GET['id_dm'];
+                $ten_dm = load_dm_theoid($id_dm);
+                $dv = load_dv_theodm($id_dm);
+                include "view/pages/service/tkdm_service.php";
+                break;
+            }
+
+            break;
+        case "huy_don":
+            if (isset($_POST['huy'])) {
+                $id_dl = $_POST['id_dl'];
+                $id_hd = $_POST['id_hd'];
+                xoa_vv_hd($id_hd);
+                xoa_vv_order($id_dl);
+                include "view/pages/datlich/lichsu.php";
+                break;
+            }
+
+            break;
 
 
 
 
 
-        case "quantri":
-            header("Location: admin/index.php");
+        case "quenmk":
+            
+            include "view/pages/login/quenmk.php";
             break;
             ///////////////////////////////////////////////////////////
             //             case "cart":
@@ -387,7 +399,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
     }
 } else {
-    $bl=load_all_bl_home();
+    $bl = load_all_bl_home();
     include "view/component/home.php";
 }
 

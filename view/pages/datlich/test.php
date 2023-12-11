@@ -1,3 +1,5 @@
+
+
 <div class="section bg-breadcrumb">
     <div class="content-wrap py-0 pos-relative">
         <div class="container">
@@ -25,7 +27,21 @@
             // echo $_SESSION['user_id'];
             ?>
         </div>
-        <form action="index.php?act=xacnhan" method="post" class="form">
+        <div class="table_nv">
+            
+            <?php  
+            foreach($get_all_nhan_vien as $item){
+                echo "<div>
+                <img src='' >
+                <p>".$item['ten_nv']."</p>
+            </div>";
+            }
+            
+            
+            
+            ?>
+        </div>
+        <form action="" method="post" class="form">
             <input type="hidden" value="<?php echo $_SESSION['user_id']; ?>" name="id_user">
             <div class="form-group">
                 <label for="ngay">Ngày</label>
@@ -35,36 +51,18 @@
                 <label for="gio">Khoảng giờ</label>
                 <select name="gio" id="khoang_gio" class="form-control">
                     <option value="">Chọn khoảng giờ</option>
-                    <?php
-                    // $dsdv=loadAll_dichvu();
-                    // foreach ($dsdv as $item) {
-                    //     extract($item);
-                    //     echo '<option value="' . $id . '">' . $ten_dv . '</option>';
-                    // }
-
-                    ?>
-
                 </select>
             </div>
 
+           
             <div class="form-group">
                 <label for="nguoi-hen">Chọn dịch vụ</label>
-                <select name="dv" id="dichvu" class="form-control" onclick="openPopup()">
-                    <option value="">Chọn dịch vụ</option>
-                    <!-- POPUP -->
+
+                <select name="dv" id="dichvu" class="form-control">
+                    <option value="" >Chọn dịch vụ</option>
+                   
 
 
-                    <div id="overlay">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closePopup()">×</a> <!-- Button đóng popup -->
-
-                        <!-- Nội dung trong Popup -->
-                        <div class="overlay-content">
-                            <h3>REVIEW KHÁCH SẠN ĐÀ NẴNG</h3>
-                            <p>
-                                Đà Nẵng luôn nổi danh là thành phố đáng sống nhất Việt Nam. Chính vì lẽ đó mà đây cũng trở thành một trong những địa điểm du lịch yêu thích. Không khó để có thể tìm được một nơi dừng chân chất lượng với sự mến khách của con người Đà Nẵng. Cùng Tico travel tìm hiểu top 20 khách sạn Đà Nẵng ngay nhé!
-                            </p>
-                        </div>
-                    </div>
                 </select>
             </div>
             <div class="form-group">
@@ -72,11 +70,7 @@
                 <select name="dong_vat" id="thucung" class="form-control">
                     <option value="">Chọn loài thú cưng</option>
                     <?php
-                    // $dsdv=loadAll_dichvu();
-                    // foreach ($dstc as $item) {
-                    //     extract($item);
-                    //     echo '<option value="' . $id . '">' . $ten_loai . '</option>';
-                    // }
+
 
                     ?>
 
@@ -87,11 +81,7 @@
                 <select name="can_nang" id="can_nang" class="form-control">
                     <option value="">---Chọn khoảng cân---</option>
                     <?php
-                    // $dsdv=loadAll_dichvu();
-                    // foreach ($ds_cannang as $item) {
-                    //     extract($item);
-                    //     echo '<option value="' . $id . '">' . $can_nang . '</option>';
-                    // }
+
 
                     ?>
 
@@ -113,10 +103,10 @@
                     <option value="">---Chọn phương thức thanh toán---</option>
                     <?php
 
-                    foreach ($phuong_thuc_tt as $item) {
-                        extract($item);
-                        echo '<option value="' . $id . '">' . $pttt . '</option>';
-                    }
+                    // foreach ($phuong_thuc_tt as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $pttt . '</option>';
+                    // }
 
                     ?>
                 </select>
@@ -127,6 +117,16 @@
 
 
 </section>
+
+<!-- 
+test -->
+
+
+
+
+
+
+<!-- test -->
 <!-- lấy dịch vụ: -->
 <script>
     $(document).ready(function() {
@@ -140,7 +140,7 @@
                     var dich_vu = data[i];
                     var str = ` 
                     <option value="${dich_vu['id']}">
-                         ${dich_vu['ten_dv']} 
+                           ${dich_vu['ten_dv']} 
                     </option>`;
                     $("#dichvu").append(str);
                 }
@@ -273,14 +273,5 @@
 
             }
         });
-    }
-</script>
-<script>
-    function openPopup() { // Click vào button thì gán style cho Popup là display:block để hiển thị lên
-        document.getElementById("overlay").style.display = "block";
-    }
-
-    function closePopup() { // Click vào close thì gán style cho Popup là display:none để ẩn đi
-        document.getElementById("overlay").style.display = "none";
     }
 </script>
