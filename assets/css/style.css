@@ -3804,47 +3804,25 @@ Back To Top Section
   background-color: rgb(185, 185, 60);
   box-shadow: 2px rgb(231, 231, 8);
 }
+.rs-image-box{
+  height: 500px;
+  width: 350px;
+}
+.rs-image-box img{
+  height: 300px;
+  width: 350px;
+
+}
+.text-black.lead{
+  width: 600px;
+}
+
 /**
  * 7. - RESPONSIVE
  * -----------------------------------------------------------------------------
  */
 
 /*# sourceMappingURL=style.css.map */
-
-
-
-/* style   */
-#overlay {
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: #0b3f67f5;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.overlay-content {
-    color: white;
-    position: relative;
-    top: 25%;
-    width: 50%;
-    text-align: center;
-    margin-top: 30px;
-    font-family: Arial;
-}
-
-#overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color: white;
-    text-decoration: none;
-}
 
 
 

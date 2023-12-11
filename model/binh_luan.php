@@ -9,11 +9,15 @@ function load_all_bl($id_dv){
     return pdo_query($sql);
 }
 function load_all_bl_home(){
-    $sql="SELECT * FROM binh_luan join tai_khoan on binh_luan.id_tk=tai_khoan.id";
+    $sql="SELECT * FROM binh_luan join tai_khoan on binh_luan.id_tk=tai_khoan.id limit 0,4";
     return pdo_query($sql);
 }
-
-
+// echo strtotime('2023-12-18');
+// echo "<pre>";
+// echo "</pre>";
+// echo strtotime(date('Y-m-d'));
+// echo "<pre>";
+// echo strtotime('2023-12-16')-strtotime(date('Y-m-d'));
 
 
 ?>

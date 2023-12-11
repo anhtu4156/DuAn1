@@ -16,9 +16,9 @@
 <div id="class" class="">
     <div class="content-wrap" style="padding: 0px;">
         <div class="container">
-        <h1>Danh sách tìm kiếm</h1>
+        <h1>Danh sách tìm kiếm theo danh mục"<?php echo $ten_dm['ten_loai_dv'] ?>"</h1>
             <form action="../../../index.php?act=timkiem" class="form1" method="post">
-                <input type="text" class="form-control" name="kyw" style="width: 300px;" value="<?=$kyw?>">
+                <input type="text" class="form-control" name="kyw" style="width: 300px;">
                 <button type="submit" class="button"><a href="../../../index.php?act=timkiem">Tìm kiếm</a></button>
             </form>
             <div class="row">
