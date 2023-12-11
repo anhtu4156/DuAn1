@@ -47,7 +47,7 @@ if (isset($_POST['login'])) {
 
     <div class="remember-forgot">
         <label><input type="checkbox">Remember Me</label>
-        <a href="#">Forgot Password</a>
+        <a href="index.php?act=quenmk">Forgot Password</a>
     </div>
     <input name="login" type="submit" class="btn" value="Đăng Nhập"></input>
     <?php

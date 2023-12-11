@@ -43,7 +43,7 @@
 	Custom Stylesheet
 	=============================================== -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css"> -->
 
 	<script src="assets/js/vendor/modernizr.min.js"></script>
 	<script src="assets/js/app.js"></script>
@@ -221,13 +221,6 @@
 								<i class='bx bx-user-circle' ></i><?= $_SESSION['user'];  ?>
 								</a>
 								<div class="dropdown-menu">
-									<?php
-									if(isset($_SESSION['user_id']) && $_SESSION['user'] != "" && $_SESSION['role'] == 1){
-                    
-										echo '<a class="dropdown-item" href="index.php?act=quantri">TRANG QUẢN TRỊ</a>';
-										
-									}
-									?>
 									<a class="dropdown-item" href="index.php?act=lichsu">LỊCH SỬ ĐẶT LỊCH</a>
 									<a class="dropdown-item" href="index.php?act=profile">CẬP NHẬT THÔNG TIN</a>
 									<a class="dropdown-item" href="index.php?act=pass">ĐỔI MẬT KHẨU</a>

@@ -42,14 +42,14 @@
                 function drawChart() {
 
                     // Set Data
-                    const data = google.visualization.arrayToDataTable([
-                        ['Contry', 'Mhl'],
-                        ['Italy', 54.8],
-                        ['France', 48.6],
-                        ['Spain', 44.4],
-                        ['USA', 23.9],
-                        ['Argentina', 14.5]
-                    ]);
+                    // const data = google.visualization.arrayToDataTable([
+                    //     ['Contry', 'Mhl'],
+                    //     ['Italy', 54.8],
+                    //     ['France', 48.6],
+                    //     ['Spain', 44.4],
+                    //     ['USA', 23.9],
+                    //     ['Argentina', 14.5]
+                    // ]);
                     const data1 = google.visualization.arrayToDataTable([
                         ['Danh mục', 'Số lượng'],
                         <?php

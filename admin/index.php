@@ -16,6 +16,7 @@ include "../model/datlich.php";
 include "../model/dich_vu.php";
 include "../model/hoa_don.php";
 include "../model/admin/login.php";
+include "../model/binh_luan.php";
 
 
 include "header.php";
@@ -579,6 +580,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $count = countOrder();
             $ds = loadOrder_nv($id_nv);
             include "module/nhanvien/dondat.php";
+            break;
+
+        // bình luận
+        case "binhluan":
+            if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
+                $keyw = $_POST['keyw'];
+                $iddv = $_POST['iddv'];
+            } else {
+                $keyw = "";
+                $iddv = 0;
+            }
+            $dv = laydv();
+            $dsbl = load_bl_admin($keyw,$iddv);
+            include "module/binhluan/list.php";
             break;
     }
 } else {
