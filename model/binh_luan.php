@@ -12,12 +12,20 @@ function load_all_bl_home(){
     $sql="SELECT * FROM binh_luan join tai_khoan on binh_luan.id_tk=tai_khoan.id limit 0,4";
     return pdo_query($sql);
 }
-// echo strtotime('2023-12-18');
-// echo "<pre>";
-// echo "</pre>";
-// echo strtotime(date('Y-m-d'));
-// echo "<pre>";
-// echo strtotime('2023-12-16')-strtotime(date('Y-m-d'));
+
+// load bl admin
+function load_bl_admin($keyw,$iddv){
+    $sql = "SELECT dv.id,tk.dia_chi, bl.noi_dung, bl.ngay_bl, tk.ten_tai_khoan, dv.ten_dv FROM binh_luan bl join tai_khoan tk on bl.id_tk = tk.id join dich_vu dv on bl.id_dv = dv.id where `status` = 0";
+    if($keyw!=""){
+        $sql.=" and ten_tai_khoan like '%".$keyw."%'";
+    }
+    if($iddv>0){
+        $sql.=" and id_dv ='".$iddv."'";
+    }
+    $sql.=" order by id desc";
+    return pdo_query($sql);
+}
+
 
 
 ?>

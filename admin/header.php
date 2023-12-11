@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="assets/css/tailwind.min.css">
         <link rel="stylesheet" href="../assets/css/login.css">
         <!-- biểu đồ -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://www.gstatic.com/charts/loader.js"></script>
         <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
 

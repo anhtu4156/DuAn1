@@ -278,11 +278,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             update_trang_thai($id);
             include "view/pages/datlich/trang4.php";
             break;
+        
         case "lichsu":
-
             include "view/pages/datlich/lichsu.php";
-
             break;
+        
         case "binhluan":
             if (isset($_POST['gui_bl'])) {
                 $id_dv = $_POST['id_dv'];
@@ -292,12 +292,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_bl($ngay_bl, $id_tk, $noi_dung, $id_dv);
                 header("location: index.php?act=ct_service&&id=" . $id_dv);
             }
-
             break;
-
-
-
-
+        
         case "timkiem":
             if (isset($_POST['kyw']) && $_POST['kyw'] != "") {
                 $kyw = $_POST['kyw'];
@@ -337,8 +333,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
 
 
-        case "quantri":
-            header("Location: admin/index.php");
+        case "quenmk":
+            
+            include "view/pages/login/quenmk.php";
             break;
             ///////////////////////////////////////////////////////////
             //             case "cart":
