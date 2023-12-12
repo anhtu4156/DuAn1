@@ -68,18 +68,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/danhmuc_dv/list.php";
             break;
             //bình luận
-        case "binhluan":
-            if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
-                $keyw = $_POST['keyw'];
-                $iddv = $_POST['iddv'];
-            } else {
-                $keyw = "";
-                $iddv = 0;
-            }
-            $dv = laydv();
-            $dsbl = load_bl_admin($keyw, $iddv);
-            include "module/binhluan/list.php";
-            break;
+       
         case "xoa_bl":
             if (isset($_GET['id_bl'])) {
                 delete_bl($_GET['id_bl']);
@@ -161,7 +150,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 }
                 $loaddv = loaddv_theoid($iddv);
             }
-            $listdanhmuc_dv = loadall_danhmuc_dv();
+            $listdanhmuc_dv = loadall_danhmuc_dv1();
             include "module/dich_vu/update.php";
             break;
         case "xoa_dv":
@@ -613,10 +602,22 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds = loadOrder_nv($id_nv);
             include "module/nhanvien/dondat.php";
             break;
+            case "binhluan":
+                if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
+                    $keyw = $_POST['keyw'];
+                    $iddv = $_POST['iddv'];
+                } else {
+                    $keyw = "";
+                    $iddv = 0;
+                }
+                $dv = laydv();
+                $dsbl = load_bl_admin($keyw,$iddv);
+                include "module/binhluan/list.php";
+                break;
+        }
+    } else {
+        $thongke = thongke_order_month();
+        include "content.php";
     }
-} else {
-    $thongke = thongke_order_month();
-    include "content.php";
-}
 
 include "footer.php";

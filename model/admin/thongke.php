@@ -20,3 +20,4 @@ function thongke_order_day(){
     $result = pdo_query($sql);
     return $result;
 }
+?>
