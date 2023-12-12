@@ -112,7 +112,7 @@
                                                         <tr>
 
                                                             <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                                ID dịch vụ
+                                                                STT
                                                             </th>
                                                             <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                                 Tên khách hàng
@@ -136,12 +136,14 @@
                                                     </thead>
                                                     <tbody>
                                                         <?php
+                                                        $stt=1;
                                                         foreach ($dsbl as $item) {
                                                             extract($item);
+                                                            
                                                             echo '<tr class="bg-white border-b border-dashed dark:bg-gray-900 dark:border-gray-700/40">
                                                                     
                                                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                                        <a href="#" class="text-brand-500 underline">' . $id . '</a>
+                                                                        <a href="#" class="text-brand-500 underline">' . $stt++ . '</a>
                                                                     </td>
                                                                     <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
                                                                         <div class="flex items-center">
@@ -164,8 +166,8 @@
                                                                     </td>
                                                                     
                                                                     <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                                    <a href="index.php?act=sua_hd&id_hd=' . $id . '" class="me-3"><i class="icofont-ui-edit text-lg text-gray-500 dark:text-gray-400"></i></a>
-                                                                    <a href="index.php?act=xoa_hd&id_hd=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn xóa vào thùng rác")\'><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
+                                                
+                                                                    <a href="index.php?act=xoa_bl&id_bl=' . $id . '" onclick=\'return confirm("Bạn có chắc chắn muốn xóa vào thùng rác")\'><i class="icofont-ui-delete text-lg text-red-500 dark:text-red-400"></i></a>
                                                                     </td>
                                                                 </tr>';
                                                         }
