@@ -131,7 +131,7 @@
                             <!-- Orders -->
                             <a href="#" class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200" data-fc-type="collapse" data-fc-parent="parent-accordion">
                                 <span data-lucide="scroll-text" class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
-                                <span>Orders</span>
+                                <span>Danh sách tất cả đơn đặt</span>
                                 <i class="icofont-thin-down  fc-collapse-open:rotate-180 ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></i>
                             </a>
     
@@ -140,7 +140,7 @@
                                     <li class="nav-item relative block">
                                         <a href="index.php?act=order" class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                             <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                            Đơn đặt tổng
+                                            Danh sách đặt lịch
                                         </a>
                                     </li>
                                     <li class="nav-item relative block">
@@ -165,7 +165,7 @@
                         <!-- Xác nhận đơn -->
                         <a href="#" class="nav-link hover:bg-transparent hover:text-black  rounded-md dark:hover:text-slate-200   flex items-center  decoration-0 px-3 py-3 cursor-pointer group-data-[sidebar=dark]:hover:text-slate-200 group-data-[sidebar=brand]:hover:text-slate-200" data-fc-type="collapse" data-fc-parent="parent-accordion">
                             <span data-lucide="scroll-text" class="w-5 h-5 text-center text-slate-800 me-2 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></span>
-                            <span>Đơn đặt</span>
+                            <span>Đơn đặt cá nhân</span>
                             <i class="icofont-thin-down  fc-collapse-open:rotate-180 ms-auto inline-block text-[14px] transform transition-transform duration-300 text-slate-800 dark:text-slate-400 group-data-[sidebar=dark]:text-slate-400 group-data-[sidebar=brand]:text-slate-400"></i>
                         </a>
 
@@ -174,13 +174,13 @@
                                 <li class="nav-item relative block">
                                     <a href="index.php?act=xacnhan_don" class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                         <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                        Đơn đặt
+                                        Đơn đặt 
                                     </a>
                                 </li>
                                 <li class="nav-item relative block">
                                     <a href="index.php?act=xacnhan" class="nav-link  hover:text-primary-500  rounded-md dark:hover:text-primary-500 relative   flex items-center decoration-0 px-3 py-3 group-data-[sidebar=brand]:hover:text-slate-200">
                                         <i class="icofont-dotted-right me-2 text-slate-600 text-[8px] group-data-[sidebar=brand]:text-slate-400"></i>
-                                        Xác nhận đơn đặt
+                                        Xác nhận hoàn thành dịch vụ
                                     </a>
                                 </li>
 
