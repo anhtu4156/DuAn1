@@ -35,12 +35,9 @@ function load_dm_dv(){
     $sql="SELECT * from loai_dv";
     return pdo_query($sql);
 }
-function load_dm_theoid($id){
-    $sql="SELECT * from loai_dv where id=".$id;
-    return pdo_query_one($sql);
-}
+
 function load_ten_dv($id_dv){
-    $sql="SELECT ten_dv,id FROM dich_vu where id=".$id_dv;
+    $sql="SELECT ten_dv FROM dich_vu where id=".$id_dv;
     return pdo_query_one($sql);
 }
 // print_r( load_ten_dv(1));

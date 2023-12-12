@@ -5,3 +5,18 @@ function thongke()
     $result = pdo_query($sql);
     return $result;
 }
+
+function thongke_order_month(){
+    $sql = "SELECT MONTH(ngay_dat_lich) AS month, COUNT(*) AS tong
+    FROM ds_dat_lich
+    GROUP BY MONTH(ngay_dat_lich)
+    ORDER BY month;";
+    $result = pdo_query($sql);
+    return $result;
+}
+function thongke_order_day(){
+    $sql = "SELECT COUNT(*) AS tong FROM ds_dat_lich
+    WHERE DATE(ngay_dat_lich) = CURRENT_DATE";
+    $result = pdo_query($sql);
+    return $result;
+}

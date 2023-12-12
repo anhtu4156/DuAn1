@@ -156,3 +156,9 @@ function get_vaitro(){
     return $data;
 
 }
+
+function get_anh_nv($id){
+    $sql = "SELECT anh FROM nhan_vien WHERE id=".$id;
+    $data = pdo_query_one($sql);
+    return $data;
+}

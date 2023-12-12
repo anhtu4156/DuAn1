@@ -11,6 +11,7 @@ function dangnhap_admin($email, $pass) {
         $_SESSION['admin'] = $taikhoan_admin['ten_nv'];
         $_SESSION['admin_id'] = $taikhoan_admin['id'];
         $_SESSION['role'] = $taikhoan_admin['vai_tro'];
+        
         return "Đăng nhập thành công";
     } else {
         return "Thông tin tài khoản sai";

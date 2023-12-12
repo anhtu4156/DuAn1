@@ -122,7 +122,13 @@
 
         <button type="button" class="dropdown-toggle flex items-center rounded-full text-sm
                     focus:bg-none focus:ring-0 dark:focus:ring-0 md:me-0" id="user-profile" aria-expanded="false" data-fc-autoclose="both" data-fc-type="dropdown">
-          <img class="h-8 w-8 rounded-full" src="assets/images/users/avatar-1.png" alt="user photo" />
+                    <?php
+                    if(isset($_SESSION['admin_id'] )){
+                      $anh_nv = get_anh_nv($_SESSION['admin_id']);
+                    }
+                    $img_path = './assets/images/upload/'.$anh_nv['anh'];
+                     ?>
+          <img class="h-8 w-8 rounded-full" src="<?php echo $img_path; ?>" alt="" />
           <span class="ltr:ms-2 rtl:ms-0 rtl:me-2 hidden text-left xl:block">
             <span class="block font-medium text-slate-600 dark:text-gray-300"><?php echo $_SESSION['admin'] ?></span>
             <span class="-mt-0.5 block text-xs text-slate-500 dark:text-gray-400"><?php if ($_SESSION['role'] == 1) {

@@ -35,8 +35,6 @@ function get_dl_kt_nv(){
     LIMIT 1";
     return pdo_query_one($sql);
 }
-//print_r(get_dl_kt_nv());
-
 function get_dl_pttt_tk(){
     $sql="SELECT phuong_thuc_tt.pttt,ds_dat_lich.id_tai_khoan,tai_khoan.ten_tai_khoan,tai_khoan.email,ds_dat_lich.id_pttt,ds_dat_lich.gia FROM phuong_thuc_tt JOIN ds_dat_lich ON phuong_thuc_tt.id = ds_dat_lich.id_pttt
     JOIN tai_khoan ON ds_dat_lich.id_tai_khoan=tai_khoan.id
@@ -61,7 +59,10 @@ function update_dl($ngay_dat_lich,$khoang_gio,$id_thu_cung,$id_khoang_can,$id_di
 }
 
 
-
+function get_ls($id_tk){
+    $sql="SELECT * FROM ds_dat_lich where id_tai_khoan=".$id_tk;
+    return pdo_query($sql);
+}
 function get_ca_lam($id){
     $sql="SELECT ca_lam.ca_lam from ca_lam where id=".$id;
     return pdo_query_one($sql);
@@ -79,10 +80,7 @@ function get_ten_nv($id){
 // //print_r(get_datlich());
 //  echo '</pre>';
 
-function get_ls($id_tk){
-    $sql="SELECT * FROM ds_dat_lich where id_tai_khoan=".$id_tk;
-    return pdo_query($sql);
-}
+
 function count_nv($id_nv,$id_cl){
     $sql="SELECT count(id) from ds_dat_lich 
 	where id_nhan_vien=".$id_nv." AND id_khoang_gio=".$id_cl."
