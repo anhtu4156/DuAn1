@@ -267,7 +267,7 @@ include 'banner.php';
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Gặp Gỡ Các chuyên gia về thú y của chúng tôi
+							Gặp Gỡ Thú Y
 						</h2>
 						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
 					</div>
@@ -281,7 +281,7 @@ include 'banner.php';
 						
 						foreach($dsnv as $item){
 							extract($item);
-							$anh_nv="../../admin/assets/images/upload/".$anh;
+							$anh_nv="../../admin/assets/images".$anh;
 							echo "	<div class='col-12 col-sm-6 col-md-4'>
 							<div class='rs-team-1'>
 								<div class='media'>
@@ -327,17 +327,33 @@ include 'banner.php';
 						<h2 class="section-heading text-center text-primary mb-4">
 							Đánh Giá Của Khách Hàng
 						</h2>
-						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
 					
 				</div>
 				<div class="row">
 					<div class="col-sm-12 col-md-10 offset-md-1">
 						<div id="testimonial">
+							<!-- Item 1 -->
+							<!-- <div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="assets/images/team-1.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>Businessman</span>
+										</p>                        
+									</div>
+								</div>
+							</div> -->
 							<?php
 								foreach($bl as $item ){
 									extract($item);
-									$anh="../../admin/assets/images/upload/".$anh;
+									$anh="../../admin/assets/images/".$anh;
 									echo '<div class="item">
 									<div class="rs-box-testimony">
 										<div class="quote-box">
@@ -358,6 +374,54 @@ include 'banner.php';
 							
 							
 							?>
+							<!-- Item 2 -->
+							<!-- <div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="assets/images/team-2.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>CEO Buka Kreasi</span>
+										</p>                        
+									</div>
+								</div>
+							</div> -->
+							<!-- Item 3 -->
+							<!-- <div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="assets/images/team-3.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>Businessman</span>
+										</p>                        
+									</div>
+								</div>
+							</div> -->
+							<!-- Item 4 -->
+							<!-- <div class="item">
+								<div class="rs-box-testimony">
+									<div class="quote-box">
+										<div class="media">
+											<img src="assets/images/team-4.jpg" alt="" class="rounded-circle">
+										</div>
+										<blockquote class="text-black">
+										 Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam
+										</blockquote>
+										<p class="quote-name">
+											Johnathan Doel <span>CEO Buka Kreasi</span>
+										</p>                        
+									</div>
+								</div>
+							</div> -->
 						</div>
 					</div>
 
@@ -374,9 +438,9 @@ include 'banner.php';
 				<div class="row">
 					<div class="col-sm-12 col-md-12">
 						<h2 class="section-heading text-center text-primary no-after mb-5">
-							Bài viết của chúng tôi
+							From Our Articles
 						</h2>
-						<p class="subheading text-center">Sức khỏe và hạnh phúc của thú cưng của bạn là ưu tiên hàng đầu của chúng tôi.</p>
+						<p class="subheading text-center">Your pet's health and well-being are our top priority.</p>
 					</div>
 				</div>
 

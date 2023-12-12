@@ -40,13 +40,22 @@
         <form action="index.php?act=xacnhan" method="post" class="form">
             <input type="hidden" value="<?php echo $_SESSION['user_id']; ?>" name="id_user">
             <div class="form-group">
-                <label for="ngay">Ngày: Vui lòng chọn ngày cách ngày hiện tại tối đa 1 tuần</label>
+                <label for="ngay">Ngày</label>
                 <input type="date" class="form-control" id="ngay" name="ngay">
             </div>
             <div class="form-group">
                 <label for="gio">Khoảng giờ</label>
                 <select name="gio" id="khoang_gio" class="form-control">
                     <option value="">Chọn khoảng giờ</option>
+                    <?php
+                    // $dsdv=loadAll_dichvu();
+                    // foreach ($dsdv as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $ten_dv . '</option>';
+                    // }
+
+                    ?>
+
                 </select>
             </div>
 
@@ -54,6 +63,14 @@
                 <label for="nguoi-hen">Chọn dịch vụ</label>
                 <select name="dv" id="dichvu" class="form-control">
                     <option value="">Chọn dịch vụ</option>
+                    <?php
+                    // $dsdv=loadAll_dichvu();
+                    // foreach ($dsdv as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $ten_dv . '</option>';
+                    // }
+
+                    ?>
 
                 </select>
             </div>
@@ -61,6 +78,14 @@
                 <label for="nguoi-hen">Chọn loài thú cưng</label>
                 <select name="dong_vat" id="thucung" class="form-control">
                     <option value="">Chọn loài thú cưng</option>
+                    <?php
+                    // $dsdv=loadAll_dichvu();
+                    // foreach ($dstc as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $ten_loai . '</option>';
+                    // }
+
+                    ?>
 
                 </select>
             </div>
@@ -68,6 +93,14 @@
                 <label for="nguoi-hen">Chọn khoảng cân</label>
                 <select name="can_nang" id="can_nang" class="form-control">
                     <option value="">---Chọn khoảng cân---</option>
+                    <?php
+                    // $dsdv=loadAll_dichvu();
+                    // foreach ($ds_cannang as $item) {
+                    //     extract($item);
+                    //     echo '<option value="' . $id . '">' . $can_nang . '</option>';
+                    // }
+
+                    ?>
 
                 </select>
             </div>
@@ -108,10 +141,9 @@
             url: "http://localhost:3000/model/json/dvu.php",
             dataType: 'json',
             success: function(data) {
-                
+
                 //$("#dichvu").html("");
                 for (i = 0; i < data.length; i++) {
-                    //console.log(data);
                     var dich_vu = data[i];
                     var str = ` 
                     <option value="${dich_vu['id']}">

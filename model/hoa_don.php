@@ -1,9 +1,9 @@
 <?php
 include_once "pdo.php";
 
-function insert_hoadon($ngay_dat_lich,$khoang_gio,$id_tk,$id_dv,$id_nv, $id_dl){
-    $sql="INSERT INTO hoa_don (ngay_dat_lich,id_khoang_gio,id_tk,id_dv,id_nv,id_dl) 
-    VALUES ('$ngay_dat_lich','$khoang_gio','$id_tk','$id_dv','$id_nv','$id_dl')";
+function insert_hoadon($ngay_dat_lich,$khoang_gio,$id_tk,$id_dv,$id_nv){
+    $sql="INSERT INTO hoa_don (ngay_dat_lich,id_khoang_gio,id_tk,id_dv,id_nv) 
+    VALUES ('$ngay_dat_lich','$khoang_gio','$id_tk','$id_dv','$id_nv')";
     pdo_execute($sql);
 }
 function get_hd_dv_nv(){
@@ -17,7 +17,6 @@ function get_tttt($id_dl){
     $sql="SELECT * from hoa_don where id_dl=".$id_dl;
     return pdo_query_one($sql);
  }
- //print_r(get_tttt(51));
 // $x=get_hd_dv_nv();
 // extract($x);
 // echo $id;
@@ -32,7 +31,7 @@ function update_trang_thai($id){
     pdo_execute($sql);
 }
 function get_hd($id_tk){
-    $sql="SELECT id as id_hd,id_nv,ngay_dat_lich,trang_thai_tt FROM hoa_don where id_tk=".$id_tk;
+    $sql="SELECT id as id_hd,id_nv,ngay_dat_lich FROM hoa_don where id_tk=".$id_tk;
     return pdo_query($sql);
 }
 
@@ -88,8 +87,16 @@ function xoa_vv_hd($id){
     $sql = "DELETE FROM `hoa_don` WHERE id = $id";
     pdo_execute($sql);
 }
-
-
+function xoa_hd_theo_dl($id){
+    $sql = "DELETE FROM `hoa_don` WHERE id_dl = $id";
+    pdo_execute($sql);
+}
+function get_hd_theo_dl($id){
+    $sql="SELECT * FROM `hoa_don` where id_dl=".$id;
+    return pdo_query_one($sql);
+}
+// print_r(get_hd_theo_dl(51)) ;
+// echo get_hd_theo_dl(51)['id'];
 // lấy ds dv 
 function laydv(){
     $sql = "SELECT id as iddv, ten_dv FROM `dich_vu` ";

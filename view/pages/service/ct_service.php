@@ -28,7 +28,7 @@
 								$dm = load_dm_dv();
 								foreach($dm as $item){
 									extract($item);
-									echo "<li class=''><a href='../../../index.php?act=timkiem_theodm&id_dm=$id'>".$ten_loai_dv."</a></li>";
+									echo "<li class=''><a href='#'>".$ten_loai_dv."</a></li>";
 								}
 
 
@@ -71,7 +71,7 @@
 
 				?>
 				<div class="col-12 col-sm-12 col-md-8">
-					<img src="<?php echo $anh ?>" alt="" class="img-fluid" style="width: 600px; height: 500px;">
+					<img src="<?php echo $anh ?>" alt="" class="img-fluid">
 					<h2 class="section-heading text-primary no-after mb-4">
 						<?php echo $ten_dv ?>
 					</h2>
@@ -159,13 +159,13 @@
 					<!-- end accordion -->
 					<?php 
 					if(isset($_SESSION['user_id'])){?>
-						<!-- <form action="../../../index.php?act=binhluan" class="form" method="post">
+						<form action="../../../index.php?act=binhluan" class="form" method="post">
 							<input type="text" class="form-control" name="binhluan" style="margin-bottom: 20px; margin-top:20px;">
 							<a href="../../../index.php?act=binhluan"><input type="submit" name="gui_bl" class="btn btn-primary" value="Gửi bình luận"></input></a>
 							<input type="hidden" value="<?php echo date('Y-m-d') ?>" name="ngay_bl">
 							<input type="hidden" name="id_tk" value="<?=$_SESSION['user_id'] ?>">
 							<input type="hidden" value="<?=$_GET['id']?>" name="id_dv">
-						</form> -->
+						</form>
 					<?php }
 					
 					
