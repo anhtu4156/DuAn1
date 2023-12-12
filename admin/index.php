@@ -67,7 +67,34 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdanhmuc_dv = loadall_danhmuc_dv();
             include "module/danhmuc_dv/list.php";
             break;
-
+            //bình luận
+        case "binhluan":
+            if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
+                $keyw = $_POST['keyw'];
+                $iddv = $_POST['iddv'];
+            } else {
+                $keyw = "";
+                $iddv = 0;
+            }
+            $dv = laydv();
+            $dsbl = load_bl_admin($keyw, $iddv);
+            include "module/binhluan/list.php";
+            break;
+        case "xoa_bl":
+            if (isset($_GET['id_bl'])) {
+                delete_bl($_GET['id_bl']);
+            }
+            if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
+                $keyw = $_POST['keyw'];
+                $iddv = $_POST['iddv'];
+            } else {
+                $keyw = "";
+                $iddv = 0;
+            }
+            $dv = laydv();
+            $dsbl = load_bl_admin($keyw, $iddv);
+            include "module/binhluan/list.php";
+            break;
             // dịch vụ
         case "them_dv":
             if (isset($_POST['them']) && ($_POST['them'])) {
@@ -353,8 +380,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
             // xoá đơn đặt vĩnh viễn
         case "xoa_ordervv":
-            if (isset($_GET['id_order']) && $_GET['id_order']) {
+            if (isset($_GET['id_order']) && $_GET['id_order'] && isset($_GET['id_hd']) && $_GET['id_hd']) {
                 $id = $_GET['id_order'];
+                $id_hd = $_GET['id_hd'];
+                xoa_hd_theo_dl($id);
                 xoa_vv_order($id);
             }
             $count = countOrder();
@@ -364,6 +393,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             // thùng rác order
         case "thungrac_order":
             $ds = thungrac_order();
+
             include "module/dondat/thungrac_order.php";
             break;
 
@@ -497,20 +527,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/bien_the/update.php";
             break;
             break;
-/////////////////////////////
-        // đăng xuất
+            /////////////////////////////
+            // đăng xuất
         case "logout":
             dangxuat_admin();
             header("Location: index.php");
             break;
-/////////////////////////////
-        // xác nhận đơn của nhân viên
+            /////////////////////////////
+            // xác nhận đơn của nhân viên
         case "xacnhan":
             $count = countOrder();
             $ds = loadOrder_nv($id_nv);
             include "module/nhanvien/dondat.php";
             break;
-        // xác nhận đơn tiến hành của nhân viên
+            // xác nhận đơn tiến hành của nhân viên
         case "xacnhan_don":
             $count = countOrder();
             $ds = load_don_choxacnhan($id_nv);
@@ -539,7 +569,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/nhanvien/xacnhan_don.php";
             break;
 
-        // ds đơn hủy
+            // ds đơn hủy
         case "ds_donhuy":
             if (isset($_GET['id_order']) && $_GET['id_order'] != '') {
                 $id = $_GET['id_order'];
@@ -550,7 +580,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "module/nhanvien/list_donhuy.php";
             break;
 
-        //khôi phục đơn bị hủy
+            //khôi phục đơn bị hủy
         case "khoiphuc_dondat":
             if (isset($_GET['id_don']) && $_GET['id_don'] != '') {
                 $id = $_GET['id_don'];
@@ -560,8 +590,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $ds = ds_donhuy($id_nv);
             include "module/nhanvien/list_donhuy.php";
             break;
-        
-        // xóa vv đơn đặt
+
+            // xóa vv đơn đặt
         case "xoa_dondat_vv":
             if (isset($_GET['id_don']) && $_GET['id_don'] != '') {
                 $id = $_GET['id_don'];
@@ -571,29 +601,17 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $count = countOrder();
             $ds = ds_donhuy($id_nv);
             include "module/nhanvien/list_donhuy.php";
-        // xác nhận hoàn thành dịch vụ thành công
+            // xác nhận hoàn thành dịch vụ thành công
         case "duyetdon":
             if (isset($_GET['id_order']) && $_GET['id_order'] != '') {
                 $id = $_GET['id_order'];
+                $thanhtoan = get_tttt($id);
+                update_trang_thai($thanhtoan['id']);
                 duyetdon($id);
             }
             $count = countOrder();
             $ds = loadOrder_nv($id_nv);
             include "module/nhanvien/dondat.php";
-            break;
-
-        // bình luận
-        case "binhluan":
-            if (isset($_POST['clickOK']) && ($_POST['clickOK'])) {
-                $keyw = $_POST['keyw'];
-                $iddv = $_POST['iddv'];
-            } else {
-                $keyw = "";
-                $iddv = 0;
-            }
-            $dv = laydv();
-            $dsbl = load_bl_admin($keyw,$iddv);
-            include "module/binhluan/list.php";
             break;
     }
 } else {

@@ -83,8 +83,16 @@ function xoa_vv_hd($id){
     $sql = "DELETE FROM `hoa_don` WHERE id = $id";
     pdo_execute($sql);
 }
-
-
+function xoa_hd_theo_dl($id){
+    $sql = "DELETE FROM `hoa_don` WHERE id_dl = $id";
+    pdo_execute($sql);
+}
+function get_hd_theo_dl($id){
+    $sql="SELECT * FROM `hoa_don` where id_dl=".$id;
+    return pdo_query_one($sql);
+}
+// print_r(get_hd_theo_dl(51)) ;
+// echo get_hd_theo_dl(51)['id'];
 // lấy ds dv 
 function laydv(){
     $sql = "SELECT id as iddv, ten_dv FROM `dich_vu` ";

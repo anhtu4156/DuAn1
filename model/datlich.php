@@ -83,7 +83,7 @@ function get_ten_nv($id){
 
 function count_nv($id_nv,$id_cl){
     $sql="SELECT count(id) from ds_dat_lich 
-	where id_nhan_vien=".$id_nv." AND id_khoang_gio=".$id_cl."
+	where id_nhan_vien=".$id_nv." AND id_khoang_gio=".$id_cl." AND trang_thai_dv='0'
     GROUP BY id_nhan_vien";
     return pdo_query_one($sql);
 }
