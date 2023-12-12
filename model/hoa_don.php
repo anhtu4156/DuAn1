@@ -13,6 +13,10 @@ function get_hd_dv_nv(){
     LIMIT 1";
     return pdo_query_one($sql);
 }
+function get_tttt($id_dl){
+    $sql="SELECT * from hoa_don where id_dl=".$id_dl;
+    return pdo_query_one($sql);
+ }
 // $x=get_hd_dv_nv();
 // extract($x);
 // echo $id;
