@@ -4,7 +4,11 @@ function loadall_danhmuc_dv(){
     $listdanhmuc= pdo_query($sql);
     return  $listdanhmuc;
 }
- 
+function loadall_danhmuc_dv1(){
+    $sql="select id,ten_loai_dv,ngay_tao,trang_thai,mo_ta as mt from loai_dv order by id desc";
+    $listdanhmuc= pdo_query($sql);
+    return  $listdanhmuc;
+}
 function them_danhmuc_dv($ten_danhmuc_dv,$mota_danhmuc_dv){
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     $date = date("Y-m-d");

@@ -15,7 +15,7 @@ function load_all_bl_home(){
 
 // load bl admin
 function load_bl_admin($keyw,$iddv){
-    $sql = "SELECT dv.id,tk.dia_chi, bl.noi_dung, bl.ngay_bl, tk.ten_tai_khoan, dv.ten_dv FROM binh_luan bl join tai_khoan tk on bl.id_tk = tk.id join dich_vu dv on bl.id_dv = dv.id where `status` = 0";
+    $sql = "SELECT bl.id,tk.dia_chi, bl.noi_dung, bl.ngay_bl, tk.ten_tai_khoan, dv.ten_dv FROM binh_luan bl join tai_khoan tk on bl.id_tk = tk.id join dich_vu dv on bl.id_dv = dv.id where `status` = 0";
     if($keyw!=""){
         $sql.=" and ten_tai_khoan like '%".$keyw."%'";
     }
@@ -26,6 +26,10 @@ function load_bl_admin($keyw,$iddv){
     return pdo_query($sql);
 }
 
+function delete_bl($id){
+    $sql="delete from binh_luan where id=".$id;
+    pdo_query($sql);
+}
 
 
 ?>

@@ -145,12 +145,29 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $get_date = $_POST['date'];
                 $dateTimeObject = new DateTime($get_date);
                 $date = $dateTimeObject->format('Y-m-d H:i:s');
-                capnhat_tk($userId, $user, $email, $date, $address, $tel);
+                if (isset($_FILES['anh']['name']) && !empty($_FILES['anh']['name'])) {
+                    $hinh = $_FILES['anh']['name'];
+                    $target_dir = "./admin/assets/images/upload/";
+                    $target_file = $target_dir . basename($_FILES['anh']['name']);
+
+                    if (move_uploaded_file($_FILES['anh']['tmp_name'], $target_file)) {
+                        // Bạn có thể thêm mã xử lý khi upload ảnh thành công ở đây
+                    } else {
+                        // Bạn có thể thêm mã xử lý khi upload ảnh không thành công ở đây
+                    }
+                    capnhat_tk($userId, $user, $email, $date, $address, $tel,$hinh);
+                } else {
+                    // Xử lý trường hợp không có ảnh được chọn
+                    capnhat_tk_kh_anh($userId, $user, $email, $date, $address, $tel);
+                }
+                
+
                 $thongbao = "Cập nhật thành công";
-            }
-            if (isset($thongbao) && $thongbao != "") {
                 header("Location: index.php?act=profile");
             }
+            // if (isset($thongbao) && $thongbao != "") {
+            //     header("Location: index.php?act=profile");
+            // }
             include "view/pages/account/pro5.php";
             break;
             // đổi mk:
@@ -278,11 +295,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             update_trang_thai($id);
             include "view/pages/datlich/trang4.php";
             break;
-        
+
         case "lichsu":
             include "view/pages/datlich/lichsu.php";
             break;
-        
+
         case "binhluan":
             if (isset($_POST['gui_bl'])) {
                 $id_dv = $_POST['id_dv'];
@@ -293,18 +310,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 header("location: index.php?act=ct_service&&id=" . $id_dv);
             }
             break;
-        
+
         case "timkiem":
-            if (isset($_POST['kyw']) && $_POST['kyw'] != "") {
-                $kyw = $_POST['kyw'];
-                $dv = load_dv_timkiem($kyw);
-                include "view/pages/service/tk_service.php";
-                //header("location: view/pages/service/tk_service.php");
-                break;
-            } else {
-                include "view/pages/service/tk_service.php";
-                break;
+            if (isset($_POST['tim'])) {
+                if (isset($_POST['kyw']) && $_POST['kyw'] != "") {
+                    $kyw = $_POST['kyw'];
+                    // $dv = load_dv_timkiem($kyw);
+                    // include "view/pages/service/tk_service.php";
+                    //header("location: view/pages/service/tk_service.php");
+                    $dv = load_dv_timkiem($kyw);
+                    include "view/pages/service/tk_service.php";
+                    break;
+                }
             }
+            
             break;
 
         case "timkiem_theodm":
@@ -334,7 +353,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
 
         case "quenmk":
-            
+
             include "view/pages/login/quenmk.php";
             break;
             ///////////////////////////////////////////////////////////

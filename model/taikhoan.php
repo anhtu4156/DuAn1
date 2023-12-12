@@ -1,5 +1,4 @@
 <?php
-
 //dang ky
 function insert_taikhoan($user,$pass,$email){
     $sql="INSERT INTO `tai_khoan` ( `ten_tai_khoan`, `mat_khau`, `email`) VALUES ( '$user', '$pass','$email') ";
@@ -15,13 +14,18 @@ function dangnhap($user, $pass) {
     $sql = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='$user' and mat_khau='$pass'";
     
     $taikhoan = pdo_query_one($sql);
-
+    
     if ($taikhoan != "") {
+        if($taikhoan['trang_thai']==0){
+            $_SESSION['user'] = $user;
+            $_SESSION['user_id'] = $taikhoan['id'];
+           
+            return "Đăng nhập thành công";
+        }else{
+            return " Tài khoản của bạn đã bị khoá. Vui lòng liên hệ qua 0123456789 để được hỗ trợ";
+        }
         // Lưu ID người dùng vào session sau khi đăng nhập thành công
-        $_SESSION['user'] = $user;
-        $_SESSION['user_id'] = $taikhoan['id'];
        
-        return "Đăng nhập thành công";
     } else {
         return "Thông tin tài khoản sai";
     }
@@ -43,7 +47,11 @@ function get_user($user){
     return $data;
 }
 
-function capnhat_tk($id,$user,$email,$date,$address,$tel){
+function capnhat_tk($id,$user,$email,$date,$address,$tel,$anh){
+    $sql ="UPDATE `tai_khoan` SET `ten_tai_khoan` = '$user', `email` = '$email', `so_dien_thoai` = '$tel', `ngay_sinh` = '$date', `dia_chi` = '$address' ,`anh`='$anh' WHERE `tai_khoan`.`id` = '$id';";
+    pdo_execute($sql);
+}
+function capnhat_tk_kh_anh($id,$user,$email,$date,$address,$tel){
     $sql ="UPDATE `tai_khoan` SET `ten_tai_khoan` = '$user', `email` = '$email', `so_dien_thoai` = '$tel', `ngay_sinh` = '$date', `dia_chi` = '$address' WHERE `tai_khoan`.`id` = '$id';";
     pdo_execute($sql);
 }
@@ -155,4 +163,9 @@ function get_vaitro(){
     $data = pdo_query($sql);
     return $data;
 
+}
+function get_anh_nv($id){
+    $sql = "SELECT anh FROM nhan_vien WHERE id=".$id;
+    $data = pdo_query_one($sql);
+    return $data;
 }

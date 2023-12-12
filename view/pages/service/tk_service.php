@@ -19,13 +19,13 @@
         <h1>Danh sách tìm kiếm</h1>
             <form action="../../../index.php?act=timkiem" class="form1" method="post">
                 <input type="text" class="form-control" name="kyw" style="width: 300px;" value="<?=$kyw?>">
-                <button type="submit" class="button"><a href="../../../index.php?act=timkiem">Tìm kiếm</a></button>
+                <a href="../../../index.php?act=timkiem"><input type="submit" class="button" value="Tìm kiếm" name="tim"></a>
             </form>
             <div class="row">
             
 
                 <?php
-                if (isset($dv) && $dv != "") {
+                if (isset($dv) && $dv) {
                     foreach ($dv as $item) {
                         extract($item);
                         $anh="../../../admin/assets/images/upload/".$anh_dv;

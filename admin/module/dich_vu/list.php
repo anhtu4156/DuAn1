@@ -100,7 +100,7 @@
                                                             </th>
 
                                                             <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                                ID dịch vụ
+                                                                STT
                                                             </th>
                                                             <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                                 Tên dịch vụ
@@ -126,6 +126,7 @@
 
                                                         <!-- 1 -->
                                                         <?php
+                                                        $stt=1;
                                                         foreach ($listdichvu as $items) {
                                                             extract($items);
                                                             $hinhpath = "assets/images/upload/" . $anh_dv;
@@ -147,7 +148,7 @@
                                                             </td>
                                                             
                                                             <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                                <span class="text-brand-500 ">' . $id . '</span>
+                                                                <span class="text-brand-500 ">' . $stt++ . '</span>
                                                             </td>
                                                             <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                                                                 <span class="text-brand-500 ">' . $ten_dv . '</span>
